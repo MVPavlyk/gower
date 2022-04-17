@@ -1,0 +1,36 @@
+.main_header {
+    height: 80px;
+    width: 100%;
+    background-color: #FF5636;
+    display: flex;
+    align-items: center;
+}
+
+.header_wrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_links {
+    display: flex;
+    align-items: center;
+    column-gap: 35px;
+}
+
+.header_link {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+}
+
+.header_links a [class='active'] {
+    text-decoration: underline;
+}
+
+.header_logo {
+    height: 60px;
+}

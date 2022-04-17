@@ -1,0 +1,61 @@
+.restaurant_block {
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 350px;
+    border: 3px solid #FF5636;
+    padding: 30px;
+}
+
+.restaurant_block_left {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.restaurant_title {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 35px;
+}
+
+.restaurant_info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.restaurant_details {
+    display: flex;
+    align-items: center;
+}
+
+.restaurant_details {
+    border: none;
+    height: 40px;
+    width: 190px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 25px;
+    border-radius: 5px;
+    color: black;
+    background-color: #FF5636;
+}
+
+.restaurant_details:focus {
+    background-color: #e3e3e3;
+}
+
+.restaurant_location {
+    display: flex;
+    font-size: 20px;
+    column-gap: 15px;
+    font-weight: 700;
+    align-items: center;
+}
+
+.restaurant_time {
+    font-size: 20px;
+    font-weight: 700;
+}
