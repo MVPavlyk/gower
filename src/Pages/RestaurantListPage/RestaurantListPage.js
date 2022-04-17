@@ -1,9 +1,10 @@
 import React from 'react';
 import {RestaurantBlock} from '../../Components';
-import css from './RestaurantPageList.module.css'
+import {Navbar} from '../../Components';
+import css from './RestaurantPageList.module.css';
 
 const RestaurantListPage = () => {
-    const storrage = [
+    const storage = [
         {
             id: 1,
             name: 'Кафе-Бар “У Марти”',
@@ -14,19 +15,23 @@ const RestaurantListPage = () => {
         {
             id: 2,
             name: 'Ресторан  “Панорама”',
-            address: 'Вул. Степана Бандери 2',
+            address: 'Вул. Степана Бандери 3',
             time: '09:00 - 21:00',
             img: './img/panorama.png'
         }
-    ]
+    ];
 
 
     return (
-        <div className={css.restaurant__wrap}>
-            {
-                storrage.map(restaurant => <RestaurantBlock key={restaurant.id} restaurant={restaurant}/>)
-            }
-        </div>
+        <>
+            <Navbar/>
+            <div className={css.restaurant__wrap}>
+
+                {
+                    storage.map(restaurant => <RestaurantBlock key={restaurant.id} restaurant={restaurant}/>)
+                }
+            </div>
+        </>
     );
 };
 
