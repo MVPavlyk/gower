@@ -1,8 +1,10 @@
 .menu_page{
-    height: 200px;
+    height: 3500px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     background-color: #F3F3F3;
+
+    flex-direction: column;
 }

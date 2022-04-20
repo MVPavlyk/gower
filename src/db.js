@@ -8,7 +8,10 @@ const storage = [
         mini_img: '1wcb71xWDxoP0znTK58ddDFUUX5bAVflJ',
         bg_img: '1KQfKSN3Pymdzdq8KXAq9GnAajg5rDee1',
         desc_p_1: 'Про ресторан «Панорама» у Львові можна сказати словами Оскара Уайльда: «Смак мовчазний». Це твердження справедливе для елітного ресторану , що ідеально вписався в атмосферу вузенької львівської вулички.',
-        desc_p_1_img: '1QailJxKIma3zIttprDBnFi7rb96FMiVU'
+        desc_p_1_img: '1QailJxKIma3zIttprDBnFi7rb96FMiVU',
+        photo_p_1_img: '1coTsh-dy8FF_F9gLvDHGX9BgAW4XLFy1',
+        menu_p_1_img: '1PEPwUzNryLJEzNXUx8YGWlEo32EhgR9f',
+        menu_p_2_img: '1lL0u2t15TI6p-GC771WwlSRAorYMS7uV'
 
     },
     {
@@ -20,7 +23,10 @@ const storage = [
         mini_img: '1zFBl0Ct0H1Ex_PUQcJ5sfnDCZ9N5plMn',
         bg_img: '14mqhKrzZZRmrz8y3ItPBYQHKq4EPH0Tb',
         desc_p_1: 'Про ресторан «Панорама» у Львові можна сказати словами Оскара Уайльда: «Смак мовчазний». Це твердження справедливе для елітного ресторану , що ідеально вписався в атмосферу вузенької львівської вулички.',
-        desc_p_1_img: '1QailJxKIma3zIttprDBnFi7rb96FMiVU'
+        desc_p_1_img: '1QailJxKIma3zIttprDBnFi7rb96FMiVU',
+        photo_p_1_img: '1coTsh-dy8FF_F9gLvDHGX9BgAW4XLFy1',
+        menu_p_1_img: '1PEPwUzNryLJEzNXUx8YGWlEo32EhgR9f',
+        menu_p_2_img: '1lL0u2t15TI6p-GC771WwlSRAorYMS7uV'
     }
 ];
 
