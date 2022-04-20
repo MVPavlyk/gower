@@ -1,0 +1,8 @@
+.location_page{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #F3F3F3;
+}

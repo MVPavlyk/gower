@@ -7,10 +7,20 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-*{
-    box-sizing: border-box;
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F3F3F3;
 }
 
+::-webkit-scrollbar-thumb {
+    background-color: #CDC9C9;
+    border-radius: 5px;
+}
+
+
+* {
+    box-sizing: border-box;
+}
 
 
 code {
