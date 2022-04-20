@@ -1,19 +1,30 @@
 .desc_page{
-    height: 2700px;
 
+    height: 100%;
     align-items: center;
     justify-content: center;
     width: 100%;
     background-color: #F3F3F3;
 }
 .desc_page1{
-    height: 620px;
+    height: 25%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
     background-color: #F3F3F3;
 }
-.desc_p_1{
-    width: 30%
+.desc_page_text{
+    width: 40%;
+    font-family: 'Poiret One',serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 56px;
+    text-align: center;
+
+}
+.desc_page_photo{
+    width: 40%;
+    height: 25%;
 }
