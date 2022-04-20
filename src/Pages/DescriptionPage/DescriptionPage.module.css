@@ -1,8 +1,19 @@
 .desc_page{
-    height: 200px;
-    display: flex;
+    height: 2700px;
+
     align-items: center;
     justify-content: center;
     width: 100%;
     background-color: #F3F3F3;
+}
+.desc_page1{
+    height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #F3F3F3;
+}
+.desc_p_1{
+    width: 30%
 }
