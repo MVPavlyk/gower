@@ -11,7 +11,6 @@ const PhotosPage = () => {
 
     return (
         <div className={css.photos_page}>
-            <div className={css.photo_title}>Фото "Панорами"</div>
             <div className={css.photo_slider}>
                 <div className={css.arrows_style}>
                     <button>
@@ -19,7 +18,7 @@ const PhotosPage = () => {
                     </button>
                 </div>
                 <img
-                    src={`https://drive.google.com/uc?export=view&id=${oneRestaurant.photo_p_1_img}`}
+                    src={`https://drive.google.com/uc?export=view&id=${oneRestaurant.photos.photo_p_1_img}`}
                     alt={oneRestaurant.name}
                 />
                 <div className={css.arrows_style}>

@@ -8,11 +8,11 @@ const MenuPage = () => {
     return (
         <div className={css.menu_page}>
             <img
-                src={`https://drive.google.com/uc?export=view&id=${oneRestaurant.menu_p_1_img}`}
+                src={`https://drive.google.com/uc?export=view&id=${oneRestaurant.menu.menu_p_1_img}`}
                 alt={oneRestaurant.name}
             />
             <img
-                src={`https://drive.google.com/uc?export=view&id=${oneRestaurant.menu_p_2_img}`}
+                src={`https://drive.google.com/uc?export=view&id=${oneRestaurant.menu.menu_p_2_img}`}
                 alt={oneRestaurant.name}
             />
         </div>
