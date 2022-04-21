@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {NavLink, Redirect, useParams} from 'react-router-dom';
+import {NavLink, useParams} from 'react-router-dom';
 import {Outlet} from 'react-router-dom';
 import {getRestaurant} from '../../store';
 import css from './OneRestaurantPage.module.css';
@@ -17,9 +17,9 @@ const OneRestaurantPage = () => {
     }, []);
 
 
-
     return (
         <div className={css.one_page}>
+
             <div className={css.one_page_bg}>
                 <img
                     src={`https://drive.google.com/uc?export=view&id=${oneRestaurant.bg_img}`}
