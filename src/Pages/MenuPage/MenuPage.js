@@ -1,21 +1,24 @@
 import React from 'react';
-import css from './MenuPage.module.css'
+import css from './MenuPage.module.css';
 import {useSelector} from 'react-redux';
 
 const MenuPage = () => {
     const {oneRestaurant} = useSelector(state => state['placeReducers']);
 
     return (
-        <div className={css.menu_page}>
-            <img
-                src={`https://drive.google.com/uc?export=view&id=${oneRestaurant.menu.menu_p_1_img}`}
-                alt={oneRestaurant.name}
-            />
-            <img
-                src={`https://drive.google.com/uc?export=view&id=${oneRestaurant.menu.menu_p_2_img}`}
-                alt={oneRestaurant.name}
-            />
-        </div>
+        <>
+            {oneRestaurant.menu &&
+                <div className={css.menu_page}>
+                    {oneRestaurant.menu.map(image =>
+                        <img
+                            src={`https://drive.google.com/uc?export=view&id=${image}`}
+                            alt={oneRestaurant.name}
+                            key={`${image}`}
+                        />
+                    )}
+                </div>
+            }
+        </>
     );
 };
 

@@ -1,0 +1,28 @@
+.desc_block {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.desc_block:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+.desc_page_text {
+    width: 40%;
+    font-family: 'Poiret One', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 56px;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+
+}
+
+.desc_page_photo {
+    width: 40%;
+}
