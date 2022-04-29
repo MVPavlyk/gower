@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {NavLink, useParams} from 'react-router-dom';
+import {NavLink, useNavigate, useParams} from 'react-router-dom';
 import {Outlet} from 'react-router-dom';
 import {getRestaurant} from '../../store';
 import css from './OneRestaurantPage.module.css';
@@ -8,18 +8,29 @@ import css from './OneRestaurantPage.module.css';
 const OneRestaurantPage = () => {
     const restaurantId = useParams();
 
+    const navigate = useNavigate();
+
     const {oneRestaurant} = useSelector(state => state['placeReducers']);
 
     const dispatch = useDispatch();
 
+
     useEffect(() => {
-        dispatch(getRestaurant(restaurantId));
+        const restaurant = async () => {
+            dispatch(getRestaurant(restaurantId));
+        };
+        restaurant().then(toDesc);
+
     }, []);
+
+
+    const toDesc = () => {
+        navigate(`/place/${restaurantId.id}/description`);
+    };
 
 
     return (
         <div className={css.one_page}>
-
             <div className={css.one_page_bg}>
                 <img
                     src={`https://drive.google.com/uc?export=view&id=${oneRestaurant.bg_img}`}
