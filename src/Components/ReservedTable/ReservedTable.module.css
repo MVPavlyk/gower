@@ -1,0 +1,35 @@
+.reserved_block {
+    border-top: 1px solid #A9A8A8;
+    padding: 15px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button_wrap{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete_btn{
+    padding: 12px 20px;
+    background-color: #FF5636;
+    border-radius: 10px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.reserved_block:first-child {
+    border: none;
+}
+
+.reserved_data_block {
+    font-size: 40px;
+    font-weight: 500;
+    width: 20%;
+    text-align: center;
+}

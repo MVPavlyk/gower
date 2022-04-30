@@ -21,7 +21,7 @@ const OneRestaurantPage = () => {
         };
         restaurant().then(toDesc);
 
-    }, []);
+    }, [restaurantId.id]);
 
 
     const toDesc = () => {

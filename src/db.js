@@ -31,6 +31,106 @@ const storage = [
         menu: [
             '1PEPwUzNryLJEzNXUx8YGWlEo32EhgR9f',
             '1lL0u2t15TI6p-GC771WwlSRAorYMS7uV'
+        ],
+        halls: [
+            {
+                number: 1,
+                map_bg: '1_Insspz6gTdy26b41Z3rVls48gtiF4OX',
+                tables: [
+                    {
+                        number: 1,
+                        type: 'table_6',
+                        size: 6,
+                        coordinates: {
+                            top: '6.25vw',
+                            right: '1.4vw',
+                            transform: 'rotate(90deg)'
+                        }
+                    },
+                    {
+                        number: 2,
+                        type: 'table_6',
+                        size: 6,
+                        coordinates: {
+                            top: '24.3vw',
+                            right: '1.4vw',
+                            transform: 'rotate(90deg)'
+                        }
+                    },
+
+                    {
+                        number: 3,
+                        type: 'table_6',
+                        size: 6,
+                        coordinates: {
+                            bottom: '12vw',
+                            right: '1.4vw',
+                            transform: 'rotate(90deg)'
+                        }
+                    },
+                    {
+                        number: 4,
+                        type: 'table_6',
+                        size: 6,
+                        coordinates: {
+                            right: '17.4vw',
+                            top: '3.2vw'
+                        }
+                    },
+                    {
+                        number: 5,
+                        type: 'table_6',
+                        size: 6,
+                        coordinates: {
+                            right: '17.4vw',
+                            top: '3.2vw'
+                        }
+                    },
+                    {
+                        number: 6,
+                        type: 'table_6',
+                        size: 6,
+                        coordinates: {
+                            left: '27vw',
+                            top: '5vw',
+                            transform: 'rotate(-17deg)'
+                        }
+                    },
+
+                    {
+                        number: 7,
+                        type: 'table_6',
+                        size: 6,
+                        coordinates: {
+                            left: '7vw',
+                            top: '12vw',
+                            transform: 'rotate(-17deg)'
+                        }
+                    },
+
+                    {
+                        number: 8,
+                        type: 'table_6',
+                        size: 6,
+                        coordinates: {
+                            left: '1.4',
+                            top: '32vw',
+                            transform: 'rotate(90deg)'
+                        }
+                    },
+
+                    {
+                        number: 9,
+                        type: 'table_6',
+                        size: 6,
+                        coordinates: {
+                            left: '1.4',
+                            top: '58vw',
+                            transform: 'rotate(90deg)'
+                        }
+                    }
+                ]
+            }
         ]
     },
 
@@ -66,6 +166,106 @@ const storage = [
         menu: [
             '1PEPwUzNryLJEzNXUx8YGWlEo32EhgR9f',
             '1lL0u2t15TI6p-GC771WwlSRAorYMS7uV'
+        ],
+        halls: [
+            {
+                number: 1,
+                map_bg: '1_Insspz6gTdy26b41Z3rVls48gtiF4OX',
+                tables: [
+                    {
+                        number: 1,
+                        type: 'table_6',
+                        size: 6,
+                        coordinates: {
+                            top: '6.25vw',
+                            right: '1.4vw',
+                            transform: 'rotate(90deg)'
+                        }
+                    },
+                    {
+                        number: 2,
+                        type: 'table_6',
+                        size: 6,
+                        coordinates: {
+                            top: '24.3vw',
+                            right: '1.4vw',
+                            transform: 'rotate(90deg)'
+                        }
+                    },
+
+                    {
+                        number: 3,
+                        type: 'table_6',
+                        size: 6,
+                        coordinates: {
+                            bottom: '12vw',
+                            right: '1.4vw',
+                            transform: 'rotate(90deg)'
+                        }
+                    },
+                    {
+                        number: 4,
+                        type: 'table_6',
+                        size: 6,
+                        coordinates: {
+                            right: '17.4vw',
+                            top: '3.2vw'
+                        }
+                    },
+                    {
+                        number: 5,
+                        type: 'table_6',
+                        size: 6,
+                        coordinates: {
+                            right: '17.4vw',
+                            top: '3.2vw'
+                        }
+                    },
+                    {
+                        number: 6,
+                        type: 'table_6',
+                        size: 6,
+                        coordinates: {
+                            left: '27vw',
+                            top: '5vw',
+                            transform: 'rotate(-17deg)'
+                        }
+                    },
+
+                    {
+                        number: 7,
+                        type: 'table_6',
+                        size: 6,
+                        coordinates: {
+                            left: '7vw',
+                            top: '12vw',
+                            transform: 'rotate(-17deg)'
+                        }
+                    },
+
+                    {
+                        number: 8,
+                        type: 'table_6',
+                        size: 6,
+                        coordinates: {
+                            left: '1.4',
+                            top: '32vw',
+                            transform: 'rotate(90deg)'
+                        }
+                    },
+
+                    {
+                        number: 9,
+                        type: 'table_6',
+                        size: 6,
+                        coordinates: {
+                            left: '1.4',
+                            top: '58vw',
+                            transform: 'rotate(90deg)'
+                        }
+                    }
+                ]
+            }
         ]
 
     }

@@ -1,0 +1,12 @@
+.table_6 {
+    cursor: pointer;
+    width: 15.2vw;
+    height: 9vw;
+    background-color: #A9A8A8;
+    position: absolute;
+}
+
+.table_6:active {
+    background-color: #FF5636;
+}
+
