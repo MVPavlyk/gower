@@ -131,6 +131,13 @@ const storage = [
                     }
                 ]
             }
+        ],
+        coordinates: {
+            lat: 49.834638,
+            lng: 24.019595
+        },
+        exterior: [
+            '18DWhUHuORMN9KXe89NyxCAPvxGuj0PYK'
         ]
     },
 
@@ -266,7 +273,15 @@ const storage = [
                     }
                 ]
             }
+        ],
+        coordinates: {
+            lat: 49.834638,
+            lng: 24.019595
+        },
+        exterior: [
+            '18DWhUHuORMN9KXe89NyxCAPvxGuj0PYK'
         ]
+
 
     }
 ];

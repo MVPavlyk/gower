@@ -4,7 +4,9 @@ import storage from '../../db';
 const onePlaceSlice = createSlice({
     name: 'onePlaceSlice',
     initialState: {
-        oneRestaurant: {}
+        oneRestaurant: {},
+        status: null,
+        error: null
     },
     reducers: {
         getRestaurant: (state, action) => {
