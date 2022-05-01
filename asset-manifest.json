@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/gower/static/css/main.abd5465a.css",
+    "main.js": "/gower/static/js/main.ea8df3da.js",
+    "static/media/location.svg": "/gower/static/media/location.a05ad7f02f25bfa0940f8ce283ac2a23.svg",
+    "static/media/logo.svg": "/gower/static/media/logo.6bcd5a06ce85002fb5890a9fddefb7d2.svg",
+    "index.html": "/gower/index.html",
+    "static/media/stars.svg": "/gower/static/media/stars.91fc10cca5eeb524922fbdb77af0a322.svg",
+    "static/media/sort.svg": "/gower/static/media/sort.c5d236ab048016a57cd6b61049f068ad.svg",
+    "static/media/search.svg": "/gower/static/media/search.ec756592eae6272d8bfb72031b99fac0.svg",
+    "static/media/filter.svg": "/gower/static/media/filter.a49c23645e431577260426790835724c.svg",
+    "static/media/left_arrow.svg": "/gower/static/media/left_arrow.45c97c3e53058ba1df3e78410016bf2f.svg",
+    "static/media/right_arrow.svg": "/gower/static/media/right_arrow.28cc765ba2d920c05ea138b923a03f1a.svg",
+    "main.abd5465a.css.map": "/gower/static/css/main.abd5465a.css.map",
+    "main.ea8df3da.js.map": "/gower/static/js/main.ea8df3da.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abd5465a.css",
+    "static/js/main.ea8df3da.js"
+  ]
+}
