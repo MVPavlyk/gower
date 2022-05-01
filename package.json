@@ -1,5 +1,5 @@
 {
-  "homepage": "https://MVPavlyk.github.io/gower",
+  "homepage": "http://MVPavlyk.github.io/gower",
   "name": "gower",
   "version": "0.1.0",
   "private": true,
@@ -16,7 +16,7 @@
     "react-scripts": "5.0.0"
   },
   "scripts": {
-    "predeploy": "npm run bild",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
