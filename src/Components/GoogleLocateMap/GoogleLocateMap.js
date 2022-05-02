@@ -15,7 +15,7 @@ const GoogleLocateMap = ({center}) => {
         mapRef.current = map;
     }, []);
 
-    const onUnmount = useCallback(function callback(map) {
+    const onUnmount = useCallback(function callback() {
         mapRef.current = undefined;
     }, []);
 
@@ -28,9 +28,7 @@ const GoogleLocateMap = ({center}) => {
             onLoad={onLoad}
             onUnmount={onUnmount}
         >
-
-            <Marker position={center}>
-            </Marker>
+            {center && <Marker position={center}/>}
         </GoogleMap>
     );
 };

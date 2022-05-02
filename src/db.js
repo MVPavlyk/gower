@@ -9,7 +9,7 @@ const storage = [
         bg_img: '1KQfKSN3Pymdzdq8KXAq9GnAajg5rDee1',
         description: [
             {
-                desc_p: 'Про ресторан «Панорама» у Львові можна сказати словами Оскара Уайльда: «Смак мовчазний». Це твердження справедливе для елітного ресторану , що ідеально вписався в атмосферу вузенької львівської вулички.',
+                desc_p: 'Про ресторан «У марти» у Львові можна сказати словами Оскара Уайльда: «Смак мовчазний». Це твердження справедливе для елітного ресторану , що ідеально вписався в атмосферу вузенької львівської вулички.',
                 desc_img: '1QailJxKIma3zIttprDBnFi7rb96FMiVU'
             },
             {
@@ -145,7 +145,7 @@ const storage = [
         id: 2,
         name: 'Ресторан  “Панорама”',
         short_name: 'Панорама',
-        address: 'Вул. Степана Бандери 3',
+        address: 'Проспект Свободи 45',
         time: '09:00 - 21:00',
         mini_img: '1zFBl0Ct0H1Ex_PUQcJ5sfnDCZ9N5plMn',
         bg_img: '14mqhKrzZZRmrz8y3ItPBYQHKq4EPH0Tb',
@@ -275,8 +275,8 @@ const storage = [
             }
         ],
         coordinates: {
-            lat: 49.834638,
-            lng: 24.019595
+            lat: 49.843754,
+            lng: 24.025675
         },
         exterior: [
             '18DWhUHuORMN9KXe89NyxCAPvxGuj0PYK'
