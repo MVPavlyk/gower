@@ -2,7 +2,6 @@
     width: 100%;
     height: 260px;
     background-color: #FF5636;
-
     display: flex;
     align-items: center;
 }
@@ -17,11 +16,13 @@
 
 .footer_links {
     display: flex;
-    column-gap: 35px;
     flex-direction: column;
     align-items: flex-start;
     row-gap: 20px;
+    width: 25%;
 }
+
+
 
 .footer_link {
     font-size: 25px;
@@ -39,6 +40,7 @@
     flex-direction: column;
     align-items: flex-end;
     row-gap: 15px;
+    width: 25%;
 }
 
 .footer_info_titles {

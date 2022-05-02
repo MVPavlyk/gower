@@ -1,8 +1,8 @@
 import React from 'react';
-import css from './Footer.module.css'
-import rootCss from "../../root.module.css";
-import {NavLink} from "react-router-dom";
-import logo from "../../img/logo.svg";
+import css from './Footer.module.css';
+import rootCss from '../../root.module.css';
+import {NavLink} from 'react-router-dom';
+import logo from '../../img/logo.svg';
 
 const Footer = () => {
     return (
@@ -20,9 +20,9 @@ const Footer = () => {
                     <div className={css.footer_info}>
                         <div className={css.footer_info_titles}>Contacts</div>
                         <div className={css.footer_info_titles}>Email:</div>
-                            <a className={css.footer_info_content} href={'/'}>example@gmail.com</a>
+                        <a className={css.footer_info_content} href={'/'}>example@gmail.com</a>
                         <div className={css.footer_info_titles}>Telegram:</div>
-                            <a className={css.footer_info_content} href={'/'}>t/me.com</a>
+                        <a className={css.footer_info_content} href={'/'}>t/me.com</a>
                     </div>
                 </div>
             </div>
