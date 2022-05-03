@@ -20,7 +20,7 @@ const PhotosPage = () => {
                         </button>
                     </div>
                     <img
-                        src={`https://drive.google.com/uc?export=view&id=${oneRestaurant.photos.photo_p_1_img}`}
+                        src={oneRestaurant.photos.photo_p_1_img}
                         alt={oneRestaurant.name}
                     />
                     <div className={css.arrows_style}>

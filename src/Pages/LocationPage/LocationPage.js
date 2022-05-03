@@ -13,17 +13,10 @@ const LocationPage = () => {
 
     const {oneRestaurant} = useSelector(state => state['placeReducers']);
 
-    const centerDefault = {
-        lat: -3.745,
-        lng: -38.523
-    };
-
-
     const {isLoaded} = useJsApiLoader({
         id: 'google-map-script',
         googleMapsApiKey: API_KEY
     });
-
 
     return (
         <div className={css.location_page}>
@@ -34,8 +27,9 @@ const LocationPage = () => {
                 {oneRestaurant.exterior &&
                     <div>
                         {oneRestaurant.exterior.map(photo =>
-                            <img src={`https://drive.google.com/uc?export=view&id=${photo}`}
+                            <img src={`${photo}`}
                                  alt={oneRestaurant.name}
+                                 key={`${photo}`}
                             />)
                         }
                     </div>

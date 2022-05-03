@@ -13,7 +13,7 @@ const DescriptionBlock = ({descBlock}) => {
 
             <div className={css.desc_page_photo}>
                 <img
-                    src={`https://drive.google.com/uc?export=view&id=${descBlock.desc_img}`}
+                    src={descBlock.desc_img}
                     alt={oneRestaurant.name}
                 />
             </div>

@@ -11,7 +11,7 @@ const MenuPage = () => {
                 <div className={css.menu_page}>
                     {oneRestaurant.menu.map(image =>
                         <img
-                            src={`https://drive.google.com/uc?export=view&id=${image}`}
+                            src={`${image}`}
                             alt={oneRestaurant.name}
                             key={`${image}`}
                         />

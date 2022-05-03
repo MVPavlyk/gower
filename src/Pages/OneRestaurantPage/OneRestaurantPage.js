@@ -33,7 +33,7 @@ const OneRestaurantPage = () => {
         <div className={css.one_page}>
             <div className={css.one_page_bg}>
                 <img
-                    src={`https://drive.google.com/uc?export=view&id=${oneRestaurant.bg_img}`}
+                    src={oneRestaurant.bg_img}
                     alt={oneRestaurant.name}
                     className={css.bg_img}
                 />

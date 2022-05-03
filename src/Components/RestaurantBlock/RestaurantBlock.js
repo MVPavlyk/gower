@@ -8,7 +8,7 @@ const RestaurantBlock = ({restaurant}) => {
     return (
         <div className={css.restaurant_block}>
             <div className={css.restaurant_block_left}>
-                <img src={`https://drive.google.com/uc?export=view&id=${restaurant.mini_img}`} alt={restaurant.name}/>
+                <img src={restaurant.mini_img} alt={restaurant.name}/>
                 <div className={css.restaurant_info}>
                     <h1 className={css.restaurant_title}>{restaurant.name}</h1>
                     <img src={stars} alt={'stars'}/>

@@ -33,13 +33,22 @@
 }
 
 .one_title {
-    font-size: 128px;
+    font-size: 140px;
     font-weight: 500;
     position: relative;
     z-index: 4;
     width: fit-content;
-    /*text-decoration: underline;*/
-    border-bottom: 7px solid black;
+}
+
+.one_title::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    height: 7px;
+    background-color: #000;
+
 }
 
 .tab_header {

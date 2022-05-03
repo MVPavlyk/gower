@@ -7,7 +7,7 @@ const Map = ({hall}) => {
         <div className={css.map}>
             <img
                 className={css.map_bg}
-                src={`https://drive.google.com/uc?export=view&id=${hall.map_bg}`}
+                src={hall.map_bg}
                 alt={`hall_${hall.number}`}
             />
             {hall.tables.map(table => <Table table={table} key={table.number}/>)}
