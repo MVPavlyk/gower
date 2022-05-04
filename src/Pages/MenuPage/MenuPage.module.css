@@ -1,10 +1,14 @@
-.menu_page{
-    height: 3500px;
+.menu_page {
+    padding: 100px 8.5vw;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: #F3F3F3;
-
+    background-color: #FFFFFF;
     flex-direction: column;
+    text-align: center;
+}
+
+.carousel {
+    width: 50%;
 }

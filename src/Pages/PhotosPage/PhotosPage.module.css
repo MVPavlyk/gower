@@ -1,15 +1,14 @@
-.photos_page{
-    height: 1200px;
+.photos_page {
+    padding: 100px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: #F3F3F3;
-
+    background-color: #FFFFFF;
     flex-direction: column;
 }
 
-.photo_title{
+.photo_title {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +19,7 @@
     font-family: 'Poiret One', serif;
 }
 
-.photo_slider{
+.photo_slider {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,11 +27,19 @@
 
 }
 
-.arrows_style button{
+.arrows_style button {
     border: none;
     background: none;
 }
 
-.arrows_style button:focus{
+.arrows_style button:focus {
     background-color: #e3e3e3;
+}
+
+.carousel_wrap {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }

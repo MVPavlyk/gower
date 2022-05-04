@@ -1,17 +1,17 @@
 .forms_wrap {
-    width: 100%;
+    width: 45%;
     background-color: #fff;
     padding: 25px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 3px solid #FF5636;
+    border: 3px solid #047E89;
     margin-top: 100px;
-    row-gap: 30px;
+    row-gap: 8px;
 }
 
 .forms_title {
-    font-size: 48px;
+    font-size: 24px;
     font-weight: 500;
 }
 
@@ -23,17 +23,17 @@
 }
 
 .reserve_input {
-    width: 460px;
-    height: 76px;
-    padding: 10px 30px;
+    width: 230px;
+    height: 35px;
+    padding: 5px 15px;
     background-color: #F3F3F3;
-    border: 2px solid #FF5636;
+    border: 2px solid #047E89;
     border-radius: 10px;
     outline: none;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 .reserve_text {
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 500;
 }

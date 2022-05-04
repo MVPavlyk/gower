@@ -7,19 +7,20 @@
     justify-content: space-between;
 }
 
-.button_wrap{
+.button_wrap {
     width: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.delete_btn{
-    padding: 12px 20px;
-    background-color: #FF5636;
+
+.delete_btn {
+    padding: 5px 8px;
+    background-color: #047E89;
     border-radius: 10px;
     color: white;
-    font-size: 40px;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -28,8 +29,12 @@
 }
 
 .reserved_data_block {
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 500;
     width: 20%;
     text-align: center;
+}
+
+.reserved_data_block:first-child {
+    width: 10%;
 }

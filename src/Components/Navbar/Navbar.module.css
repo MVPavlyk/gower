@@ -1,6 +1,7 @@
 .main_navbar {
     width: 100%;
-    background-color: #F3F3F3;
+    background-color: #FFFFFF;
+    border-bottom: 3px solid #F3F3F3;
 }
 
 .nav_wrap {
@@ -18,7 +19,7 @@
     padding: 0 20px;
     height: 42px;
     width: 300px;
-    background-color: #fff;
+    background-color: #F3F3F3;
     border-radius: 20px;
 }
 
@@ -57,7 +58,7 @@
 }
 
 .nav_link {
-    background-color: #F3F3F3;
+    background-color: #FFF;
     border: none;
     border-radius: 5px;
 }

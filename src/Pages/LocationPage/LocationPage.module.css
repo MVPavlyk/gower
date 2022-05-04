@@ -1,10 +1,10 @@
 .location_page {
-    padding: 100px 135px;
+    padding: 100px 8.5vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    background-color: #F3F3F3;
+    background-color: #FFFFFF;
 }
 
 .map_wrap {

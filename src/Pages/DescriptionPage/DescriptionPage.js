@@ -1,5 +1,6 @@
 import React from 'react';
 import css from './DescriptionPage.module.css';
+import rootCss from '../../root.module.css';
 import {useSelector} from 'react-redux';
 import {DescriptionBlock} from '../../Components';
 
@@ -10,9 +11,9 @@ const DescriptionPage = () => {
         <>
             {oneRestaurant.description &&
                 <div className={css.desc_page}>
-                    {oneRestaurant.description.map(descBlock =>
+                    <div className={rootCss.container}>{oneRestaurant.description.map(descBlock =>
                         <DescriptionBlock key={descBlock.desc_img} descBlock={descBlock}/>
-                    )}
+                    )}</div>
                 </div>}
         </>
 

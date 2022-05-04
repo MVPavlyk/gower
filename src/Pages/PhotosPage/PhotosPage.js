@@ -1,10 +1,9 @@
 import React from 'react';
-import css from './PhotosPage.module.css'
 import {useSelector} from 'react-redux';
-import left_arrow from "../../img/left_arrow.svg";
-import right_arrow from "../../img/right_arrow.svg";
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import {Carousel} from 'react-responsive-carousel';
 
-
+import css from './PhotosPage.module.css';
 
 const PhotosPage = () => {
     const {oneRestaurant} = useSelector(state => state['placeReducers']);
@@ -13,26 +12,13 @@ const PhotosPage = () => {
         <>
             {oneRestaurant.photos &&
                 <div className={css.photos_page}>
-                <div className={css.photo_slider}>
-                    <div className={css.arrows_style}>
-                        <button>
-                            <img src={left_arrow} alt="left_arrow"/>
-                        </button>
-                    </div>
-                    <img
-                        src={oneRestaurant.photos.photo_p_1_img}
-                        alt={oneRestaurant.name}
-                    />
-                    <div className={css.arrows_style}>
-                        <button>
-                            <img src={right_arrow} alt="right_arrow"/>
-                        </button>
-                    </div>
+                    <Carousel className={css.carousel_wrap}>
+                        <img src={oneRestaurant.photos.photo_p_1_img} alt={oneRestaurant.name}/>
+                        <img src={oneRestaurant.photos.photo_p_1_img} alt={oneRestaurant.name}/>
+                        <img src={oneRestaurant.photos.photo_p_1_img} alt={oneRestaurant.name}/>
+                    </Carousel>
                 </div>
-
-            </div>
             }
-
         </>
     );
 };

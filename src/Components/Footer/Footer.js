@@ -19,9 +19,7 @@ const Footer = () => {
                     </div>
                     <div className={css.footer_info}>
                         <div className={css.footer_info_titles}>Contacts</div>
-                        <div className={css.footer_info_titles}>Email:</div>
                         <a className={css.footer_info_content} href={'/'}>example@gmail.com</a>
-                        <div className={css.footer_info_titles}>Telegram:</div>
                         <a className={css.footer_info_content} href={'/'}>t/me.com</a>
                     </div>
                 </div>

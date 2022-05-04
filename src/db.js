@@ -5,6 +5,7 @@ const storage = [
         short_name: 'У Марти',
         address: 'Вул. Степана Бандери 2',
         time: '09:00 - 21:00',
+        rating: 5,
         mini_img: 'https://gower.s3.eu-north-1.amazonaws.com/u_marty.png',
         bg_img: 'https://gower.s3.eu-north-1.amazonaws.com/u_martu_bg.png',
         description: [
@@ -26,16 +27,16 @@ const storage = [
             }
         ],
         photos: {
-            photo_p_1_img: 'https://gower.s3.eu-north-1.amazonaws.com/photos_1.png'
+            photo_p_1_img: 'https://gower.s3.eu-north-1.amazonaws.com/carousel_photo.png'
         },
         menu: [
-            'https://gower.s3.eu-north-1.amazonaws.com/m1.png',
-            'https://gower.s3.eu-north-1.amazonaws.com/m2.png'
+            'https://gower.s3.eu-north-1.amazonaws.com/menu1.png',
+            'https://gower.s3.eu-north-1.amazonaws.com/menu2.png'
         ],
         halls: [
             {
                 number: 1,
-                map_bg: 'https://gower.s3.eu-north-1.amazonaws.com/map_bg_1.svg',
+                map_bg: 'https://gower.s3.eu-north-1.amazonaws.com/bg_new.svg',
                 tables: [
                     {
                         number: 1,
@@ -63,7 +64,7 @@ const storage = [
                         type: 'table_6',
                         size: 6,
                         coordinates: {
-                            bottom: '12vw',
+                            top: '60vw',
                             right: '1.4vw',
                             transform: 'rotate(90deg)'
                         }
@@ -147,8 +148,9 @@ const storage = [
         short_name: 'Панорама',
         address: 'Проспект Свободи 45',
         time: '09:00 - 21:00',
-        mini_img: 'https://gower.s3.eu-north-1.amazonaws.com/panorama.png',
-        bg_img: 'https://gower.s3.eu-north-1.amazonaws.com/panorama_bg.png',
+        rating: 3.2,
+        mini_img: 'https://gower.s3.eu-north-1.amazonaws.com/panorama_new.png',
+        bg_img: 'https://gower.s3.eu-north-1.amazonaws.com/panorama_bg_new.png',
         description: [
             {
                 desc_p: 'Про ресторан «Панорама» у Львові можна сказати словами Оскара Уайльда: «Смак мовчазний». Це твердження справедливе для елітного ресторану , що ідеально вписався в атмосферу вузенької львівської вулички.',
@@ -168,16 +170,16 @@ const storage = [
             }
         ],
         photos: {
-            photo_p_1_img: 'https://gower.s3.eu-north-1.amazonaws.com/photos_1.png'
+            photo_p_1_img: 'https://gower.s3.eu-north-1.amazonaws.com/carousel_photo.png'
         },
         menu: [
-            'https://gower.s3.eu-north-1.amazonaws.com/m1.png',
-            'https://gower.s3.eu-north-1.amazonaws.com/m2.png'
+            'https://gower.s3.eu-north-1.amazonaws.com/menu1.png',
+            'https://gower.s3.eu-north-1.amazonaws.com/menu2.png'
         ],
         halls: [
             {
                 number: 1,
-                map_bg: 'https://gower.s3.eu-north-1.amazonaws.com/map_bg_1.svg',
+                map_bg: 'https://gower.s3.eu-north-1.amazonaws.com/bg_new.svg',
                 tables: [
                     {
                         number: 1,

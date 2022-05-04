@@ -7,6 +7,7 @@ import store from './store/store';
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 import ScrollToTop from './root_functions/scrollUp';
+import rootCss from './root.module.css';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);

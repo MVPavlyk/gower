@@ -69,7 +69,7 @@ const OneRestaurantPage = () => {
                         className={({isActive}) =>
                             (isActive ? css.active_link : undefined)}
                     >
-                        Карта столиків
+                        Столики
                     </NavLink>
                     <NavLink
                         to={`/place/${oneRestaurant.id}/location`}
