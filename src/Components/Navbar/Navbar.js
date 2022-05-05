@@ -1,5 +1,4 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
 import rootCss from '../../root.module.css';
 import css from './Navbar.module.css';
 import search from '../../img/search.svg';
@@ -16,7 +15,7 @@ const Navbar = () => {
                         <button className={css.search_btn}>
                             <img src={search} alt="search"/>
                         </button>
-                        <input type="text" className={css.search_input} placeholder='Search...'/>
+                        <input type="text" className={css.search_input} placeholder="Search..."/>
                     </form>
                     <div className={css.nav_links}>
                         <div>

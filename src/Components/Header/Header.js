@@ -18,6 +18,11 @@ const Header = () => {
                         <NavLink className={css.header_link} to={'/'}>About us</NavLink>
                         <NavLink className={css.header_link} to={'/'}>Login</NavLink>
                     </div>
+                    <div className={css.burger_btn}>
+                        <div> </div>
+                        <div> </div>
+                        <div> </div>
+                    </div>
                 </div>
             </div>
         </div>

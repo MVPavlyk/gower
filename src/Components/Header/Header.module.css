@@ -34,3 +34,59 @@
 .header_logo {
     height: 60px;
 }
+
+.burger_btn {
+    width: 46px;
+    height: 30px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.burger_btn div {
+    height: 6px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+@media (max-width: 900px) {
+    .main_header {
+        height: 60px;
+    }
+
+    .header_links {
+        display: none;
+    }
+
+    .burger_btn {
+        display: flex;
+    }
+
+    .header_logo img {
+        width: 140px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .main_header {
+        height: 40px;
+    }
+
+    .burger_btn {
+        width: 25px;
+        row-gap: 4px;
+        height: fit-content;
+    }
+
+    .burger_btn div {
+        height: 4px;
+        border-radius: 2px;
+    }
+
+    .header_logo img {
+        width: 90px;
+    }
+}
