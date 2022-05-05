@@ -4,6 +4,8 @@
     background-color: #047E89;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 4;
 }
 
 .header_wrap {
@@ -51,6 +53,27 @@
     border-radius: 3px;
 }
 
+.burger_menu,
+.burger_menu_show{
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    background-color: #047E89;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 5px;
+    padding: 30px 8.5vw;
+    border-top: 1px solid #FFFFFF;
+    margin-top: -260px;
+    z-index: 10;
+    transition: .2s linear;
+}
+
+.burger_menu_show{
+    margin-top: 0;
+}
+
 @media (max-width: 900px) {
     .main_header {
         height: 60px;
@@ -88,5 +111,10 @@
 
     .header_logo img {
         width: 90px;
+    }
+
+    .burger_menu,
+    .burger_menu_show{
+        top: 40px;
     }
 }

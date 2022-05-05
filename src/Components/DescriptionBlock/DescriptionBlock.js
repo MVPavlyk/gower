@@ -10,13 +10,11 @@ const DescriptionBlock = ({descBlock}) => {
             <div className={css.desc_page_text}>
                 {descBlock.desc_p}
             </div>
-
-            <div className={css.desc_page_photo}>
-                <img
-                    src={descBlock.desc_img}
-                    alt={oneRestaurant.name}
-                />
-            </div>
+            <img
+                src={descBlock.desc_img}
+                alt={oneRestaurant.name}
+                className={css.desc_page_photo}
+            />
         </div>
     );
 };

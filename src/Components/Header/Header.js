@@ -1,10 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import rootCss from '../../root.module.css';
 import css from './Header.module.css';
 import logo from '../../img/logo.svg';
 
 const Header = () => {
+
+    const [show, setShow] = useState(false);
+
+    const showBurger = () => {
+        setShow(!show);
+    };
+
     return (
         <div className={css.main_header}>
             <div className={rootCss.container}>
@@ -18,12 +25,18 @@ const Header = () => {
                         <NavLink className={css.header_link} to={'/'}>About us</NavLink>
                         <NavLink className={css.header_link} to={'/'}>Login</NavLink>
                     </div>
-                    <div className={css.burger_btn}>
+                    <div className={css.burger_btn} onClick={() => showBurger()}>
                         <div> </div>
                         <div> </div>
                         <div> </div>
                     </div>
                 </div>
+            </div>
+            <div className={show ? css.burger_menu_show : css.burger_menu}>
+                <NavLink className={css.header_link} to={'/'}>Login</NavLink>
+                <NavLink className={css.header_link} to={'/'}>Places</NavLink>
+                <NavLink className={css.header_link} to={'/'}>Cooperation</NavLink>
+                <NavLink className={css.header_link} to={'/'}>About us</NavLink>
             </div>
         </div>
     );

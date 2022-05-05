@@ -106,10 +106,9 @@
     .footer_info{
         display: none;
     }
-    .footer_link,
-    .footer_info_titles,
-    .footer_info_content {
-        font-size: 12px;
+    .footer_link{
+        font-size: 16px;
+        font-weight: 400;
     }
 
     .footer_logo img{

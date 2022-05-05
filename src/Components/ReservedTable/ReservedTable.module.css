@@ -38,3 +38,37 @@
 .reserved_data_block:first-child {
     width: 10%;
 }
+
+.reserved_data_block:nth-child(2),
+.reserved_data_block:nth-child(3) {
+    width: 15%;
+}
+
+@media (max-width: 600px) {
+    .reserved_data_block,
+    .delete_btn {
+        font-size: 16px;
+    }
+
+    .reserved_block {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 500px){
+    .reserved_data_block,
+    .delete_btn {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px){
+    .reserved_data_block,
+    .delete_btn {
+        font-size: 10px;
+    }
+    .delete_btn{
+        padding: 3px;
+        border-radius: 5px;
+    }
+}

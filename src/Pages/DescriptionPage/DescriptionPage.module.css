@@ -7,3 +7,21 @@
     padding: 100px 0;
     background-color: #FFFFFF;
 }
+
+.desc_wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+@media (max-width: 767px) {
+    .desc_page {
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .desc_page {
+        padding: 25px 0;
+    }
+}

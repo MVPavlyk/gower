@@ -11,9 +11,10 @@ const DescriptionPage = () => {
         <>
             {oneRestaurant.description &&
                 <div className={css.desc_page}>
-                    <div className={rootCss.container}>{oneRestaurant.description.map(descBlock =>
-                        <DescriptionBlock key={descBlock.desc_img} descBlock={descBlock}/>
-                    )}</div>
+                    <div className={rootCss.container}>
+                        <div className={css.desc_wrap}>{oneRestaurant.description.map(descBlock =>
+                            <DescriptionBlock key={descBlock.desc_img} descBlock={descBlock}/>)}</div>
+                    </div>
                 </div>}
         </>
 

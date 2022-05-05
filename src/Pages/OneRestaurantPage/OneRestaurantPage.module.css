@@ -14,13 +14,6 @@
     font-family: "Poiret One", sans-serif;
 }
 
-.bg_img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
 
 .one_bg_gradient {
     width: 100%;
@@ -36,7 +29,7 @@
     font-size: 120px;
     font-weight: 500;
     position: relative;
-    z-index: 4;
+    z-index: 2;
     width: fit-content;
     color: #FFFFFF;
 }
@@ -71,3 +64,70 @@
     position: relative;
     z-index: 7;
 }
+
+@media (max-width: 1000px) {
+    .one_title {
+        font-size: 100px;
+    }
+
+    .one_bg_gradient {
+        background: linear-gradient(74.55deg, #000000 0%, rgba(0, 0, 0, 0) 80%);
+    }
+
+    .tab_header a {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 767px) {
+    .one_title {
+        font-size: 80px;
+    }
+
+    .one_page_bg {
+        height: 70vw;
+    }
+}
+
+@media (max-width: 700px) {
+    .tab_header a {
+        font-size: 20px;
+        padding: 10px 0;
+        height: fit-content;
+        border-radius: 5px 5px 0 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .tab_header a {
+        font-size: 20px;
+        padding: 10px 0;
+        height: fit-content;
+    }
+}
+
+@media (max-width: 550px) {
+    .one_page_bg {
+        height: 60vw;
+    }
+
+    .one_title {
+        font-size: 60px;
+    }
+
+    .tab_header a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 420px) {
+    .one_title {
+        font-size: 40px;
+    }
+
+    .tab_header a {
+        font-size: 14px;
+        padding: 6px 0;
+    }
+}
+

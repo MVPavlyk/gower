@@ -31,12 +31,10 @@ const OneRestaurantPage = () => {
 
     return (
         <div className={css.one_page}>
-            <div className={css.one_page_bg}>
-                <img
-                    src={oneRestaurant.bg_img}
-                    alt={oneRestaurant.name}
-                    className={css.bg_img}
-                />
+            <div className={css.one_page_bg}
+                 style={
+                     {background: `url(${oneRestaurant.bg_img}) center top / cover`}
+                 }>
                 <div className={css.one_bg_gradient}>
                 </div>
                 <div className={css.one_title}>

@@ -12,3 +12,24 @@
 .carousel {
     width: 50%;
 }
+
+@media (max-width: 1000px) {
+    .menu_page {
+        padding: 50px 8.5vw;
+    }
+
+    .carousel {
+        width: 70%;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu_page {
+        padding: 30px 8.5vw;
+    }
+
+    .carousel {
+        width: 80%;
+    }
+}
+
