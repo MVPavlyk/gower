@@ -17,7 +17,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
-    line-height: 56px;
+    /*line-height: 56px;*/
     text-align: center;
     position: relative;
     z-index: 3;
@@ -26,4 +26,122 @@
 
 .desc_page_photo {
     width: 40%;
+}
+
+@media (max-width: 1300px) {
+    .desc_page_text {
+        font-size: 35px;
+    }
+
+    .desc_page_photo,
+    .desc_page_photo img {
+        width: 480px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .desc_page_text {
+        font-size: 30px;
+    }
+
+    .desc_page_photo,
+    .desc_page_photo img {
+        width: 450px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .desc_page_text {
+        font-size: 30px;
+    }
+
+    .desc_page_photo,
+    .desc_page_photo img {
+        width: 420px;
+    }
+}
+
+@media (max-width: 992px) {
+    .desc_page_text {
+        font-size: 26px;
+    }
+
+    .desc_page_photo,
+    .desc_page_photo img {
+        width: 360px;
+    }
+}
+
+@media (max-width: 840px) {
+    .desc_page_text {
+        font-size: 22px;
+    }
+
+    .desc_page_photo,
+    .desc_page_photo img {
+        width: 320px;
+    }
+}
+
+@media (max-width: 767px) {
+    .desc_block,
+    .desc_block:nth-child(2n) {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 55px;
+        margin: 20px 0;
+    }
+
+    .desc_page_text {
+        width: 600px;
+        font-size: 30px;
+    }
+
+    .desc_page_photo,
+    .desc_page_photo img {
+        width: 540px;
+    }
+}
+
+@media (max-width: 650px) {
+    .desc_page_text {
+        width: 450px;
+        font-size: 24px;
+    }
+
+    .desc_page_photo,
+    .desc_page_photo img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 470px) {
+    .desc_page_text {
+        width: 360px;
+        font-size: 18px;
+    }
+
+    .desc_page_photo,
+    .desc_page_photo img {
+        width: 360px;
+    }
+}
+
+@media (max-width: 400px) {
+    .desc_page_text {
+        width: 320px;
+        font-size: 16px;
+    }
+
+    .desc_page_photo,
+    .desc_page_photo img {
+        width: 320px;
+    }
+}
+
+@media (max-width: 320px) {
+    .desc_page_photo,
+    .desc_page_photo img {
+        width: 310px;
+    }
 }
