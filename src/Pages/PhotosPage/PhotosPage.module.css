@@ -49,3 +49,10 @@
         padding: 30px 0;
     }
 }
+
+@media (max-width: 500px) {
+    .photos_page {
+        justify-content: flex-start;
+        min-height: calc(100vh - 300px);
+    }
+}

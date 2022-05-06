@@ -77,15 +77,14 @@
     .tab_header a {
         font-size: 26px;
     }
+    .one_page_bg {
+        height: 70vw;
+    }
 }
 
 @media (max-width: 767px) {
     .one_title {
         font-size: 80px;
-    }
-
-    .one_page_bg {
-        height: 70vw;
     }
 }
 

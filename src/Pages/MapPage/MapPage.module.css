@@ -139,6 +139,8 @@
     }
     .map_page{
         padding: 25px 8.5vw;
+        min-height: calc(100vh - 300px);
+        justify-content: flex-start;
     }
 }
 
