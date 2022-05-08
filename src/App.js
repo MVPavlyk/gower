@@ -17,7 +17,7 @@ function App() {
             <Route path={'/'} element={<Layout/>}>
                 <Route index element={<RestaurantListPage/>}/>
                 <Route path={'/place/:id'} element={<OneRestaurantPage/>}>
-                    <Route path={'/place/:id/description'} element={<DescriptionPage/>}/>
+                    <Route index element={<DescriptionPage/>}/>
                     <Route path={'/place/:id/photos'} element={<PhotosPage/>}/>
                     <Route path={'/place/:id/menu'} element={<MenuPage/>}/>
                     <Route path={'/place/:id/map'} element={<MapPage/>}/>

@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {NavLink} from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import {NavLink, useLocation} from 'react-router-dom';
 import rootCss from '../../root.module.css';
 import css from './Header.module.css';
 import logo from '../../img/logo.svg';
@@ -11,6 +11,12 @@ const Header = () => {
     const showBurger = () => {
         setShow(!show);
     };
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        setShow(false)
+    }, [pathname]);
 
     return (
         <div className={css.main_header}>

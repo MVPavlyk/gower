@@ -17,10 +17,13 @@
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
-    text-align: center;
     position: relative;
     z-index: 3;
+    text-align: left;
+}
 
+.desc_block:nth-child(2n) .desc_page_text {
+    text-align: right;
 }
 
 .desc_page_photo {
@@ -65,10 +68,12 @@
         row-gap: 55px;
     }
 
-    .desc_page_text {
+    .desc_page_text,
+    .desc_block:nth-child(2n) .desc_page_text{
         width: 100%;
         padding: 0 20px;
         font-size: 30px;
+        text-align: center;
     }
 
     .desc_page_photo {
@@ -77,13 +82,15 @@
 }
 
 @media (max-width: 650px) {
-    .desc_page_text {
+    .desc_page_text,
+    .desc_block:nth-child(2n) .desc_page_text {
         font-size: 24px;
     }
 }
 
 @media (max-width: 470px) {
-    .desc_page_text {
+    .desc_page_text,
+    .desc_block:nth-child(2n) .desc_page_text {
         font-size: 18px;
         padding: 0;
     }
@@ -95,7 +102,8 @@
 }
 
 @media (max-width: 400px) {
-    .desc_page_text {
+    .desc_page_text,
+    .desc_block:nth-child(2n) .desc_page_text {
         font-size: 16px;
     }
 }

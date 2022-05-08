@@ -4,9 +4,10 @@
     height: 9vw;
     background-color: #A9A8A8;
     position: absolute;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.table_6:active {
+.table_6:hover {
     background-color: #047E89;
 }
 

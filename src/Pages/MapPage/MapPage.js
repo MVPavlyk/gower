@@ -23,38 +23,15 @@ const MapPage = () => {
                     </div>
                     {!!tables.length &&
                         <>
-                            <div className={css.map_bottom}>
-                                <div className={css.reserved_tables}>
-                                    <div className={css.reserved_title}>
-                                        Резерв
-                                    </div>
-                                    <div className={css.table_header}>
-                                        <div className={css.table_header_block}>
-                                            Зал
-                                        </div>
-                                        <div className={css.table_header_block}>
-                                            Столик
-                                        </div>
-                                        <div className={css.table_header_block}>
-                                            К-сть місць
-                                        </div>
-                                        <div className={css.table_header_block}>
-                                            Дата та час
-                                        </div>
-                                        <div className={css.table_header_block}>
-                                        </div>
-                                    </div>
-                                    <div className={css.table_data}>{tables.map(table =>
-                                        <ReservedTable table={table} key={table.number}/>)}
-                                    </div>
-                                </div>
-                                <ReserveForms/>
+                            <ReservedTable tables={tables}/>
+                            <div className={css.reserve_forms_wrap}>
+                                <input type="text" className={css.reserve_input} placeholder="Ім'я та прізвище"/>
+                                <input type="text" className={css.reserve_input} placeholder="Номер телефону"/>
                             </div>
                             <div className={css.reserve_btn} onClick={() => send()}>
                                 Зарезервувати
                             </div>
                         </>
-
                     }
                 </div>
             }

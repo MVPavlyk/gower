@@ -1,74 +1,68 @@
-.reserved_block {
-    border-top: 1px solid #A9A8A8;
-    padding: 15px 0;
+.reserved_table {
     width: 100%;
+    padding: 20px;
+    border: 2px solid #047E89;
+    margin-top: 50px;
+}
+
+.reserved_header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
-.button_wrap {
-    width: 20%;
+.reserved_header_block {
+    width: 22.5%;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 30px;
+    background: #F3F3F3;
+    border-radius: 10px 10px 0 0;
+    mix-blend-mode: luminosity;
+    padding: 10px 0;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-
-.delete_btn {
-    padding: 5px 8px;
-    background-color: #047E89;
-    border-radius: 10px;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
+.empty_block {
+    width: 5%;
 }
 
-.reserved_block:first-child {
-    border: none;
-}
-
-.reserved_data_block {
-    font-size: 20px;
-    font-weight: 500;
-    width: 20%;
-    text-align: center;
-}
-
-.reserved_data_block:first-child {
-    width: 10%;
-}
-
-.reserved_data_block:nth-child(2),
-.reserved_data_block:nth-child(3) {
-    width: 15%;
-}
-
-@media (max-width: 600px) {
-    .reserved_data_block,
-    .delete_btn {
-        font-size: 16px;
-    }
-
-    .reserved_block {
-        padding: 10px 0;
+@media (max-width: 1000px) {
+    .reserved_header_block {
+        font-size: 20px;
     }
 }
 
-@media (max-width: 500px){
-    .reserved_data_block,
-    .delete_btn {
+@media (max-width: 767px) {
+    .reserved_header_block {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .reserved_table {
+        padding: 10px;
+    }
+
+    .reserved_header_block {
+        width: 15%;
+    }
+
+    .reserved_header_block:nth-child(4n-1) {
+        width: 25%;
+    }
+
+    .reserved_header_block:nth-child(4n) {
+        width: 30%;
+    }
+}
+
+@media (max-width: 400px) {
+    .reserved_header_block {
         font-size: 12px;
-    }
-}
 
-@media (max-width: 500px){
-    .reserved_data_block,
-    .delete_btn {
-        font-size: 10px;
-    }
-    .delete_btn{
-        padding: 3px;
-        border-radius: 5px;
     }
 }
