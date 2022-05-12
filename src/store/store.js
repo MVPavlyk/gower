@@ -6,7 +6,7 @@ import tableReducers from './slices/table.Slice';
 const store = configureStore({
     reducer: {
         placeReducers,
-        tableReducers
+        tableReducers,
     }
 });
 

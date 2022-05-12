@@ -65,6 +65,7 @@
     z-index: 7;
 }
 
+
 @media (max-width: 1000px) {
     .one_title {
         font-size: 100px;

@@ -16,6 +16,7 @@ const OneRestaurantPage = () => {
 
 
     useEffect(() => {
+
         dispatch(getRestaurant(restaurantId));
 
     }, [restaurantId.id]);
