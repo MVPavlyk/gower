@@ -54,7 +54,7 @@
 }
 
 .burger_menu,
-.burger_menu_show{
+.burger_menu_show {
     width: 100%;
     position: absolute;
     top: 60px;
@@ -70,8 +70,26 @@
     transition: .2s linear;
 }
 
-.burger_menu_show{
+.burger_menu_show {
     margin-top: 0;
+}
+
+.switch_btn,
+.dark_switch_btn {
+    font-weight: bold;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+}
+
+.switch_btn {
+    background-color: #05727c;
+}
+
+.dark_switch_btn {
+    background-color: #05727c;
+    color: #FFFFFF;
 }
 
 @media (max-width: 900px) {
@@ -114,7 +132,7 @@
     }
 
     .burger_menu,
-    .burger_menu_show{
+    .burger_menu_show {
         top: 40px;
     }
 }
