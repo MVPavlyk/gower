@@ -122,7 +122,8 @@
         height: 200px;
     }
 
-    .restaurant_block {
+    .restaurant_block,
+    .restaurant_block_dark {
         height: fit-content;
     }
 }
