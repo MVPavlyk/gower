@@ -14,3 +14,10 @@ const Layout = () => {
 };
 
 export {Layout};
+
+/*
+export default props => {
+    return (
+        <> {props.children} </>
+    )
+}*/

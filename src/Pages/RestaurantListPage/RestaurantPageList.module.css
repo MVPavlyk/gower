@@ -8,3 +8,14 @@
     align-items: center;
     row-gap: 16px;
 }
+
+.restaurant__wrap_dark{
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 100px;
+    background-color: #035259;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+}

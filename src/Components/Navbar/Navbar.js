@@ -4,11 +4,13 @@ import css from './Navbar.module.css';
 import search from '../../img/search.svg';
 import sort from '../../img/sort.svg';
 import filter from '../../img/filter.svg';
+import {useSelector} from "react-redux";
 
 
 const Navbar = () => {
+    const {dark} = useSelector(state => state['modeReducers'])
     return (
-        <div className={css.main_navbar}>
+        <div className={ dark? css.main_navbar_dark: css.main_navbar}>
             <div className={rootCss.container}>
                 <div className={css.nav_wrap}>
                     <form className={css.search_box}>

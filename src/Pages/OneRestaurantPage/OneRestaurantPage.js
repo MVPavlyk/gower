@@ -14,7 +14,6 @@ const OneRestaurantPage = () => {
 
     const {pathname} = useLocation();
 
-
     useEffect(() => {
 
         dispatch(getRestaurant(restaurantId));
