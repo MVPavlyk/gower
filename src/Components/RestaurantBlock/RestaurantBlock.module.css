@@ -1,5 +1,5 @@
-.restaurant_block {
-    background-color: #FFF;
+.restaurant_block,
+.restaurant_block_dark {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -9,13 +9,31 @@
     color: black;
 }
 
-.block_border {
+.restaurant_block {
+    background-color: #FFF;
+}
+
+.restaurant_block_dark {
+    background-color: #035259;
+    color: #FFF;
+}
+
+.block_border,
+.block_border_dark {
     width: 80%;
     height: 1px;
+}
+
+.block_border {
     background-color: #047E89;
 }
 
-.block_border:first-child {
+.block_border_dark {
+    background-color: #FFF;
+}
+
+.block_border:first-child,
+.block_border_dark:first-child {
     display: none;
 }
 
@@ -104,7 +122,8 @@
         height: 200px;
     }
 
-    .restaurant_block {
+    .restaurant_block,
+    .restaurant_block_dark {
         height: fit-content;
     }
 }
@@ -115,7 +134,8 @@
         align-items: center;
     }
 
-    .restaurant_block {
+    .restaurant_block,
+    .restaurant_block_dark {
         justify-content: center;
     }
 

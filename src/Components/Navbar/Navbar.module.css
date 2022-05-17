@@ -1,7 +1,16 @@
-.main_navbar {
+.main_navbar,
+.main_navbar_dark {
     width: 100%;
+}
+
+.main_navbar {
     background-color: #FFFFFF;
     border-bottom: 3px solid #F3F3F3;
+}
+
+.main_navbar_dark {
+    background-color: #035259;
+    border-bottom: 2px solid #FFF;
 }
 
 .nav_wrap {
@@ -12,15 +21,23 @@
     justify-content: space-between;
 }
 
-.search_box {
+.search_box,
+.search_box_dark {
     display: flex;
     align-items: center;
     column-gap: 15px;
     padding: 0 20px;
     height: 42px;
     width: 300px;
-    background-color: #F3F3F3;
     border-radius: 20px;
+}
+
+.search_box {
+    background-color: #F3F3F3;
+}
+
+.search_box_dark {
+    background-color: #047E89;
 }
 
 .search_btn {
@@ -43,36 +60,53 @@
     color: #000000;
 }
 
+.search_box_dark .search_input::placeholder,
+.search_box_dark .search_input {
+    color: #FFF;
+}
+
+
 .nav_links {
     display: flex;
     align-items: center;
     column-gap: 15px;
 }
 
-.nav_link {
+.nav_link,
+.nav_link_dark {
     display: flex;
     align-items: center;
     column-gap: 12px;
     font-size: 20px;
     padding: 10px;
-}
-
-.nav_link {
-    background-color: #FFF;
     border: none;
     border-radius: 5px;
 }
 
-.nav_link:focus {
+.nav_link {
+    background-color: #FFF;
+}
+
+.nav_link_dark {
+    background-color: #035259;
+    color: #FFF;
+}
+
+.nav_link:focus,
+.nav_link:hover{
     background-color: #e3e3e3;
 }
 
-.nav_link:hover {
-    background-color: #e3e3e3;
+.nav_link_dark:focus,
+.nav_link_dark:hover{
+    background-color: #047E89;
 }
+
+
 
 @media (max-width: 900px) {
-    .search_box {
+    .search_box,
+    .search_box_dark {
         width: 200px;
     }
 
@@ -84,7 +118,8 @@
         font-size: 16px;
     }
 
-    .nav_link {
+    .nav_link,
+    .nav_link_dark {
         font-size: 16px;
         padding: 5px;
     }
@@ -99,7 +134,8 @@
 }
 
 @media (max-width: 550px) {
-    .search_box {
+    .search_box,
+    .search_box_dark {
         width: 140px;
         height: 25px;
         padding: 0 10px;
@@ -114,12 +150,14 @@
         font-size: 12px;
     }
 
-    .nav_link {
+    .nav_link,
+    .nav_link_dark {
         font-size: 12px;
         padding: 5px;
     }
 
-    .nav_link img {
+    .nav_link img,
+    .nav_link_dark img{
         height: 16px;
     }
 
@@ -131,11 +169,13 @@
 
 @media (max-width: 400px) {
     .nav_links,
-    .nav_link {
+    .nav_link,
+    .nav_link_dark {
         column-gap: 5px;
     }
 
-    .search_box {
+    .search_box,
+    .search_box_dark {
         width: 110px;
     }
 }

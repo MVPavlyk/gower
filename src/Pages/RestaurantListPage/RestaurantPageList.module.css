@@ -1,10 +1,18 @@
-.restaurant__wrap{
+.restaurant__wrap,
+.restaurant__wrap_dark{
     width: 100%;
     min-height: 100vh;
     padding-bottom: 100px;
-    background-color: #FFF;
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 16px;
+}
+
+.restaurant__wrap{
+    background-color: #FFF;
+}
+
+.restaurant__wrap_dark{
+    background-color: #035259;
 }
