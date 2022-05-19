@@ -4,10 +4,11 @@ import {Layout} from './Components';
 import {
     DescriptionPage,
     LocationPage,
+    LoginPage,
     MapPage,
     MenuPage,
     OneRestaurantPage,
-    PhotosPage,
+    PhotosPage, RegisterPage,
     RestaurantListPage
 } from './Pages';
 
@@ -23,6 +24,8 @@ function App() {
                     <Route path={'/place/:id/map'} element={<MapPage/>}/>
                     <Route path={'/place/:id/location'} element={<LocationPage/>}/>
                 </Route>
+                <Route path={'/login'} element={<LoginPage/>}/>
+                <Route path={'/register'} element={<RegisterPage/>}/>
             </Route>
         </Routes>
     );

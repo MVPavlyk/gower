@@ -5,3 +5,5 @@ export * from './MenuPage/MenuPage';
 export * from './RestaurantListPage/RestaurantListPage';
 export * from './OneRestaurantPage/OneRestaurantPage';
 export * from './PhotosPage/PhotosPage';
+export * from './RegisterPage/RegisterPage';
+export * from './LoginPage/LoginPage';

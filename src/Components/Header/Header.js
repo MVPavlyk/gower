@@ -15,10 +15,10 @@ const Header = () => {
         setShow(!show);
     };
 
-    const { pathname } = useLocation();
+    const {pathname} = useLocation();
 
     useEffect(() => {
-        setShow(false)
+        setShow(false);
     }, [pathname]);
 
 
@@ -47,7 +47,7 @@ const Header = () => {
                         <NavLink className={css.header_link} to={'/'}>Places</NavLink>
                         <NavLink className={css.header_link} to={'/'}>Cooperation</NavLink>
                         <NavLink className={css.header_link} to={'/'}>About us</NavLink>
-                        <NavLink className={css.header_link} to={'/'}>Login</NavLink>
+                        <NavLink className={css.header_link} to={'/login'}>Login</NavLink>
                     </div>
                     <div className={css.burger_btn} onClick={() => showBurger()}>
                         <div> </div>
