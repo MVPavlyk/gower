@@ -11,8 +11,8 @@ const DescriptionPage = () => {
 
     return (
         <>
-            {oneRestaurant.description &&
-                <div className={dark ? css.desc_page_dark : css.desc_page}>
+            {oneRestaurant.description && <div className={dark ? css.desc_page_dark : css.desc_page}>
+
                     <div className={rootCss.container}>
                         <div className={css.desc_wrap}>{oneRestaurant.description.map(descBlock =>
                             <DescriptionBlock key={descBlock.desc_img} descBlock={descBlock}/>)}</div>

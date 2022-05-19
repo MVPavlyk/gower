@@ -12,6 +12,7 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 const LocationPage = () => {
 
     const {oneRestaurant} = useSelector(state => state['placeReducers']);
+    const {dark} = useSelector(state => state['themeReducers']);
 
     const {isLoaded} = useJsApiLoader({
         id: 'google-map-script',
@@ -19,7 +20,8 @@ const LocationPage = () => {
     });
 
     return (
-        <div className={css.location_page}>
+
+        <div className={dark ? css.location_page_dark : css.location_page}>
             <div className={css.exterior}>
                 <div className={css.title}>
                     Екстер'єр
@@ -45,6 +47,7 @@ const LocationPage = () => {
             </div>
 
         </div>
+
     );
 };
 

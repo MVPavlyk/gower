@@ -1,4 +1,4 @@
-.map_page {
+.map_page, .map_page_dark {
     padding: 100px 8.5vw;
     display: flex;
     align-items: center;
@@ -7,7 +7,10 @@
     width: 100%;
     background-color: #FFFFFF;
 }
-
+.map_page_dark{
+    background: #035259;
+    color:#FFFFFF;
+}
 .map_wrap {
     width: 100%;
     height: fit-content !important;

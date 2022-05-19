@@ -7,7 +7,7 @@ import {sendReserve} from '../../store';
 const MapPage = () => {
     const {oneRestaurant} = useSelector(state => state['placeReducers']);
     const {tables} = useSelector(state => state['tableReducers']);
-
+    const {dark} = useSelector(state => state['themeReducers']);
     const dispatch = useDispatch();
 
     const send = () => {
@@ -16,8 +16,9 @@ const MapPage = () => {
 
     return (
         <>
+
             {oneRestaurant.halls &&
-                <div className={css.map_page}>
+                <div className={dark ? css.map_page_dark : css.map_page}>
                     <div className={css.map_wrap}>
                         {oneRestaurant.halls.map(hall => <Map hall={hall} key={hall.number}/>)}
                     </div>
@@ -35,6 +36,7 @@ const MapPage = () => {
                     }
                 </div>
             }
+
         </>
     );
 };

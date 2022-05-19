@@ -40,8 +40,8 @@ const Header = () => {
                     <div className={css.header_links}>
                         <div>
                             <button onClick={() => switchT()}
-                                    className={dark ? css.dark_switch_btn : css.switch_btn}>
-                                {dark ? 'White Theme' : 'Dark Theme'}
+                                    className={css.switch_btn}>
+                                {dark ? 'White' : 'Dark'}
                             </button>
                         </div>
                         <NavLink className={css.header_link} to={'/'}>Places</NavLink>

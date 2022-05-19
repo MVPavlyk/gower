@@ -3,13 +3,16 @@ import css from './MenuPage.module.css';
 import {useSelector} from 'react-redux';
 import {Carousel} from 'react-responsive-carousel';
 
+
 const MenuPage = () => {
     const {oneRestaurant} = useSelector(state => state['placeReducers']);
+    const {dark} = useSelector(state => state['themeReducers']);
 
     return (
         <>
-            {oneRestaurant.menu &&
-                <div className={css.menu_page}>
+
+
+            {oneRestaurant.menu && <div className={dark ? css.menu_page_dark : css.menu_page}>
                     <Carousel className={css.carousel}>
                         {oneRestaurant.menu.map(image =>
                             <img
@@ -21,7 +24,10 @@ const MenuPage = () => {
                     </Carousel>
                 </div>
             }
+
+
         </>
+
     );
 };
 

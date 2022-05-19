@@ -8,6 +8,7 @@
     z-index: 4;
 }
 
+
 .header_wrap {
     height: 100%;
     width: 100%;
@@ -74,23 +75,20 @@
     margin-top: 0;
 }
 
-.switch_btn,
-.dark_switch_btn {
+.switch_btn
+ {
     font-weight: bold;
     width: 100px;
     height: 40px;
-    border-radius: 10px;
     border: none;
+
+    color: #FFFFFF;
 }
 
 .switch_btn {
-    background-color: #05727c;
+    background-color: #095e67;
 }
 
-.dark_switch_btn {
-    background-color: #05727c;
-    color: #FFFFFF;
-}
 
 @media (max-width: 900px) {
     .main_header {
@@ -135,4 +133,54 @@
     .burger_menu_show {
         top: 40px;
     }
+}
+
+
+.switch_btn {
+    color: #FFF;
+    transition: all 0.3s;
+    position: relative;
+}
+.switch_btn span {
+    transition: all 0.3s;
+}
+.switch_btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+    transform: scale(0.1, 1);
+}
+.switch_btn:hover span {
+    letter-spacing: 2px;
+}
+.switch_btn:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+.switch_btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255,255,255,0.1);
+}
+.switch_btn:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
 }
