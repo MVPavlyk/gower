@@ -92,11 +92,7 @@
     color: #FFFFFF;
 }
 
-@media (max-width: 900px) {
-    .main_header {
-        height: 60px;
-    }
-
+@media (max-width: 1200px) {
     .header_links {
         display: none;
     }
@@ -105,9 +101,18 @@
         display: flex;
     }
 
+    .main_header {
+        height: 60px;
+    }
+
     .header_logo img {
         width: 140px;
     }
+}
+
+
+@media (max-width: 900px) {
+
 }
 
 @media (max-width: 550px) {

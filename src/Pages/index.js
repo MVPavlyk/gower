@@ -7,3 +7,4 @@ export * from './OneRestaurantPage/OneRestaurantPage';
 export * from './PhotosPage/PhotosPage';
 export * from './RegisterPage/RegisterPage';
 export * from './LoginPage/LoginPage';
+export * from './UserPage/UserPage';

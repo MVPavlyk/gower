@@ -9,7 +9,7 @@ import {
     MenuPage,
     OneRestaurantPage,
     PhotosPage, RegisterPage,
-    RestaurantListPage
+    RestaurantListPage, UserPage
 } from './Pages';
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
                 </Route>
                 <Route path={'/login'} element={<LoginPage/>}/>
                 <Route path={'/register'} element={<RegisterPage/>}/>
+                <Route path={'/user'} element={<UserPage/>}/>
             </Route>
         </Routes>
     );

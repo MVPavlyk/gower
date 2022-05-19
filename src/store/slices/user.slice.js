@@ -1,14 +1,13 @@
-import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
+import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import {UserServices} from '../../services/user.services';
 
 export const login = createAsyncThunk(
     'userSlice/login',
-    async (obj) => {
+    async (obj, {rejectWithValue}) => {
         try {
-            const user = await UserServices.login(obj);
-            return user;
+            return await UserServices.login(obj);
         } catch (error) {
-            console.log(error);
+            return rejectWithValue(error.message);
         }
 
     }
@@ -17,10 +16,21 @@ export const login = createAsyncThunk(
 
 export const registration = createAsyncThunk(
     'userSlice/register',
-    async (obj) => {
+    async (obj, {rejectWithValue}) => {
         try {
-            const user = await UserServices.register(obj);
-            return user;
+            return await UserServices.register(obj);
+        } catch (error) {
+            return rejectWithValue(error.message);
+        }
+
+    }
+);
+
+export const logout = createAsyncThunk(
+    'userSlice/logout',
+    async (_, {rejectWithValue}) => {
+        try {
+            return await UserServices.logout();
         } catch (error) {
             console.log(error);
         }
@@ -34,7 +44,7 @@ const userSlice = createSlice({
     initialState: {
         error: null,
         status: null,
-        user: {}
+        user: null
     },
     extraReducers: {
         [login.pending]: (state) => {
@@ -60,7 +70,23 @@ const userSlice = createSlice({
         [registration.rejected]: (state, action) => {
             state.status = 'rejected';
             state.error = action.payload;
-        }
+        },
+
+
+        [logout.pending]: (state) => {
+            state.status = 'pending';
+            state.error = null;
+        },
+
+        [logout.fulfilled]: (state) => {
+            state.status = 'fulfilled';
+            state.user = null;
+        },
+
+        [logout.rejected]: (state, action) => {
+            state.status = 'rejected';
+            state.error = action.payload;
+        },
     }
 });
 
