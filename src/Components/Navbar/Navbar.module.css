@@ -152,7 +152,8 @@
         width: 200px;
     }
 
-    .search_box img {
+    .search_box img,
+    .search_box_dark img{
         height: 18px;
     }
 
@@ -184,7 +185,8 @@
         column-gap: 10px;
     }
 
-    .search_box img {
+    .search_box img
+    .search_box_dark img{
         height: 13px;
     }
 

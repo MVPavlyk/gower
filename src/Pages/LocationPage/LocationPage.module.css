@@ -1,4 +1,5 @@
-.location_page,.location_page_dark {
+.location_page,
+.location_page_dark {
     padding: 100px 8.5vw;
     display: flex;
     align-items: center;
@@ -6,11 +7,13 @@
     width: 100%;
     background-color: #FFFFFF;
 }
-.location_page_dark{
+
+.location_page_dark {
     background-color: #035259FF;
-    color:#FFFFFF;
+    color: #FFFFFF;
 
 }
+
 .map_wrap {
     width: 500px;
     height: 500px;
@@ -74,7 +77,8 @@
 }
 
 @media (max-width: 992px) {
-    .location_page {
+    .location_page,
+    .location_page_dark {
         flex-direction: column;
         padding: 50px 0;
     }
@@ -136,7 +140,8 @@
         height: 280px;
     }
 
-    .location_page {
+    .location_page,
+    .location_page_dark {
         padding: 25px 0;
     }
 }

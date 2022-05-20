@@ -10,6 +10,8 @@ const OneRestaurantPage = () => {
 
     const {oneRestaurant} = useSelector(state => state['placeReducers']);
 
+    const {dark} = useSelector(state => state['themeReducers']);
+
     const dispatch = useDispatch();
 
     const {pathname} = useLocation();
@@ -33,38 +35,38 @@ const OneRestaurantPage = () => {
                 <div className={css.one_title}>
                     {oneRestaurant.short_name}
                 </div>
-                <div className={css.tab_header}>
+                <div className={dark ? css.tab_header_dark : css.tab_header}>
                     <NavLink
                         to={`/place/${oneRestaurant.id}`}
-                        className={pathname === `/place/${restaurantId.id}` ? css.active_link : undefined}
+                        className={pathname === `/place/${restaurantId.id}` ? css.active_link : css.tab_link}
                     >
                         Опис
                     </NavLink>
                     <NavLink
                         to={`/place/${oneRestaurant.id}/photos`}
                         className={({isActive}) =>
-                            (isActive ? css.active_link : undefined)}
+                            (isActive ? css.active_link : css.tab_link)}
                     >
                         Фото
                     </NavLink>
                     <NavLink
                         to={`/place/${oneRestaurant.id}/menu`}
                         className={({isActive}) =>
-                            (isActive ? css.active_link : undefined)}
+                            (isActive ? css.active_link : css.tab_link)}
                     >
                         Меню
                     </NavLink>
                     <NavLink
                         to={`/place/${oneRestaurant.id}/map`}
                         className={({isActive}) =>
-                            (isActive ? css.active_link : undefined)}
+                            (isActive ? css.active_link : css.tab_link)}
                     >
                         Столики
                     </NavLink>
                     <NavLink
                         to={`/place/${oneRestaurant.id}/location`}
                         className={({isActive}) =>
-                            (isActive ? css.active_link : undefined)}
+                            (isActive ? css.active_link : css.tab_link)}
                     >
                         Локація
                     </NavLink>
