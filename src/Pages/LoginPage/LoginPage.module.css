@@ -61,6 +61,9 @@
 .user_page {
     width: 100%;
     padding: 40px 135px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
 }
 
 .logout_btn {

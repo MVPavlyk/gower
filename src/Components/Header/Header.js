@@ -37,12 +37,12 @@ const Header = () => {
                         <NavLink className={css.header_link} to={'/'}>Places</NavLink>
                         <NavLink className={css.header_link} to={'/'}>Cooperation</NavLink>
                         <NavLink className={css.header_link} to={'/'}>About us</NavLink>
-                        <NavLink className={css.header_link} to={'/login'}>Login</NavLink>
+                        <NavLink className={css.header_link} to={'/login'}>{user ? user.firstName : 'Login'}</NavLink>
                     </div>
                     <div className={css.burger_btn} onClick={() => showBurger()}>
-                        <div> </div>
-                        <div> </div>
-                        <div> </div>
+                        <div/>
+                        <div/>
+                        <div/>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@ const Header = () => {
                 <NavLink className={css.header_link} to={'/'}>Login</NavLink>
                 <NavLink className={css.header_link} to={'/'}>Places</NavLink>
                 <NavLink className={css.header_link} to={'/'}>Cooperation</NavLink>
-                <NavLink className={css.header_link} to={'/'}>About us</NavLink>
+                <NavLink className={css.header_link} to={'/login'}>About us</NavLink>
             </div>
         </div>
     );
