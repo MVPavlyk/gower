@@ -7,7 +7,7 @@ import {DescriptionBlock} from '../../Components';
 const DescriptionPage = () => {
     const {oneRestaurant} = useSelector(state => state['placeReducers']);
 
-    const {dark} = useSelector(state => state['themeReducers']);
+    const {dark} = useSelector(state => state['themeReducers'])
 
     return (
         <>

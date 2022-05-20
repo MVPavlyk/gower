@@ -1,4 +1,4 @@
-.register_page {
+.register_page{
     min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
@@ -37,9 +37,4 @@
     border-radius: 10px;
     border: none;
     font-size: 20px;
-    outline: none;
-}
-
-.error {
-    color: crimson;
 }
