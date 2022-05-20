@@ -7,18 +7,19 @@ import css from './PhotosPage.module.css';
 
 const PhotosPage = () => {
     const {oneRestaurant} = useSelector(state => state['placeReducers']);
+    const {dark} = useSelector(state => state['themeReducers']);
 
     return (
         <>
-            {oneRestaurant.photos &&
-                <div className={css.photos_page}>
-                    <Carousel className={css.carousel_wrap}>
-                        <img src={oneRestaurant.photos.photo_p_1_img} alt={oneRestaurant.name}/>
-                        <img src={oneRestaurant.photos.photo_p_1_img} alt={oneRestaurant.name}/>
-                        <img src={oneRestaurant.photos.photo_p_1_img} alt={oneRestaurant.name}/>
-                    </Carousel>
-                </div>
+            {oneRestaurant.photos && <div className={dark ? css.photos_page_dark : css.photos_page}>
+                <Carousel className={css.carousel_wrap}>
+                    <img src={oneRestaurant.photos.photo_p_1_img} alt={oneRestaurant.name}/>
+                    <img src={oneRestaurant.photos.photo_p_1_img} alt={oneRestaurant.name}/>
+                    <img src={oneRestaurant.photos.photo_p_1_img} alt={oneRestaurant.name}/>
+                </Carousel>
+            </div>
             }
+
         </>
     );
 };

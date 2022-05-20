@@ -2,7 +2,7 @@
     cursor: pointer;
     width: 15.2vw;
     height: 9vw;
-    background-color: #A9A8A8;
+    background-color: rgba(169, 168, 168, 0.49);
     position: absolute;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }

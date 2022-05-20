@@ -1,4 +1,4 @@
-.location_page {
+.location_page,.location_page_dark {
     padding: 100px 8.5vw;
     display: flex;
     align-items: center;
@@ -6,7 +6,11 @@
     width: 100%;
     background-color: #FFFFFF;
 }
+.location_page_dark{
+    background-color: #035259FF;
+    color:#FFFFFF;
 
+}
 .map_wrap {
     width: 500px;
     height: 500px;

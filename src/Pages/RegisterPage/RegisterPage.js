@@ -14,7 +14,7 @@ const RegisterPage = () => {
     } = useForm({resolver: joiResolver(UserValidator)});
 
     const {user, error} = useSelector(state => state['userReducers']);
-
+    const {dark} = useSelector(state => state['themeReducers']);
     const dispatch = useDispatch();
 
     const submit = (obj) => {
@@ -23,7 +23,7 @@ const RegisterPage = () => {
 
 
     return (
-        <div className={css.register_page}>
+        <div className={dark ? css.register_page_dark : css.register_page}>
 
             <form onSubmit={handleSubmit(submit)} className={css.register_form}>
                 <input
