@@ -45,7 +45,7 @@ const Navbar = () => {
                         </div>
                         <div>
                             <button className={dark ? css.nav_link_dark : css.nav_link}>
-                                <img src={dark ? filter_dark : filter} alt="filter"/> {EN ? "Filter" : "Фільтер"}
+                                <img src={dark ? filter_dark : filter} alt="filter"/> {EN ? "Filter" : "Фільтр"}
                             </button>
                         </div>
                         <div>

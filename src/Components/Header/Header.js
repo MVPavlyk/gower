@@ -5,8 +5,7 @@ import rootCss from '../../root.module.css';
 import css from './Header.module.css';
 import logo from '../../img/logo.svg';
 
-import {useDispatch, useSelector} from 'react-redux';
-import {switchTheme} from '../../store';
+import {useSelector} from 'react-redux';
 
 const Header = () => {
 
@@ -36,10 +35,11 @@ const Header = () => {
                     <div className={css.header_links}>
                         <div>
                         </div>
-                        <NavLink className={css.header_link} to={'/'}>{EN ? "Places" : "Місця"}</NavLink>
-                        <NavLink className={css.header_link} to={'/'}>{EN ? "Cooperation" : "Співпраця"}</NavLink>
-                        <NavLink className={css.header_link} to={'/'}>{EN ? "About us" : "Про нас"}</NavLink>
-                        <NavLink className={css.header_link} to={'/login'}>{user ? user.firstName : EN ? 'Login' : 'Вхід'}</NavLink>
+                        <NavLink className={css.header_link} to={'/'}>{EN ? 'Places' : 'Місця'}</NavLink>
+                        <NavLink className={css.header_link} to={'/'}>{EN ? 'Cooperation' : 'Співпраця'}</NavLink>
+                        <NavLink className={css.header_link} to={'/'}>{EN ? 'About us' : 'Про нас'}</NavLink>
+                        <NavLink className={css.header_link}
+                                 to={'/login'}>{user ? user.firstName : EN ? 'Login' : 'Вхід'}</NavLink>
                     </div>
                     <div className={css.burger_btn} onClick={() => showBurger()}>
                         <div/>
