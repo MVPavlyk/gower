@@ -1,26 +1,32 @@
 import React from 'react';
 import css from './ReservedTable.module.css';
+
+import {useDispatch, useSelector} from 'react-redux';
+import {deleteTable} from '../../store';
+
 import {ReserveRow} from '../ReserveRow/ReserveRow';
 import {useSelector} from 'react-redux';
 
 const ReservedTable = ({tables}) => {
 
+    const {EN} = useSelector(state => state['languageReducers']);
     const {dark} = useSelector(state => state['themeReducers']);
+
 
     return (
         <div className={css.reserved_table}>
             <div className={dark ? css.reserved_header_dark : css.reserved_header}>
                 <div className={css.reserved_header_block}>
-                    Зал
+                    {EN ? "Hall" : "Зал"}
                 </div>
                 <div className={css.reserved_header_block}>
-                    Столик
+                    {EN ? "Table" : "Столик"}
                 </div>
                 <div className={css.reserved_header_block}>
-                    К-сть місць
+                    {EN ? "Seating capacity" : "К-сть місць"}
                 </div>
                 <div className={css.reserved_header_block}>
-                    Дата та час
+                    {EN ? "Date & Time" : "Дата та час"}
                 </div>
                 <div className={css.empty_block}>
 

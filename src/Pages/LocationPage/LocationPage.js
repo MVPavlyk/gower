@@ -13,6 +13,7 @@ const LocationPage = () => {
 
     const {oneRestaurant} = useSelector(state => state['placeReducers']);
     const {dark} = useSelector(state => state['themeReducers']);
+    const {EN} = useSelector(state => state['languageReducers']);
 
     const {isLoaded} = useJsApiLoader({
         id: 'google-map-script',
@@ -24,7 +25,7 @@ const LocationPage = () => {
         <div className={dark ? css.location_page_dark : css.location_page}>
             <div className={css.exterior}>
                 <div className={css.title}>
-                    Екстер'єр
+                    {EN ? "Exterior" : "Екстер'єр"}
                 </div>
                 {oneRestaurant.exterior &&
                 <div>
@@ -39,7 +40,7 @@ const LocationPage = () => {
             </div>
             <div className={css.google_map}>
                 <div className={css.title}>
-                    Карта
+                    {EN ? "Map" : "Карта"}
                 </div>
                 <div className={css.map_wrap}>
                     {isLoaded && <GoogleLocateMap center={oneRestaurant.coordinates}/>}

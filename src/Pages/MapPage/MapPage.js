@@ -9,6 +9,7 @@ const MapPage = () => {
     const {tables} = useSelector(state => state['tableReducers']);
     const {dark} = useSelector(state => state['themeReducers']);
     const dispatch = useDispatch();
+    const {EN} = useSelector(state => state['languageReducers']);
 
     const send = () => {
         dispatch(sendReserve());
@@ -26,11 +27,11 @@ const MapPage = () => {
                 <>
                     <ReservedTable tables={tables}/>
                     <div className={css.reserve_forms_wrap}>
-                        <input type="text" className={css.reserve_input} placeholder="Ім'я та прізвище"/>
-                        <input type="text" className={css.reserve_input} placeholder="Номер телефону"/>
+                        <input type="text" className={css.reserve_input} placeholder={EN ? "First and last name" : "Ім'я та прізвище"}/>
+                        <input type="text" className={css.reserve_input} placeholder={EN ? "Phone number" : "Номер телефону"}/>
                     </div>
                     <div className={css.reserve_btn} onClick={() => send()}>
-                        Зарезервувати
+                        {EN ? "Send" : "Зарезервувати"}
                     </div>
                 </>
                 }
