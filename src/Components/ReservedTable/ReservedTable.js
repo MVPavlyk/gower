@@ -5,7 +5,6 @@ import {useDispatch, useSelector} from 'react-redux';
 import {deleteTable} from '../../store';
 
 import {ReserveRow} from '../ReserveRow/ReserveRow';
-import {useSelector} from 'react-redux';
 
 const ReservedTable = ({tables}) => {
 
@@ -17,16 +16,16 @@ const ReservedTable = ({tables}) => {
         <div className={css.reserved_table}>
             <div className={dark ? css.reserved_header_dark : css.reserved_header}>
                 <div className={css.reserved_header_block}>
-                    {EN ? "Hall" : "Зал"}
+                    {EN ? 'Hall' : 'Зал'}
                 </div>
                 <div className={css.reserved_header_block}>
-                    {EN ? "Table" : "Столик"}
+                    {EN ? 'Table' : 'Столик'}
                 </div>
                 <div className={css.reserved_header_block}>
-                    {EN ? "Seating capacity" : "К-сть місць"}
+                    {EN ? '№ of seats' : 'К-сть місць'}
                 </div>
                 <div className={css.reserved_header_block}>
-                    {EN ? "Date & Time" : "Дата та час"}
+                    {EN ? 'Date & Time' : 'Дата та час'}
                 </div>
                 <div className={css.empty_block}>
 
