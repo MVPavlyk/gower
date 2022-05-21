@@ -9,4 +9,5 @@ export const urls = {
     changePsw: '/api/User/ChangeSelfPassword',
     update: '/api/User/UpdateSelf',
     getUser: '/api/User/GetCurrent',
+    deleteUser: '/api/User/Delete'
 };

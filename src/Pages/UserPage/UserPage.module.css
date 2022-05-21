@@ -1,0 +1,41 @@
+.user_page {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    padding: 40px 135px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.logout_btn {
+    font-size: 20px;
+    background-color: #047E89;
+    padding: 5px 15px;
+    border-radius: 5px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.change_p_block {
+
+}
+
+.none {
+    display: none;
+}
+
+.change_psw_form {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+}
+
+.error {
+    color: crimson;
+}
+
+.change_p_input {
+
+}
