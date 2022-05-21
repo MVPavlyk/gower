@@ -34,7 +34,29 @@ export const logout = createAsyncThunk(
         } catch (error) {
             console.log(error);
         }
+    }
+);
 
+
+export const changePsw = createAsyncThunk(
+    'userSlice/changePsw',
+    async (obj, {rejectWithValue}) => {
+        try {
+            return await UserServices.changePsw(obj);
+        } catch (error) {
+            return rejectWithValue(error);
+        }
+    }
+);
+
+export const deleteUser = createAsyncThunk(
+    'userSlice/deleteUser',
+    async (_, {rejectWithValue}) => {
+        try {
+            return await UserServices.deleteUser();
+        } catch (error) {
+            return rejectWithValue(error);
+        }
     }
 );
 
@@ -73,11 +95,6 @@ const userSlice = createSlice({
         },
 
 
-        [logout.pending]: (state) => {
-            state.status = 'pending';
-            state.error = null;
-        },
-
         [logout.fulfilled]: (state) => {
             state.status = 'fulfilled';
             state.user = null;
@@ -87,6 +104,27 @@ const userSlice = createSlice({
             state.status = 'rejected';
             state.error = action.payload;
         },
+
+        [changePsw.fulfilled]: (state) => {
+            state.status = 'fulfilled';
+            state.error = null;
+        },
+
+        [changePsw.rejected]: (state, action) => {
+            state.status = 'rejected';
+            state.error = action.payload;
+        },
+
+        [deleteUser.fulfilled]: (state) => {
+            state.status = 'fulfilled';
+            state.user = null;
+        },
+
+        [deleteUser.rejected]: (state, action) => {
+            state.status = 'rejected';
+            state.error = action.payload;
+        }
+
     }
 });
 
