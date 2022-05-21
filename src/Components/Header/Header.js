@@ -10,6 +10,8 @@ import {switchTheme} from '../../store';
 
 const Header = () => {
 
+    const {EN} = useSelector(state => state['languageReducers']);
+
     const [show, setShow] = useState(false);
 
     const showBurger = () => {
@@ -34,9 +36,9 @@ const Header = () => {
                     <div className={css.header_links}>
                         <div>
                         </div>
-                        <NavLink className={css.header_link} to={'/'}>Places</NavLink>
-                        <NavLink className={css.header_link} to={'/'}>Cooperation</NavLink>
-                        <NavLink className={css.header_link} to={'/'}>About us</NavLink>
+                        <NavLink className={css.header_link} to={'/'}>{EN ? "Places" : "Місця"}</NavLink>
+                        <NavLink className={css.header_link} to={'/'}>{EN ? "Cooperation" : "Співпраця"}</NavLink>
+                        <NavLink className={css.header_link} to={'/'}>{EN ? "About us" : "Про нас"}</NavLink>
                         <NavLink className={css.header_link} to={'/login'}>{user ? user.firstName : 'Login'}</NavLink>
                     </div>
                     <div className={css.burger_btn} onClick={() => showBurger()}>

@@ -14,6 +14,7 @@ const OneRestaurantPage = () => {
 
     const {pathname} = useLocation();
 
+    const {EN} = useSelector(state => state['languageReducers']);
 
     useEffect(() => {
 
@@ -38,35 +39,35 @@ const OneRestaurantPage = () => {
                         to={`/place/${oneRestaurant.id}`}
                         className={pathname === `/place/${restaurantId.id}` ? css.active_link : undefined}
                     >
-                        Опис
+                        {EN ? "Description" : "Опис"}
                     </NavLink>
                     <NavLink
                         to={`/place/${oneRestaurant.id}/photos`}
                         className={({isActive}) =>
                             (isActive ? css.active_link : undefined)}
                     >
-                        Фото
+                        {EN ? "Photos" : "Фото"}
                     </NavLink>
                     <NavLink
                         to={`/place/${oneRestaurant.id}/menu`}
                         className={({isActive}) =>
                             (isActive ? css.active_link : undefined)}
                     >
-                        Меню
+                        {EN ? "Menu" : "Меню"}
                     </NavLink>
                     <NavLink
                         to={`/place/${oneRestaurant.id}/map`}
                         className={({isActive}) =>
                             (isActive ? css.active_link : undefined)}
                     >
-                        Столики
+                        {EN ? "Tables" : "Столики"}
                     </NavLink>
                     <NavLink
                         to={`/place/${oneRestaurant.id}/location`}
                         className={({isActive}) =>
                             (isActive ? css.active_link : undefined)}
                     >
-                        Локація
+                        {EN ? "Location" : "Локація"}
                     </NavLink>
                 </div>
             </div>
