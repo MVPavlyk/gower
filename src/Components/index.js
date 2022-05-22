@@ -8,3 +8,6 @@ export * from './Header/Header';
 export * from './RestaurantBlock/RestaurantBlock';
 export * from './Navbar/Navbar';
 export * from './ReservedTable/ReservedTable';
+export * from './UpdateUserForm/UpdateUserForm';
+export * from './ChangePasswordForm/ChangePasswordForm';
+export * from './DeleteUserForm/DeleteUserForm';

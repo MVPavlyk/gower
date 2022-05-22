@@ -4,6 +4,7 @@
     padding: 40px 135px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     row-gap: 20px;
 }
 
@@ -16,26 +17,3 @@
     cursor: pointer;
 }
 
-.change_p_block {
-
-}
-
-.none {
-    display: none;
-}
-
-.change_psw_form {
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    align-items: center;
-}
-
-.error {
-    color: crimson;
-}
-
-.change_p_input {
-
-}

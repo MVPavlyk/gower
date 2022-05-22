@@ -1,0 +1,45 @@
+.show_delete_btn {
+    padding: 10px 20px;
+    background-color: #F3F3F3;
+    font-size: 24px;
+    border: 3px solid crimson;
+    color: crimson;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.delete_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.delete_input,
+.full_delete_btn {
+    height: 50px;
+    width: 300px;
+    border: 2px solid crimson;
+    border-radius: 10px;
+    padding: 0 15px;
+    outline: none;
+    font-size: 22px;
+}
+
+.delete_text {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.full_delete_btn {
+    background-color: crimson;
+    color: #FFFFFF;
+}
+
+.error {
+    color: crimson;
+}

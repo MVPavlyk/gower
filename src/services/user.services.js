@@ -7,5 +7,6 @@ export const UserServices = {
     register: (registerData) => axiosServices.post(urls.register, registerData).then(value => value.data),
     logout: () => axiosServices.post(urls.logout),
     changePsw: (pwsData) => axiosServices.put(urls.changePsw, pwsData).then(value => value.data),
-    deleteUser: () => axiosServices.delete(urls.deleteUser)
+    deleteUser: () => axiosServices.delete(urls.deleteUser),
+    updateUser: (user) => axiosServices.post(urls.update, user).then(value => value.data)
 };
