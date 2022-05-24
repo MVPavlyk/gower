@@ -1,5 +1,6 @@
 .show_delete_btn {
-    padding: 10px 20px;
+    height: 50px;
+    width: 480px;
     background-color: #F3F3F3;
     font-size: 24px;
     border: 3px solid crimson;
@@ -22,7 +23,7 @@
 .delete_input,
 .full_delete_btn {
     height: 50px;
-    width: 300px;
+    width: 480px;
     border: 2px solid crimson;
     border-radius: 10px;
     padding: 0 15px;

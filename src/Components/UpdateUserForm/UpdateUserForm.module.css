@@ -24,8 +24,8 @@
 }
 
 .update_user_btn {
-    padding: 0 15px;
     height: 50px;
+    width: 480px;
     background-color: #047E89;
     color: #FFFFFF;
     border-radius: 15px;
