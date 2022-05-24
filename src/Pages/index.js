@@ -8,3 +8,5 @@ export * from './PhotosPage/PhotosPage';
 export * from './RegisterPage/RegisterPage';
 export * from './LoginPage/LoginPage';
 export * from './UserPage/UserPage';
+export * from './AboutUsPage/AboutUsPage';
+export * from './CooperationPage/CooperationPage';

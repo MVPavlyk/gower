@@ -53,12 +53,18 @@ const Navbar = () => {
                                 <div className={dark ? css.dark_switch_btn_ball : css.switch_btn_ball}>
 
                                 </div>
+                                <div className={ dark ? css.dark_switch_btn_name : css.switch_btn_name}>
+                                    {dark ? "dark mode" : "white mode"}
+                                </div>
                             </button>
                         </div>
                         <div>
-                            <button onClick={() => switchL()} className={EN ? css.dark_switch_btn : css.switch_btn}>
-                                <div className={EN ? css.dark_switch_btn_ball : css.switch_btn_ball}>
+                            <button onClick={() => switchL()} className={EN ? ( dark ? css.switch_btn_en_dark : css.switch_btn_en) : (dark ? css.switch_btn_uk_dark : css.switch_btn_uk)}>
+                                <div className={EN ? css.switch_btn_ball_en : css.switch_btn_ball_uk}>
 
+                                </div>
+                                <div className={EN ? ( dark ? css.switch_btn_name_en_dark : css.switch_btn_name_en) : ( dark ? css.switch_btn_name_uk_dark : css.switch_btn_name_uk)}>
+                                    {EN ? "EN" : "UK"}
                                 </div>
                             </button>
                         </div>

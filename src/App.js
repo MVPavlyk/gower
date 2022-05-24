@@ -9,7 +9,9 @@ import {
     MenuPage,
     OneRestaurantPage,
     PhotosPage, RegisterPage,
-    RestaurantListPage, UserPage
+    RestaurantListPage, UserPage,
+    AboutUsPage,
+    CooperationPage
 } from './Pages';
 
 function App() {
@@ -24,8 +26,10 @@ function App() {
                     <Route path={'/place/:id/map'} element={<MapPage/>}/>
                     <Route path={'/place/:id/location'} element={<LocationPage/>}/>
                 </Route>
+                <Route path={'/about'} element={<AboutUsPage/>}/>
                 <Route path={'/login'} element={<LoginPage/>}/>
                 <Route path={'/register'} element={<RegisterPage/>}/>
+                <Route path={'/cooperation'} element={<CooperationPage/>}/>
             </Route>
         </Routes>
     );
