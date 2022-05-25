@@ -7,12 +7,7 @@ import {ChangePasswordForm, DeleteUserForm, UpdateUserForm} from '../../Componen
 const UserPage = () => {
     const {user, error} = useSelector(state => state['userReducers']);
 
-    const dispatch = useDispatch();
 
-    const logOut = () => {
-        dispatch(logout());
-        console.log(user);
-    };
 
 
     return (

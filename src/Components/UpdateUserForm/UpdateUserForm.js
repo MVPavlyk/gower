@@ -3,7 +3,7 @@ import {useForm} from 'react-hook-form';
 import {joiResolver} from '@hookform/resolvers/joi';
 import {useDispatch, useSelector} from 'react-redux';
 import {UserValidator} from '../../Validation';
-import {updateUser} from '../../store';
+import {logout, updateUser} from '../../store';
 import css from './UpdateUserForm.module.css';
 
 const UpdateUserForm = () => {
@@ -19,6 +19,11 @@ const UpdateUserForm = () => {
 
     const [updateError, setUpdateError] = useState(false);
 
+    const logOut = () => {
+        dispatch(logout());
+
+    };
+
     const updateU = (obj) => {
         if (!(obj.firstName === user.firstName && obj.lastName === user.lastName && obj.email === user.email)) {
             dispatch(updateUser(obj));
@@ -30,35 +35,39 @@ const UpdateUserForm = () => {
     };
 
     return (
-        <form className={css.user_update} onSubmit={handleSubmit(updateU)}>
-            <h4 className={css.user_update_text}>{EN ? 'Firstname:' : 'Ім\'я:'}</h4>
-            <input
-                type="text"
-                {...register('firstName')}
-                defaultValue={user.firstName}
-                className={css.user_update_input}
-            />
-            <div className={css.error}>{errors.firstName ? EN ? 'Incorrect name' : 'Некоректне ім\'я' : ''}</div>
-            <h4 className={css.user_update_text}>{EN ? 'Lastname:' : 'Прізвище:'}</h4>
-            <input
-                type="text"
-                {...register('lastName')}
-                defaultValue={user.lastName}
-                className={css.user_update_input}
-            />
-            <div className={css.error}>{errors.lastName ? EN ? 'Incorrect lastname' : 'Некоректне Прізвище' : ''}</div>
-            <h4 className={css.user_update_text}>{EN ? 'Email:' : 'Електронна пошта:'}</h4>
-            <input
-                type="text"
-                {...register('email')}
-                defaultValue={user.email}
-                className={css.user_update_input}
-            />
-            <div className={css.error}>{errors.email ? EN ? 'Incorrect email' : 'Хибна пошта' : ''}</div>
+        <>
+            <form className={css.user_update} onSubmit={handleSubmit(updateU)}>
+                <h4 className={css.user_update_text}>{EN ? 'Firstname:' : 'Ім\'я:'}</h4>
+                <input
+                    type="text"
+                    {...register('firstName')}
+                    defaultValue={user.firstName}
+                    className={css.user_update_input}
+                />
+                <div className={css.error}>{errors.firstName ? EN ? 'Incorrect name' : 'Некоректне ім\'я' : ''}</div>
+                <h4 className={css.user_update_text}>{EN ? 'Lastname:' : 'Прізвище:'}</h4>
+                <input
+                    type="text"
+                    {...register('lastName')}
+                    defaultValue={user.lastName}
+                    className={css.user_update_input}
+                />
+                <div
+                    className={css.error}>{errors.lastName ? EN ? 'Incorrect lastname' : 'Некоректне Прізвище' : ''}</div>
+                <h4 className={css.user_update_text}>{EN ? 'Email:' : 'Електронна пошта:'}</h4>
+                <input
+                    type="text"
+                    {...register('email')}
+                    defaultValue={user.email}
+                    className={css.user_update_input}
+                />
+                <div className={css.error}>{errors.email ? EN ? 'Incorrect email' : 'Хибна пошта' : ''}</div>
 
-            <div className={css.error}>{updateError ? EN ? 'Update error' : 'Помилка оновлення' : ''}</div>
-            <button className={css.update_user_btn}>{EN ? 'Update user data' : 'Оновити дані користувача'}</button>
-        </form>
+                <div className={css.error}>{updateError ? EN ? 'Update error' : 'Помилка оновлення' : ''}</div>
+                <button className={css.update_user_btn}>{EN ? 'Update user data' : 'Оновити дані користувача'}</button>
+            </form>
+            <button className={css.update_user_btn} onClick={() => logOut()}>{EN ? 'Logout' : 'Вийти'}</button>
+        </>
     );
 };
 
