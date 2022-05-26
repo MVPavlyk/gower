@@ -37,7 +37,6 @@ const Header = () => {
                         </div>
                         <NavLink className={css.header_link} to={'/'}>{EN ? 'Places' : 'Місця'}</NavLink>
                         <NavLink className={css.header_link} to={'/cooperation'}>{EN ? 'Cooperation' : 'Співпраця'}</NavLink>
-                        <NavLink className={css.header_link} to={'/about'}>{EN ? 'About us' : 'Про нас'}</NavLink>
                         <NavLink className={css.header_link}
                                  to={'/login'}>{user ? user.firstName : EN ? 'Login' : 'Вхід'}</NavLink>
                     </div>
@@ -52,7 +51,6 @@ const Header = () => {
                 <NavLink className={css.header_link} to={'/login'}>Login</NavLink>
                 <NavLink className={css.header_link} to={'/'}>Places</NavLink>
                 <NavLink className={css.header_link} to={'/cooperation'}>Cooperation</NavLink>
-                <NavLink className={css.header_link} to={'/about'}>About us</NavLink>
             </div>
         </div>
     );
