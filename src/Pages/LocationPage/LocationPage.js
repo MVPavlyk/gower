@@ -28,18 +28,20 @@ const LocationPage = () => {
     });
 
     return (
+
         <>
             <div className={dark ? css.location_page_dark : css.location_page}>
                 <div className={css.exterior}>
                     <div className={css.title}>
                         {EN ? "Exterior" : "Екстер'єр"}
                     </div>
-                    {oneRestaurant.exterior.map(photo =>
+             {oneRestaurant.exterior.map(photo =>
                         <img src={`${photo}`}
                              alt={oneRestaurant.name}
                              key={`${photo}`}
                         />)
                     }
+
                 </div>
                 <div className={css.google_map}>
                     <div className={css.title}>
@@ -48,6 +50,7 @@ const LocationPage = () => {
                     <div className={css.map_wrap}>
                         {isLoaded && <GoogleLocateMap center={oneRestaurant.coordinates}/>}
                     </div>
+
                 </div>
             </div>
             <div className={dark ? css.contacts_dark : css.contacts}>
