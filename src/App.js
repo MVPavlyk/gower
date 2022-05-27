@@ -14,12 +14,14 @@ import {
 } from './Pages';
 import {AdminPage} from './Pages/AdminPage/AdminPage';
 import {useDispatch} from 'react-redux';
-import {setUserFromLocalStorage} from './store';
+import {getLanguage, getTheme, setUserFromLocalStorage} from './store';
 
 function App() {
     const dispatch = useDispatch();
 
     dispatch(setUserFromLocalStorage());
+    dispatch(getTheme());
+    dispatch(getLanguage());
 
     return (
         <Routes>

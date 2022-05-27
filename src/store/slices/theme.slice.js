@@ -6,14 +6,19 @@ const themeSlice = createSlice({
         dark: false
     },
     reducers: {
+        getTheme: (state) => {
+            state.dark = JSON.parse(localStorage.getItem('darkMode'))
+        },
         switchTheme: (state) => {
-            state.dark = !state.dark;
+            const currentState = !state.dark;
+            state.dark = currentState;
+            localStorage.setItem('darkMode', `${currentState}`);
         }
     }
 });
 
 const themeReducers = themeSlice.reducer;
 
-export const {switchTheme} = themeSlice.actions;
+export const {switchTheme, getTheme} = themeSlice.actions;
 
 export default themeReducers;

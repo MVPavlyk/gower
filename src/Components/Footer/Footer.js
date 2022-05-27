@@ -16,7 +16,6 @@ const Footer = () => {
                     <div className={css.footer_links}>
                         <NavLink className={css.footer_link} to={'/'}>{EN ? "Places" : "Місця"}</NavLink>
                         <NavLink className={css.footer_link} to={'/'}>{EN ? "Cooperation" : "Співпраця"}</NavLink>
-                        <NavLink className={css.footer_link} to={'/'}>{EN ? "About us" : "Про нас"}</NavLink>
                     </div>
                     <div>
                         <NavLink className={css.footer_logo} to={'/'}><img src={logo} alt="logo"/></NavLink>

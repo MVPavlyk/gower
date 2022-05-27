@@ -1,5 +1,4 @@
-import React, {useEffect} from 'react';
-import {Navigate} from 'react-router-dom';
+import React from 'react';
 import {useForm} from 'react-hook-form';
 import {useDispatch, useSelector} from 'react-redux';
 import css from './RegisterPage.module.css';

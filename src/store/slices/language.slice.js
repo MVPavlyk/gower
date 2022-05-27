@@ -6,14 +6,20 @@ const languageSlice = createSlice({
         EN: false
     },
     reducers: {
+        getLanguage: (state) => {
+            state.EN = JSON.parse(localStorage.getItem('language'));
+        },
+
         switchLanguage: (state) => {
-            state.EN = !state.EN;
+            const currentLanguage = !state.EN;
+            state.EN = currentLanguage;
+            localStorage.setItem('language', currentLanguage);
         }
     }
 });
 
 const languageReducers = languageSlice.reducer;
 
-export const {switchLanguage} = languageSlice.actions;
+export const {switchLanguage, getLanguage} = languageSlice.actions;
 
 export default languageReducers;

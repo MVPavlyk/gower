@@ -37,6 +37,8 @@
 
 .contacts_info img {
     margin: 0;
+    width: 24px;
+    height: 24px;
 }
 
 .map_wrap {
@@ -170,6 +172,11 @@
     .contacts,
     .contacts_dark {
         font-size: 18px;
+    }
+
+    .contacts_info img {
+        width: 20px;
+        height: 20px;
     }
 }
 
