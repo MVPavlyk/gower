@@ -27,16 +27,16 @@ const LocationPage = () => {
                 <div className={css.title}>
                     {EN ? "Exterior" : "Екстер'єр"}
                 </div>
-                {oneRestaurant.exterior &&
-                <div>
+
+
                     {oneRestaurant.exterior.map(photo =>
                         <img src={`${photo}`}
                              alt={oneRestaurant.name}
                              key={`${photo}`}
                         />)
                     }
-                </div>
-                }
+
+
             </div>
             <div className={css.google_map}>
                 <div className={css.title}>

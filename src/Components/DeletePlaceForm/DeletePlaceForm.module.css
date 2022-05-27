@@ -1,0 +1,16 @@
+.error {
+    color: crimson;
+}
+
+.delete_btn {
+    width: 350px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: crimson;
+    color: #FFFFFF;
+    font-size: 20px;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}

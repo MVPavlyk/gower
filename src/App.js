@@ -9,12 +9,19 @@ import {
     MenuPage,
     OneRestaurantPage,
     PhotosPage, RegisterPage,
-    RestaurantListPage, UserPage,
+    RestaurantListPage,
     AboutUsPage,
     CooperationPage
 } from './Pages';
+import {AdminPage} from './Pages/AdminPage/AdminPage';
+import {useDispatch} from 'react-redux';
+import {setUserFromLocalStorage} from './store';
 
 function App() {
+    const dispatch = useDispatch();
+
+    dispatch(setUserFromLocalStorage());
+
     return (
         <Routes>
             <Route path={'/'} element={<Layout/>}>
@@ -28,6 +35,7 @@ function App() {
                 </Route>
                 <Route path={'/about'} element={<AboutUsPage/>}/>
                 <Route path={'/login'} element={<LoginPage/>}/>
+                <Route path={'/admin'} element={<AdminPage/>}/>
                 <Route path={'/register'} element={<RegisterPage/>}/>
                 <Route path={'/cooperation'} element={<CooperationPage/>}/>
             </Route>

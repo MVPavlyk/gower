@@ -5,7 +5,9 @@ export const login = createAsyncThunk(
     'userSlice/login',
     async (obj, {rejectWithValue}) => {
         try {
-            return await UserServices.login(obj);
+            const user = await UserServices.login(obj);
+            localStorage.setItem('user', JSON.stringify(user));
+            return user;
         } catch (error) {
             return rejectWithValue(error.message);
         }
@@ -30,6 +32,7 @@ export const logout = createAsyncThunk(
     'userSlice/logout',
     async (_, {rejectWithValue}) => {
         try {
+            localStorage.removeItem('user');
             return await UserServices.logout();
         } catch (error) {
             console.log(error);
@@ -79,6 +82,13 @@ const userSlice = createSlice({
         status: null,
         user: null
     },
+
+    reducers: {
+        setUserFromLocalStorage: (state) => {
+            state.user = JSON.parse(localStorage.getItem('user'));
+        }
+    },
+
     extraReducers: {
         [login.pending]: (state) => {
             state.status = 'pending';
@@ -148,6 +158,9 @@ const userSlice = createSlice({
 
     }
 });
+
+export const {setUserFromLocalStorage} = userSlice.actions;
+
 
 const userReducers = userSlice.reducer;
 

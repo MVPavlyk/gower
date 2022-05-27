@@ -1,177 +1,201 @@
 
-.cooperation_wrap{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-}
-.cooperation_wrap_dark{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	background-color: #035259FF;
-	color: white;
-}
-.title{
-	margin-top: 40px;
-	width: 80%;
-	text-align: center;
-	font-family: 'Poiret One';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 64px;
-	line-height: 75px;
-}
-.photo_wrap{
-	width: 80%;
-	margin-top: 40px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.cooperation_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
-.main_block{
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 20px;
-	margin-bottom: 20px;
+.cooperation_wrap_dark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #035259FF;
+    color: white;
 }
+
+.title {
+    margin-top: 40px;
+    width: 80%;
+    text-align: center;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 75px;
+}
+
+.photo_wrap {
+    width: 80%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .info,
-.info_right{
-	text-align: center;
-	font-family: 'Poiret One';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 48px;
-	line-height: 56px;
+.info_right {
+    text-align: center;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 56px;
 }
-.info_right{
-	order: 1;
+
+.info_right {
+    order: 1;
 }
-.question{
-	margin-top: 40px;
-	margin-bottom: 60px;
-	font-family: 'Poiret One';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 64px;
-	line-height: 75px;
+
+.question {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    font-family: 'Poiret One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 75px;
 }
-.email{
-	width: 90%;
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 48px;
-	line-height: 59px;
-	margin-top: 20px;
-	margin-bottom: 30px;
+
+.email {
+    width: 90%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 59px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
-.telegram{
-	width: 90%;
-	text-align: end;
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 48px;
-	line-height: 59px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+
+.telegram {
+    width: 90%;
+    text-align: end;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 59px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-.instagram{
-	width: 90%;
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 48px;
-	line-height: 59px;
-	margin-top: 20px;
-	margin-bottom: 50px;
+
+.instagram {
+    width: 90%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 59px;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 @media (max-width: 1300px) {
-	.photo_wrap{
-		width: 90%;
-	}
+    .photo_wrap {
+        width: 90%;
+    }
 }
 
 @media (max-width: 900px) {
-	.main_block{
-		flex-direction: column;
-	}
-	.info,
-	.info_right{
-		order: unset;
-		font-size: 32px;
-		line-height: 56px;
-		margin-bottom: 15px;
-	}
-	img{
-		width: 85%;
-		margin-bottom: 10px;
-	}
-	.email{
-		font-size: 25px;
-		margin-top: 0;
-		margin-bottom: 5px;
-	}
-	.telegram{
-		font-size: 25px;
-		margin-top: 10px;
-		margin-bottom: 5px;
-	}
-	.instagram{
-		font-size: 25px;
-		margin-top: 10px;
-		margin-bottom: 50px;
-	}
-	.question{
-		font-size: 48px;
-	}
-	.title{
-		font-size: 48px;
-	}
+    .main_block {
+        flex-direction: column;
+    }
+
+    .info,
+    .info_right {
+        order: unset;
+        font-size: 32px;
+        line-height: 56px;
+        margin-bottom: 15px;
+    }
+
+    .cooperation_wrap img {
+        width: 85%;
+        margin-bottom: 10px;
+    }
+
+    .email {
+        font-size: 25px;
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    .telegram {
+        font-size: 25px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .instagram {
+        font-size: 25px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    .question {
+        font-size: 48px;
+    }
+
+    .title {
+        font-size: 48px;
+    }
 }
 
 @media (max-width: 550px) {
-	.title{
-		margin-top: 20px;
-		font-size: 32px;
-	}
-	.info,
-	.info_right{
-		font-size: 20px;
-		margin-bottom: unset;
-	}
-	.photo_wrap{
-		margin-top: unset;
-	}
-	img{
-		margin-bottom: unset;
-	}
-	.main_block{
-		margin-bottom: unset;
-	}
-	.question{
-		font-size: 32px;
-		margin-bottom: 10px;
-	}
-	.email{
-		font-size: 18px;
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-	.telegram{
-		font-size: 18px;
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-	.instagram{
-		font-size: 18px;
-		margin-top: 0;
-		margin-bottom: 30px;
-	}
+    .title {
+        margin-top: 20px;
+        font-size: 32px;
+    }
+
+    .info,
+    .info_right {
+        font-size: 20px;
+        margin-bottom: unset;
+    }
+
+    .photo_wrap {
+        margin-top: unset;
+    }
+
+    .cooperation_wrap img {
+        margin-bottom: unset;
+    }
+
+    .main_block {
+        margin-bottom: unset;
+    }
+
+    .question {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .email {
+        font-size: 18px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .telegram {
+        font-size: 18px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .instagram {
+        font-size: 18px;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
 }
