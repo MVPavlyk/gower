@@ -1,5 +1,6 @@
-.register_page{
-    min-height: calc(100vh - 80px);
+.register_page,
+.register_page_dark {
+    height: calc(100vh - 80px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,14 +8,21 @@
     row-gap: 20px;
 }
 
-.register_form {
+.register_page_dark {
+    background-color: #01444A;
+    color: #FFFFFF;
+}
+
+.register_form,
+.register_form_dark {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
 }
 
-.register_input {
+.register_input,
+.register_input_dark {
     width: 350px;
     height: 60px;
     border-radius: 10px;
@@ -24,11 +32,21 @@
     font-size: 22px;
 }
 
+.register_input_dark {
+    color: #FFFFFF;
+    background-color: #01444A;
+}
+
 .register_input::placeholder {
     color: #047E89;
 }
 
-.register_btn {
+.register_input_dark::placeholder {
+    color: #FFFFFF;
+}
+
+.register_btn,
+.register_btn_dark {
     padding: 10px 35px;
     color: #FFFFFF;
     background-color: #047E89;
@@ -38,3 +56,13 @@
     border: none;
     font-size: 20px;
 }
+
+.register_btn_dark {
+    background-color: #FFFFFF;
+    color: #01444A;
+}
+
+.error {
+    color: crimson;
+}
+

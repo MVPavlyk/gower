@@ -9,5 +9,8 @@ export const urls = {
     changePsw: '/api/User/ChangeSelfPassword',
     update: '/api/User/UpdateSelf',
     getUser: '/api/User/GetCurrent',
-    deleteUser: '/api/User/Delete'
+    deleteUser: '/api/User/Delete',
+    createPlace: '/api/Admin/CreatePlace',
+    deletePlace: '/api/Admin/DeletePlace',
+    createTable: '/api/Admin/CreateTablesAndAssign'
 };

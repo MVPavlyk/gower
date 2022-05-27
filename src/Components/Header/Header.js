@@ -48,7 +48,8 @@ const Header = () => {
                 </div>
             </div>
             <div className={show ? css.burger_menu_show : css.burger_menu}>
-                <NavLink className={css.header_link} to={'/login'}>Login</NavLink>
+                <NavLink className={css.header_link}
+                         to={'/login'}>{user ? user.firstName : EN ? 'Login' : 'Вхід'}</NavLink>
                 <NavLink className={css.header_link} to={'/'}>Places</NavLink>
                 <NavLink className={css.header_link} to={'/cooperation'}>Cooperation</NavLink>
             </div>

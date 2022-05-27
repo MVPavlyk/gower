@@ -5,7 +5,9 @@ export const login = createAsyncThunk(
     'userSlice/login',
     async (obj, {rejectWithValue}) => {
         try {
-            return await UserServices.login(obj);
+            const user = await UserServices.login(obj);
+            localStorage.setItem('user', JSON.stringify(user));
+            return user;
         } catch (error) {
             return rejectWithValue(error.message);
         }
@@ -30,6 +32,7 @@ export const logout = createAsyncThunk(
     'userSlice/logout',
     async (_, {rejectWithValue}) => {
         try {
+            localStorage.removeItem('user');
             return await UserServices.logout();
         } catch (error) {
             console.log(error);
@@ -60,6 +63,17 @@ export const deleteUser = createAsyncThunk(
     }
 );
 
+export const updateUser = createAsyncThunk(
+    'userSlice/updateUser',
+    async (user, {rejectWithValue}) => {
+        try {
+            return await UserServices.updateUser(user);
+        } catch (e) {
+            return rejectWithValue(e);
+        }
+    }
+);
+
 
 const userSlice = createSlice({
     name: 'userSlice',
@@ -68,6 +82,13 @@ const userSlice = createSlice({
         status: null,
         user: null
     },
+
+    reducers: {
+        setUserFromLocalStorage: (state) => {
+            state.user = JSON.parse(localStorage.getItem('user'));
+        }
+    },
+
     extraReducers: {
         [login.pending]: (state) => {
             state.status = 'pending';
@@ -123,10 +144,23 @@ const userSlice = createSlice({
         [deleteUser.rejected]: (state, action) => {
             state.status = 'rejected';
             state.error = action.payload;
+        },
+
+        [updateUser.fulfilled]: (state, action) => {
+            state.status = 'fulfilled';
+            state.user = action.payload;
+        },
+
+        [updateUser.rejected]: (state, action) => {
+            state.status = 'rejected';
+            state.error = action.payload;
         }
 
     }
 });
+
+export const {setUserFromLocalStorage} = userSlice.actions;
+
 
 const userReducers = userSlice.reducer;
 

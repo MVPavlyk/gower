@@ -25,12 +25,12 @@ const RegisterPage = () => {
     return (
         <div className={dark ? css.register_page_dark : css.register_page}>
 
-            <form onSubmit={handleSubmit(submit)} className={css.register_form}>
+            <form onSubmit={handleSubmit(submit)} className={dark ? css.register_form_dark : css.register_form}>
                 <input
                     type="text"
                     placeholder="Name"
                     {...register('firstName')}
-                    className={css.register_input}
+                    className={dark ? css.register_input_dark : css.register_input}
                 />
 
                 {errors.firstName && <div className={css.error}>{errors.firstName.message}</div>}
@@ -39,7 +39,7 @@ const RegisterPage = () => {
                     type="text"
                     placeholder="Surname"
                     {...register('lastName')}
-                    className={css.register_input}
+                    className={dark ? css.register_input_dark : css.register_input}
                 />
 
                 {errors.lastName && <div className={css.error}>{errors.lastName.message}</div>}
@@ -48,7 +48,9 @@ const RegisterPage = () => {
                     type="text"
                     placeholder="Email"
                     {...register('email')}
-                    className={css.register_input}
+                    autoComplete="off"
+                    autoCorrect='off'
+                    className={dark ? css.register_input_dark : css.register_input}
                 />
 
                 {errors.email && <div className={css.error}>{errors.email.message}</div>}
@@ -56,16 +58,16 @@ const RegisterPage = () => {
                 <input
                     type="password"
                     placeholder="Password"
-                    autoComplete="on"
+                    autoComplete="off"
                     {...register('password')}
-                    className={css.register_input}
+                    className={dark ? css.register_input_dark : css.register_input}
                 />
 
                 {errors.password && <div className={css.error}>{errors.password.message}</div>}
 
                 {error && <div className={css.error}>Хибний email або пароль</div>}
 
-                <button className={css.register_btn}>register</button>
+                <button className={dark ? css.register_btn_dark : css.register_btn}>register</button>
             </form>
         </div>
     );

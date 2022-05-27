@@ -1,6 +1,9 @@
 export * from './DescriptionBlock/DescriptionBlock';
 export * from './Layout/Layout';
 export * from './Footer/Footer';
+export * from './DeletePlaceForm/DeletePlaceForm';
+export * from './CreateTableForm/CreateTableForm';
+export * from './CreatePlaceForm/CreatePlaceForm';
 export * from './GoogleLocateMap/GoogleLocateMap';
 export * from './Map/Map';
 export * from './ReserveRow/ReserveRow';
@@ -8,3 +11,6 @@ export * from './Header/Header';
 export * from './RestaurantBlock/RestaurantBlock';
 export * from './Navbar/Navbar';
 export * from './ReservedTable/ReservedTable';
+export * from './UpdateUserForm/UpdateUserForm';
+export * from './ChangePasswordForm/ChangePasswordForm';
+export * from './DeleteUserForm/DeleteUserForm';

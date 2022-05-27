@@ -1,4 +1,5 @@
 import React from 'react';
+
 import cooperation_1 from '../../img/Cooperation_1.png'
 import cooperation_2 from '../../img/Cooperation_2.png'
 import cooperation_3 from '../../img/Cooperation_3.png'
@@ -9,6 +10,7 @@ import mail_photo_dark from '../../img/Mail_dark.svg'
 import telega_photo_dark from '../../img/Telega_dark.svg'
 import insta_photo_dark from '../../img/Insta_dark.svg'
 import css from "../CooperationPage/CooperationPage.module.css";
+
 import {useSelector} from 'react-redux';
 import {Carousel} from "react-responsive-carousel";
 
@@ -54,7 +56,7 @@ const CooperationPage = () => {
                 <div className={css.text}>
                     Instagram: @goWer
                 </div>
-            </div>
+            </div>            
         </div>
     );
 };
