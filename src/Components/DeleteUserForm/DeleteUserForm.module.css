@@ -44,3 +44,91 @@
 .error {
     color: crimson;
 }
+
+@media (max-width: 767px) {
+    .delete_text {
+        font-size: 20px;
+    }
+
+    .show_delete_btn {
+        height: 45px;
+        width: 400px;
+        font-size: 22px;
+        border-radius: 10px;
+
+    }
+
+    .delete_input,
+    .full_delete_btn {
+        height: 45px;
+        width: 400px;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .delete_text {
+        font-size: 18px;
+    }
+
+    .show_delete_btn {
+        height: 40px;
+        width: 350px;
+        font-size: 20px;
+        border-radius: 10px;
+
+    }
+
+    .delete_input,
+    .full_delete_btn {
+        height: 40px;
+        width: 350px;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 425px) {
+    .delete_text {
+        font-size: 16px;
+    }
+
+    .show_delete_btn {
+        height: 35px;
+        width: 300px;
+        font-size: 18px;
+        border-radius: 8px;
+
+    }
+
+    .delete_input,
+    .full_delete_btn {
+        height: 35px;
+        width: 300px;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 350px) {
+    .delete_text {
+        font-size: 14px;
+    }
+
+    .show_delete_btn {
+        height: 35px;
+        width: 280px;
+        font-size: 18px;
+        border-radius: 8px;
+
+    }
+
+    .delete_input,
+    .full_delete_btn {
+        height: 35px;
+        width: 280px;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+}

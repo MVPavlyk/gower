@@ -11,6 +11,8 @@ const UpdateUserForm = () => {
 
     const {EN} = useSelector(state => state['languageReducers']);
 
+    const {dark} = useSelector(state => state['themeReducers']);
+
     const {
         register, handleSubmit, formState: {errors}
     } = useForm({resolver: joiResolver(UserValidator)});
@@ -42,7 +44,7 @@ const UpdateUserForm = () => {
                     type="text"
                     {...register('firstName')}
                     defaultValue={user.firstName}
-                    className={css.user_update_input}
+                    className={dark ? css.user_input_dark : css.user_update_input}
                 />
                 <div className={css.error}>{errors.firstName ? EN ? 'Incorrect name' : 'Некоректне ім\'я' : ''}</div>
                 <h4 className={css.user_update_text}>{EN ? 'Lastname:' : 'Прізвище:'}</h4>
@@ -50,7 +52,7 @@ const UpdateUserForm = () => {
                     type="text"
                     {...register('lastName')}
                     defaultValue={user.lastName}
-                    className={css.user_update_input}
+                    className={dark ? css.user_input_dark : css.user_update_input}
                 />
                 <div
                     className={css.error}>{errors.lastName ? EN ? 'Incorrect lastname' : 'Некоректне Прізвище' : ''}</div>
@@ -59,14 +61,14 @@ const UpdateUserForm = () => {
                     type="text"
                     {...register('email')}
                     defaultValue={user.email}
-                    className={css.user_update_input}
+                    className={dark ? css.user_input_dark : css.user_update_input}
                 />
                 <div className={css.error}>{errors.email ? EN ? 'Incorrect email' : 'Хибна пошта' : ''}</div>
 
                 <div className={css.error}>{updateError ? EN ? 'Update error' : 'Помилка оновлення' : ''}</div>
-                <button className={css.update_user_btn}>{EN ? 'Update user data' : 'Оновити дані користувача'}</button>
+                <button className={dark ? css.update_user_btn_dark : css.update_user_btn}>{EN ? 'Update user data' : 'Оновити дані користувача'}</button>
             </form>
-            <button className={css.update_user_btn} onClick={() => logOut()}>{EN ? 'Logout' : 'Вийти'}</button>
+            <button className={dark ? css.update_user_btn_dark : css.update_user_btn} onClick={() => logOut()}>{EN ? 'Logout' : 'Вийти'}</button>
         </>
     );
 };

@@ -7,11 +7,11 @@ import {ChangePasswordForm, DeleteUserForm, UpdateUserForm} from '../../Componen
 const UserPage = () => {
     const {user, error} = useSelector(state => state['userReducers']);
 
-
+    const {dark} = useSelector(state => state['themeReducers']);
 
 
     return (
-        <div className={css.user_page}>
+        <div className={dark ? css.user_page_dark : css.user_page}>
             <UpdateUserForm/>
             <ChangePasswordForm/>
             <DeleteUserForm/>
