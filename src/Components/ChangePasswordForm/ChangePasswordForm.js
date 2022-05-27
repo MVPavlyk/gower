@@ -10,6 +10,7 @@ const ChangePasswordForm = () => {
     const {user, error} = useSelector(state => state['userReducers']);
 
     const {EN} = useSelector(state => state['languageReducers']);
+    const {dark} = useSelector(state => state['themeReducers']);
 
     const {
         register, handleSubmit, formState: {errors}
@@ -32,7 +33,7 @@ const ChangePasswordForm = () => {
 
     return (
         <>
-            <button className={css.show_form_btn}
+            <button className={dark ? css.show_form_btn_dark : css.show_form_btn}
                     onClick={() => setChangeP(!changeP)}>{EN ? 'Change password' : 'Змінити пароль'}</button>
             <div className={changeP ? css.change_p_block : css.none}>
                 <form onSubmit={handleSubmit(changePassword)} className={css.change_psw_form}>
@@ -47,21 +48,21 @@ const ChangePasswordForm = () => {
                         autoComplete="off"
                         placeholder={EN ? 'Current password' : 'Поточний пароль'}
                         {...register('currentPassword')}
-                        className={css.change_p_input}
+                        className={dark ? css.change_p_input_dark : css.change_p_input}
                     />
                     <input
                         type="password"
                         autoComplete="off"
                         placeholder={EN ? 'New password' : 'Новий пароль'}
                         {...register('newPassword')}
-                        className={css.change_p_input}
+                        className={dark ? css.change_p_input_dark : css.change_p_input}
                     />
                     <input
                         type="password"
                         autoComplete="off"
                         placeholder={EN ? 'Repeat password' : 'Повторіть пароль'}
                         {...register('repeatPassword')}
-                        className={css.change_p_input}
+                        className={dark ? css.change_p_input_dark : css.change_p_input}
                     />
 
                     {errors.newPassword && <div className={css.error}>{errors.newPassword.message}</div>}
@@ -69,7 +70,7 @@ const ChangePasswordForm = () => {
                     {changePasError && <div className={css.error}>{changePasError}</div>}
 
                     {error && <div className={css.error}>{EN ? 'Error' : 'Помилка'}</div>}
-                    <button className={css.change_btn}>{EN ? 'Change' : 'Змінити'}</button>
+                    <button className={dark ? css.change_btn_dark : css.change_btn}>{EN ? 'Change' : 'Змінити'}</button>
                 </form>
             </div>
         </>

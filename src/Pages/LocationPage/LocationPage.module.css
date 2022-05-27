@@ -1,6 +1,6 @@
 .location_page,
 .location_page_dark {
-    padding: 100px 8.5vw;
+    padding: 100px 8.5vw 40px 8.5vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -9,9 +9,34 @@
 }
 
 .location_page_dark {
-    background-color: #035259FF;
+    background-color: #035259;
     color: #FFFFFF;
+}
 
+.contacts,
+.contacts_dark {
+    padding: 0 8.5vw 100px 8.5vw;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: flex-start;
+}
+
+.contacts_dark {
+    background-color: #035259;
+    color: #FFFFFF;
+}
+
+.contacts_info {
+    display: flex;
+    text-align: left;
+    column-gap: 12px;
+    align-items: center;
+}
+
+.contacts_info img {
+    margin: 0;
 }
 
 .map_wrap {
@@ -83,14 +108,21 @@
         padding: 50px 0;
     }
 
+
+    .contacts,
+    .contacts_dark {
+        align-items: center;
+    }
+
     .map_wrap {
         width: 500px;
         height: 500px;
     }
 
     .exterior img {
-        height: 500px;
-        width: auto;
+
+        width: 100%;
+
     }
 
     .exterior,
@@ -114,6 +146,11 @@
     .title {
         font-size: 30px;
     }
+
+    .contacts,
+    .contacts_dark {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -128,6 +165,11 @@
 
     .title {
         font-size: 24px;
+    }
+
+    .contacts,
+    .contacts_dark {
+        font-size: 18px;
     }
 }
 
@@ -159,6 +201,11 @@
 
     .title {
         font-size: 16px;
+    }
+
+    .contacts,
+    .contacts_dark {
+        font-size: 14px;
     }
 
     .exterior,
