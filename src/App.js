@@ -9,8 +9,7 @@ import {
     MenuPage,
     OneRestaurantPage,
     PhotosPage, RegisterPage,
-    RestaurantListPage,
-    AboutUsPage,
+    RestaurantListPage, UserPage,
     CooperationPage
 } from './Pages';
 import {AdminPage} from './Pages/AdminPage/AdminPage';
@@ -33,7 +32,6 @@ function App() {
                     <Route path={'/place/:id/map'} element={<MapPage/>}/>
                     <Route path={'/place/:id/location'} element={<LocationPage/>}/>
                 </Route>
-                <Route path={'/about'} element={<AboutUsPage/>}/>
                 <Route path={'/login'} element={<LoginPage/>}/>
                 <Route path={'/admin'} element={<AdminPage/>}/>
                 <Route path={'/register'} element={<RegisterPage/>}/>

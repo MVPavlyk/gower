@@ -15,6 +15,55 @@
     color: white;
 }
 
+.title{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 80%;
+	text-align: center;
+	font-family: 'Poiret One';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 64px;
+}
+
+.contacts{
+	width: 90%;
+	text-align: start;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	font-family: 'Poiret One';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 64px;
+}
+.mail{
+	display: flex;
+	width: 90%;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	margin-top: 20px;
+}
+.telegram{
+	display: flex;
+	width: 90%;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	margin-top: 20px;
+}
+.instagram{
+	display: flex;
+	width: 90%;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	margin-top: 20px;
+	margin-bottom: 50px;
+
 .title {
     margin-top: 40px;
     width: 80%;
@@ -101,101 +150,39 @@
     margin-bottom: 50px;
 }
 
+.carousel_wrap {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.text{
+	font-family: 'Poiret One';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	margin-left: 20px;
+}
+
+.text_in_photo{
+	color: white;
+	position: absolute;
+	bottom: 4%;
+	left: 5%;
+	font-family: 'Poiret One';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 64px;
+}
+
+.carousel_wrap img{
+	position: relative;
+	background-image: linear-gradient(74.55deg, #000000 0%, rgba(0, 0, 0, 0) 56.53%);
+}
+
+
 @media (max-width: 1300px) {
-    .photo_wrap {
-        width: 90%;
-    }
-}
 
-@media (max-width: 900px) {
-    .main_block {
-        flex-direction: column;
-    }
-
-    .info,
-    .info_right {
-        order: unset;
-        font-size: 32px;
-        line-height: 56px;
-        margin-bottom: 15px;
-    }
-
-    .cooperation_wrap img {
-        width: 85%;
-        margin-bottom: 10px;
-    }
-
-    .email {
-        font-size: 25px;
-        margin-top: 0;
-        margin-bottom: 5px;
-    }
-
-    .telegram {
-        font-size: 25px;
-        margin-top: 10px;
-        margin-bottom: 5px;
-    }
-
-    .instagram {
-        font-size: 25px;
-        margin-top: 10px;
-        margin-bottom: 50px;
-    }
-
-    .question {
-        font-size: 48px;
-    }
-
-    .title {
-        font-size: 48px;
-    }
-}
-
-@media (max-width: 550px) {
-    .title {
-        margin-top: 20px;
-        font-size: 32px;
-    }
-
-    .info,
-    .info_right {
-        font-size: 20px;
-        margin-bottom: unset;
-    }
-
-    .photo_wrap {
-        margin-top: unset;
-    }
-
-    .cooperation_wrap img {
-        margin-bottom: unset;
-    }
-
-    .main_block {
-        margin-bottom: unset;
-    }
-
-    .question {
-        font-size: 32px;
-        margin-bottom: 10px;
-    }
-
-    .email {
-        font-size: 18px;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .telegram {
-        font-size: 18px;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .instagram {
-        font-size: 18px;
-        margin-top: 0;
-        margin-bottom: 30px;
-    }
 }
