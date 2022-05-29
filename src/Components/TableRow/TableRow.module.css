@@ -9,3 +9,15 @@
     border: none;
 }
 
+.cross {
+    width: 20px;
+    height: 20px;
+}
+
+.cross_div {
+    width: 12%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

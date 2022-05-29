@@ -12,9 +12,10 @@ const CreatePlaceForm = () => {
 
     const dispatch = useDispatch();
 
-    const sendPlace = (place) => {
+    const sendPlace = (place, e) => {
         dispatch(addPlace(place));
-        console.log({...place, id: 0, allTables: 0, freeTables: 0});
+        e.target.reset();
+        // console.log({...place, id: 0, allTables: 0, freeTables: 0});
     };
 
     return (

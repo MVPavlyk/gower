@@ -14,10 +14,11 @@ const DeletePlaceForm = () => {
 
     const [error, serError] = useState(false);
 
-    const deleteUserReq = (obj) => {
+    const deleteUserReq = (obj, e) => {
         if (obj.password === 'moskal') {
             dispatch(deletePlace(obj.id));
             serError(false);
+            e.target.reset();
         } else {
             serError(true);
         }

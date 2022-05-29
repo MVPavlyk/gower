@@ -15,8 +15,6 @@ const CreateTableForm = () => {
 
     const dispatch = useDispatch();
 
-    console.log(tableArray);
-
     const assignTable = (table, e) => {
         const array = [...tableArray];
         array.push({...table, isFree: true});
@@ -83,7 +81,7 @@ const CreateTableForm = () => {
                             ROTATE
                         </div>
                     </div>
-                    {tableArray.map(table => <TableRow key={table.top} table={table}/>)}
+                    {tableArray.map(table => <TableRow key={table.top} table={table} tableArray={tableArray} setTableArray={setTableArray}/>)}
                     <div className={css.send_tables_btn} onClick={() => sendTables()}>SEND</div>
                 </div>
             }

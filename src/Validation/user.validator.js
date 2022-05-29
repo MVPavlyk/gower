@@ -16,5 +16,6 @@ export const UserValidator = Joi.object({
     password:
         Joi.string()
             .regex(new RegExp('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{6,20}$'))
-            .message('Пароль має бути не коротшим як 6 символів, містити цифри, великі та малі літери')
+            .message('Пароль має бути не коротшим як 6 символів, містити цифри, великі та малі літери'),
+    repeatPassword: Joi.string()
 });

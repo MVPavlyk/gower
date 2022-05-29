@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {useDispatch, useSelector} from 'react-redux';
-import {Navigate} from 'react-router-dom'
+import {Navigate} from 'react-router-dom';
 import css from './RegisterPage.module.css';
 import {registration} from '../../store';
 import {joiResolver} from '@hookform/resolvers/joi/dist/joi';
@@ -15,10 +15,24 @@ const RegisterPage = () => {
 
     const {user, error} = useSelector(state => state['userReducers']);
     const {dark} = useSelector(state => state['themeReducers']);
+    const {EN} = useSelector(state => state['languageReducers']);
     const dispatch = useDispatch();
 
+    const [repeatError, setRepeatError] = useState(false);
+
     const submit = (obj) => {
-        dispatch(registration(obj));
+        if (obj.password === obj.repeatPassword) {
+            dispatch(registration({
+                firstName: obj.firstName,
+                lastName: obj.lastName,
+                email: obj.email,
+                password: obj.password
+            }));
+            setRepeatError(false);
+        } else {
+            setRepeatError(true);
+        }
+
     };
 
     if (user) {
@@ -67,6 +81,16 @@ const RegisterPage = () => {
                 />
 
                 {errors.password && <div className={css.error}>{errors.password.message}</div>}
+
+                <input
+                    type="password"
+                    placeholder="Repeat password"
+                    autoComplete="off"
+                    {...register('repeatPassword')}
+                    className={dark ? css.register_input_dark : css.register_input}
+                />
+
+                {repeatError && <div className={css.error}>{EN ? 'Error repeat password' : 'Помилка повтору пароля'}</div>}
 
                 {error && <div className={css.error}>Хибний email або пароль</div>}
 
