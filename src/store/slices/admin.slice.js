@@ -1,5 +1,5 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
-import {AdminServices} from '../../services/admin.services';
+import {AdminServices} from '../../services';
 
 export const addPlace = createAsyncThunk(
     'adminSlice/addPlace',
@@ -40,7 +40,6 @@ const adminSlice = createSlice({
             status: null,
             error: null
         },
-
 
         extraReducers: {
             [addPlace.fulfilled]: (state) => {

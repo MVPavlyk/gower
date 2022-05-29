@@ -12,5 +12,10 @@ export const urls = {
     deleteUser: '/api/User/Delete',
     createPlace: '/api/Admin/CreatePlace',
     deletePlace: '/api/Admin/DeletePlace',
-    createTable: '/api/Admin/CreateTablesAndAssign'
+    createTable: '/api/Admin/CreateTablesAndAssign',
+    getPaginatedUsers: '/api/Admin/GetAll',
+    getOneUser: '/api/Admin/GetUser',
+    getUserRole: '/api/Admin/GetAllRolesById',
+    updateUserRoles: '/api/Admin/UpdateUserRoles'
+
 };

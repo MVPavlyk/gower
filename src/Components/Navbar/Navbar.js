@@ -38,7 +38,7 @@ const Navbar = () => {
                         <input type="text" className={css.search_input} placeholder={EN ? "Search..." : "Пошук..."}/>
                     </form>
                     <div className={css.nav_links}>
-                        <div>
+                        {/*<div>
                             <button className={dark ? css.nav_link_dark : css.nav_link}>
                                 <img src={dark ? sort_dark : sort} alt="sort"/> {EN ? "Sorting" : "Сортування"}
                             </button>
@@ -47,7 +47,7 @@ const Navbar = () => {
                             <button className={dark ? css.nav_link_dark : css.nav_link}>
                                 <img src={dark ? filter_dark : filter} alt="filter"/> {EN ? "Filter" : "Фільтр"}
                             </button>
-                        </div>
+                        </div>*/}
                         <div>
                             <button onClick={() => switchT()} className={dark ? css.dark_switch_btn : css.switch_btn}>
                                 <div className={dark ? css.dark_switch_btn_ball : css.switch_btn_ball}>

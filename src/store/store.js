@@ -7,6 +7,7 @@ import themeReducers from './slices/theme.slice';
 import userReducers from './slices/user.slice';
 import languageReducers from './slices/language.slice';
 import adminReducers from './slices/admin.slice';
+import getUsersReducers from './slices/getUsers.slice';
 
 
 const store = configureStore({
@@ -16,7 +17,8 @@ const store = configureStore({
         tableReducers,
         themeReducers,
         languageReducers,
-        userReducers
+        userReducers,
+        getUsersReducers
     }
 });
 

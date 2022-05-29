@@ -1,0 +1,101 @@
+.get_users_panel {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #047E89;
+    min-height: 100px;
+}
+
+.panel_header {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 2px solid #F3F3F3;
+}
+
+.page_size_wrap,
+.user_type_wrap,
+.pages_switch_wrap {
+    display: flex;
+    align-items: center;
+}
+
+.page_size_btn,
+.user_type_btn,
+.page_size_btn_active,
+.user_type_btn_active {
+    width: 40px;
+    height: 30px;
+    background-color: #F3F3F3;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.page_size_btn_active,
+.user_type_btn_active {
+    background-color: #CDC9C9;
+}
+
+.user_type_btn,
+.user_type_btn_active {
+    width: 60px;
+}
+
+.page_size_btn:first-child,
+.page_size_btn_active:first-child,
+.user_type_btn:first-child,
+.user_type_btn_active:first-child {
+    border-radius: 5px 0 0 5px;
+    border-right: 1px solid #CDC9C9;
+}
+
+.page_size_btn:last-child,
+.page_size_btn_active:last-child,
+.user_type_btn:last-child,
+.user_type_btn_active:last-child {
+    border-radius: 0 5px 5px 0;
+    border-left: 1px solid #CDC9C9;
+}
+
+
+.pages_switch_wrap .page_size_btn {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.users_block {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.users_block_header {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    padding: 0 20px;
+    border-bottom: 2px solid #F3F3F3;
+}
+
+.users_block_header div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.id {
+    width: 10%;
+}
+
+.name, .email {
+    width: 45%
+}
+
+.name {
+    border-left: 2px solid #F3F3F3;
+    border-right: 2px solid #F3F3F3;
+}

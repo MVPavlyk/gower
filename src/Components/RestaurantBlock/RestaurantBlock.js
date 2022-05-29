@@ -2,6 +2,7 @@ import React from 'react';
 import css from './RestaurantBlock.module.css';
 import star from '../../img/star.svg';
 import location from '../../img/location.svg';
+import location_dark from '../../img/location_dark.svg';
 import {Link} from 'react-router-dom';
 
 import {useSelector} from 'react-redux';
@@ -24,7 +25,7 @@ const RestaurantBlock = ({restaurant}) => {
                             <div>{`${restaurant.rating}/5`}</div>
                         </div>
                         <div className={css.restaurant_location}>
-                            <img src={location} alt="location"/> {restaurant.address}
+                            <img src={dark ? location_dark : location} alt="location"/> {restaurant.address}
                         </div>
                         <div className={css.restaurant_time}>
                             {restaurant.time}

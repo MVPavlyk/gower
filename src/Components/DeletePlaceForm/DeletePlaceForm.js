@@ -25,6 +25,7 @@ const DeletePlaceForm = () => {
 
     return (
         <form onSubmit={handleSubmit(deleteUserReq)} className={createCss.add_place_form}>
+            <h4>Delete place</h4>
             <input
                 className={createCss.add_place_input}
                 type="text"

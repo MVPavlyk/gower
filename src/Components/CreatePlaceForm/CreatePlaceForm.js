@@ -1,7 +1,6 @@
 import React from 'react';
 import {useForm} from 'react-hook-form';
 import {useDispatch} from 'react-redux';
-/*import {addPlace} from '../../store';*/
 
 import css from './CreatePlaceForm.module.css';
 import {addPlace} from '../../store';
@@ -20,40 +19,41 @@ const CreatePlaceForm = () => {
 
     return (
         <form className={css.add_place_form} onSubmit={handleSubmit(sendPlace)}>
+            <h4>Create place</h4>
             <input
                 className={css.add_place_input}
                 type="text"
                 {...register('name')}
                 placeholder="name"
-                autoComplete='off'
+                autoComplete="off"
             />
             <input
                 type="text"
                 {...register('shortName')}
                 placeholder="shortName"
                 className={css.add_place_input}
-                autoComplete='off'
+                autoComplete="off"
             />
             <input
                 type="text"
                 {...register('location')}
                 placeholder="location"
                 className={css.add_place_input}
-                autoComplete='off'
+                autoComplete="off"
             />
             <input
                 type="text"
                 {...register('latitude')}
                 placeholder="latitude"
                 className={css.add_place_input}
-                autoComplete='off'
+                autoComplete="off"
             />
             <input
                 type="text"
                 {...register('longitude')}
                 placeholder="longitude"
                 className={css.add_place_input}
-                autoComplete='off'
+                autoComplete="off"
             />
             <input
                 type="number"

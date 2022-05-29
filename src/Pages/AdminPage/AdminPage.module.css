@@ -2,6 +2,17 @@
     min-height: 100vh;
     padding: 100px 6.5vw;
     display: flex;
+    justify-content: space-between;
+}
+
+.admin_page_left,
+.admin_page_right {
+    display: flex;
     flex-direction: column;
     row-gap: 30px;
+    width: 50%;
+}
+
+.admin_page_right {
+    align-items: center;
 }

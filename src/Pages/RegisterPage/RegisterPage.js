@@ -1,6 +1,7 @@
 import React from 'react';
 import {useForm} from 'react-hook-form';
 import {useDispatch, useSelector} from 'react-redux';
+import {Navigate} from 'react-router-dom'
 import css from './RegisterPage.module.css';
 import {registration} from '../../store';
 import {joiResolver} from '@hookform/resolvers/joi/dist/joi';
@@ -20,6 +21,9 @@ const RegisterPage = () => {
         dispatch(registration(obj));
     };
 
+    if (user) {
+        return <Navigate to="/" replace/>;
+    }
 
     return (
         <div className={dark ? css.register_page_dark : css.register_page}>
@@ -48,7 +52,7 @@ const RegisterPage = () => {
                     placeholder="Email"
                     {...register('email')}
                     autoComplete="off"
-                    autoCorrect='off'
+                    autoCorrect="off"
                     className={dark ? css.register_input_dark : css.register_input}
                 />
 
