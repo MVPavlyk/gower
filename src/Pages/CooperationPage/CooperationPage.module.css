@@ -29,37 +29,23 @@
     margin-bottom: 20px;
     font-family: 'Poiret One', sans-serif;
     font-weight: 400;
-    font-size: 64px;
-}
-
-.mail {
-    display: flex;
-    width: 90%;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
     font-size: 48px;
-    margin-top: 20px;
 }
-
-.telegram {
+.contacts_wrap{
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: 90%;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    margin-top: 20px;
-}
-
-.instagram {
-    display: flex;
-    width: 90%;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    margin-top: 20px;
     margin-bottom: 50px;
+    row-gap: 15px;
+}
+
+.contacts_block {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    align-items: center;
 }
 
 .carousel_wrap {
@@ -74,7 +60,7 @@
     font-family: 'Poiret One', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 48px;
+    font-size: 32px;
     margin-left: 20px;
 }
 
@@ -86,14 +72,14 @@
     font-family: 'Poiret One', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 64px;
+    font-size: 55px;
 }
 
-.carousel_wrap img {
-    position: relative;
-    background-image: linear-gradient(74.55deg, #000000 0%, rgba(0, 0, 0, 0) 56.53%);
-}
 
+.contacts_block img{
+    width: 30px;
+    height: 30px;
+}
 
 @media (max-width: 1300px) {
     .photo_wrap {
@@ -108,16 +94,16 @@
         font-size: 60px;
     }
 
-    .mail img, .telegram img, .instagram img {
+    .contacts_block img {
         width: 5%;
     }
 
     .contacts {
-        font-size: 60px;
+        font-size: 40px;
     }
 
     .text {
-        font-size: 45px;
+        font-size: 30px;
     }
 }
 
@@ -126,22 +112,14 @@
         flex-direction: column;
     }
 
-    .email {
-        font-size: 25px;
-        margin-top: 0;
-        margin-bottom: 5px;
-    }
 
-    .telegram {
-        font-size: 25px;
-        margin-top: 10px;
-        margin-bottom: 5px;
+    .contacts_wrap{
+        row-gap: 5px;
+        margin-bottom: 30px;
     }
-
-    .instagram {
+    .contacts_block {
         font-size: 25px;
-        margin-top: 10px;
-        margin-bottom: 50px;
+        margin-bottom: 5px;
     }
 
     .title {
@@ -153,11 +131,11 @@
     }
 
     .contacts {
-        font-size: 55px;
+        font-size: 38px;
     }
 
     .text {
-        font-size: 35px;
+        font-size: 27px;
     }
 }
 
@@ -171,11 +149,15 @@
     }
 
     .contacts {
-        font-size: 45px;
+        font-size: 37px;
     }
 
     .text {
-        font-size: 30px;
+        font-size: 25px;
+    }
+    .contacts_wrap{
+        row-gap: 5px;
+        margin-bottom: 25px;
     }
 }
 
@@ -189,31 +171,19 @@
         font-size: 25px;
     }
 
-    .email {
+    .contacts_block {
         font-size: 18px;
         margin-top: 0;
         margin-bottom: 0;
-    }
-
-    .telegram {
-        font-size: 18px;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .instagram {
-        font-size: 18px;
-        margin-top: 0;
-        margin-bottom: 30px;
     }
 
     .contacts {
-        font-size: 35px;
-        margin-bottom: 0;
+        font-size: 34px;
+        margin-bottom: 10px;
     }
 
     .text {
-        font-size: 24px;
+        font-size: 22px;
     }
 }
 
@@ -228,7 +198,7 @@
 
     .contacts {
         font-size: 25px;
-        margin-bottom: 0;
+        margin-bottom: 7px;
         margin-top: 10px;
     }
 
