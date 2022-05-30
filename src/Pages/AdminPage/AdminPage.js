@@ -11,9 +11,9 @@ import {useSelector} from 'react-redux';
 import {Navigate} from 'react-router-dom';
 
 const AdminPage = () => {
-    const {user} = useSelector(state => state['userReducers']);
+    const {user, roles} = useSelector(state => state['userReducers']);
 
-    if (user && (!(user.id === 1))) {
+    if (user && (!(roles.includes('Admin')))) {
         return <Navigate to="/user" replace/>;
     }
 

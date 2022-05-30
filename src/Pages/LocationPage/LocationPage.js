@@ -5,12 +5,12 @@ import {useSelector} from 'react-redux';
 import css from './LocationPage.module.css';
 import {GoogleLocateMap} from '../../Components';
 
-import phone from '../../img/phone.svg';
-import phone_dark from '../../img/phone_dark.svg';
-import instagram from '../../img/insta.svg';
-import instagram_dark from '../../img/insta_dark.svg';
-import email from '../../img/mail.svg';
-import email_dark from '../../img/mail_dark.svg';
+import phone from '../../img/LocationPage/phone_logo.svg';
+import phone_dark from '../../img/LocationPage/phone_logo_dark.svg';
+import instagram from '../../img/LocationPage/instagram_icon.svg';
+import instagram_dark from '../../img/LocationPage/instagram_icon_dark.svg';
+import email from '../../img/LocationPage/email_logo.svg';
+import email_dark from '../../img/LocationPage/email_logo_dark.svg';
 
 
 const API_KEY = process.env.REACT_APP_API_KEY;

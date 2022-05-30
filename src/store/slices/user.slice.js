@@ -35,7 +35,7 @@ export const logout = createAsyncThunk(
             localStorage.removeItem('user');
             return await UserServices.logout();
         } catch (error) {
-            console.log(error);
+            rejectWithValue(error);
         }
     }
 );
@@ -74,18 +74,35 @@ export const updateUser = createAsyncThunk(
     }
 );
 
+export const getMyRoles = createAsyncThunk(
+    'userSlice/getMyRoles',
+    async (_, {rejectWithValue}) => {
+        try {
+            const roles = await UserServices.getMyRoles();
+            localStorage.setItem('roles', JSON.stringify(roles));
+            return roles;
+        } catch (e) {
+            return rejectWithValue(e);
+        }
+    }
+);
+
 
 const userSlice = createSlice({
     name: 'userSlice',
     initialState: {
         error: null,
         status: null,
-        user: null
+        user: null,
+        roles: []
     },
 
     reducers: {
         setUserFromLocalStorage: (state) => {
             state.user = JSON.parse(localStorage.getItem('user'));
+        },
+        setRolesFromLocalStorage: state => {
+            state.roles = JSON.parse(localStorage.getItem('roles'));
         }
     },
 
@@ -154,12 +171,22 @@ const userSlice = createSlice({
         [updateUser.rejected]: (state, action) => {
             state.status = 'rejected';
             state.error = action.payload;
+        },
+
+        [getMyRoles.fulfilled]: (state, action) => {
+            state.status = 'fulfilled';
+            state.roles = action.payload;
+        },
+
+        [getMyRoles.rejected]: (state, action) => {
+            state.status = 'rejected';
+            state.error = action.payload;
         }
 
     }
 });
 
-export const {setUserFromLocalStorage} = userSlice.actions;
+export const {setUserFromLocalStorage, setRolesFromLocalStorage} = userSlice.actions;
 
 
 const userReducers = userSlice.reducer;

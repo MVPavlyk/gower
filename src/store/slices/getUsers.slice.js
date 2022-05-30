@@ -45,6 +45,18 @@ export const updateUserRoles = createAsyncThunk(
     }
 );
 
+export const getUsersByRoleName = createAsyncThunk(
+    'getUsersSlice/getUsersByRoleName',
+    async (reqObj, {rejectWithValue}) => {
+        try {
+            return GetUsersServices.getByRoleName(reqObj);
+        } catch (e) {
+            rejectWithValue(e);
+        }
+    }
+);
+
+
 const getUsersSlice = createSlice({
         name: 'getUsersSlice',
         initialState: {
@@ -74,7 +86,7 @@ const getUsersSlice = createSlice({
             },
             setRoles: (state, action) => {
                 state.oneUserRoles = action.payload;
-            }
+            },
         },
         extraReducers: {
             [getAllPaginated.fulfilled]: (state, action) => {
@@ -116,6 +128,16 @@ const getUsersSlice = createSlice({
             },
 
             [updateUserRoles.rejected]: (state, action) => {
+                state.status = 'rejected';
+                state.error = action.payload;
+            },
+
+            [getUsersByRoleName.fulfilled]: (state, action) => {
+                state.status = 'fulfilled';
+                state.users = action.payload.results;
+            },
+
+            [getUsersByRoleName.rejected]: (state, action) => {
                 state.status = 'rejected';
                 state.error = action.payload;
             }

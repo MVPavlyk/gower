@@ -1,18 +1,19 @@
 import React from 'react';
-
-import cooperation_1 from '../../img/Cooperation_1.png'
-import cooperation_2 from '../../img/Cooperation_2.png'
-import cooperation_3 from '../../img/Cooperation_3.png'
-import mail_photo from '../../img/mail.svg'
-import telega_photo from '../../img/Telega.svg'
-import insta_photo from '../../img/insta.svg'
-import mail_photo_dark from '../../img/mail_dark.svg'
-import telega_photo_dark from '../../img/Telega_dark.svg'
-import insta_photo_dark from '../../img/insta_dark.svg'
-import css from "../CooperationPage/CooperationPage.module.css";
-
 import {useSelector} from 'react-redux';
 import {Carousel} from "react-responsive-carousel";
+
+import cooperation_1 from '../../img/CooperationPage/Cooperation_1.png'
+import cooperation_2 from '../../img/CooperationPage/Cooperation_2.png'
+import cooperation_3 from '../../img/CooperationPage/Cooperation_3.png'
+
+import telegram from '../../img/CooperationPage/telegram.svg'
+import telegram_dark from '../../img/CooperationPage/telegram_dark.svg'
+import instagram from '../../img/CooperationPage/instagram.svg'
+import instagram_dark from '../../img/CooperationPage/instagram_dark.svg'
+import email from '../../img/CooperationPage/email.svg'
+import email_dark from '../../img/CooperationPage/email_dark.svg'
+
+import css from "../CooperationPage/CooperationPage.module.css";
 
 const CooperationPage = () => {
 
@@ -43,19 +44,19 @@ const CooperationPage = () => {
             <div className={css.contacts}> {EN ? 'Our contacts:' : 'Наші контакти:'} </div>
             <div className={css.contacts_wrap}>
                 <div className={css.contacts_block}>
-                    <img src={dark ? mail_photo_dark : mail_photo} alt="mail_photo"/>
+                    <img src={dark ? email_dark : email} alt="email"/>
                     <div className={css.text}>
                         Email: example228@gmail.com
                     </div>
                 </div>
                 <div className={css.contacts_block}>
-                    <img src={dark ? telega_photo_dark : telega_photo} alt="telega_photo"/>
+                    <img src={dark ? telegram_dark : telegram} alt="telegram"/>
                     <div className={css.text}>
                         Telegram: t.me/@goWer
                     </div>
                 </div>
                 <div className={css.contacts_block}>
-                    <img src={dark ? insta_photo_dark : insta_photo} alt="insta_photo"/>
+                    <img src={dark ? instagram_dark : instagram} alt="instagram"/>
                     <div className={css.text}>
                         Instagram: @goWer
                     </div>
