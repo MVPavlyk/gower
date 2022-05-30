@@ -7,10 +7,10 @@ import {GoogleLocateMap} from '../../Components';
 
 import phone from '../../img/phone.svg';
 import phone_dark from '../../img/phone_dark.svg';
-import instagram from '../../img/Insta.svg';
-import instagram_dark from '../../img/Insta_dark.svg';
-import email from '../../img/Mail.svg';
-import email_dark from '../../img/Mail_dark.svg';
+import instagram from '../../img/insta.svg';
+import instagram_dark from '../../img/insta_dark.svg';
+import email from '../../img/mail.svg';
+import email_dark from '../../img/mail_dark.svg';
 
 
 const API_KEY = process.env.REACT_APP_API_KEY;
