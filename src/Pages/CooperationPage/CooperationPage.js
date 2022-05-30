@@ -2,9 +2,9 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import {Carousel} from "react-responsive-carousel";
 
-import cooperation_1 from '../../img/CooperationPage/Cooperation_1.png'
-import cooperation_2 from '../../img/CooperationPage/Cooperation_2.png'
-import cooperation_3 from '../../img/CooperationPage/Cooperation_3.png'
+import cooperation_1 from '../../img/CooperationPage/сooperation_1.png'
+import cooperation_2 from '../../img/CooperationPage/сooperation_2.png'
+import cooperation_3 from '../../img/CooperationPage/сooperation_3.png'
 
 import telegram from '../../img/CooperationPage/telegram.svg'
 import telegram_dark from '../../img/CooperationPage/telegram_dark.svg'

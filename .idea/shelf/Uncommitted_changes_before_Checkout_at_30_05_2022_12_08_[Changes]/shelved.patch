@@ -1,0 +1,28 @@
+Index: src/Components/Navbar/Navbar.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from 'react';\r\nimport rootCss from '../../root.module.css';\r\nimport css from './Navbar.module.css';\r\nimport search from '../../img/search.svg';\r\nimport search_dark from '../../img/search_white.svg';\r\nimport sort from '../../img/sort.svg';\r\nimport sort_dark from '../../img/sort_dark.svg';\r\nimport filter from '../../img/filter.svg';\r\nimport filter_dark from '../../img/filter_dark.svg';\r\n\r\nimport {useSelector} from 'react-redux';\r\n\r\nconst Navbar = () => {\r\n\r\n    const {dark} = useSelector(state => state['themeReducers']);\r\n\r\n    return (\r\n        <div className={dark ? css.main_navbar_dark : css.main_navbar}>\r\n            <div className={rootCss.container}>\r\n                <div className={css.nav_wrap}>\r\n                    <form className={dark ? css.search_box_dark : css.search_box}>\r\n                        <button className={css.search_btn}>\r\n                            <img src={dark ? search_dark : search} alt=\"search\"/>\r\n                        </button>\r\n                        <input type=\"text\" className={css.search_input} placeholder=\"Search...\"/>\r\n                    </form>\r\n                    <div className={css.nav_links}>\r\n                        <div>\r\n                            <button className={dark ? css.nav_link_dark : css.nav_link}>\r\n                                <img src={dark ? sort_dark : sort} alt=\"sort\"/> Sorting\r\n                            </button>\r\n                        </div>\r\n                        <div>\r\n                            <button className={dark ? css.nav_link_dark : css.nav_link}>\r\n                                <img src={dark ? filter_dark : filter} alt=\"filter\"/> Filter\r\n                            </button>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    );\r\n};\r\n\r\nexport {Navbar};
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Components/Navbar/Navbar.js b/src/Components/Navbar/Navbar.js
+--- a/src/Components/Navbar/Navbar.js	(revision ea70e6d792a1a42366d69fd926796097488ca185)
++++ b/src/Components/Navbar/Navbar.js	(date 1653901713819)
+@@ -25,7 +25,7 @@
+                         <input type="text" className={css.search_input} placeholder="Search..."/>
+                     </form>
+                     <div className={css.nav_links}>
+-                        <div>
++                        {/*<div>
+                             <button className={dark ? css.nav_link_dark : css.nav_link}>
+                                 <img src={dark ? sort_dark : sort} alt="sort"/> Sorting
+                             </button>
+@@ -34,7 +34,7 @@
+                             <button className={dark ? css.nav_link_dark : css.nav_link}>
+                                 <img src={dark ? filter_dark : filter} alt="filter"/> Filter
+                             </button>
+-                        </div>
++                        </div>*/}
+                     </div>
+                 </div>
+             </div>
