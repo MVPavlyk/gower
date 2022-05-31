@@ -29,7 +29,7 @@ const UserPage = () => {
         <div className={dark ? css.user_page_dark : css.user_page}>
             <UpdateUserForm/>
             <ChangePasswordForm/>
-            {roles.includes('Admin') &&
+            {roles && roles.includes('Admin') &&
                 <NavLink to={'/admin'}>
                     <button className={dark ? updateCss.update_user_btn_dark : updateCss.update_user_btn}>
                         {EN ? 'Admin tools' : 'Засоби адміністратора'}
