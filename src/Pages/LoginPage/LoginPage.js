@@ -2,7 +2,7 @@ import React from 'react';
 import {useForm} from 'react-hook-form';
 import {joiResolver} from '@hookform/resolvers/joi';
 import {useDispatch, useSelector} from 'react-redux';
-import {login} from '../../store';
+import {getMyRoles, login} from '../../store';
 import {Navigate, NavLink} from 'react-router-dom';
 import {UserValidator} from '../../Validation';
 import css from './LoginPage.module.css';
@@ -21,10 +21,10 @@ const LoginPage = () => {
     const dispatch = useDispatch();
 
     const submit = (obj) => {
-        dispatch(login(obj));
+        dispatch(login(obj)).then(dispatch(getMyRoles()));
     };
 
-    if(user) {
+    if (user) {
         return <Navigate to="/user" replace/>;
     }
 
