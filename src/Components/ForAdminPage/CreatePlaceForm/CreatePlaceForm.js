@@ -1,6 +1,6 @@
 import React from 'react';
 import {useForm} from 'react-hook-form';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
 import css from './CreatePlaceForm.module.css';
 import {addPlace} from '../../../store';
@@ -18,51 +18,54 @@ const CreatePlaceForm = () => {
         // console.log({...place, id: 0, allTables: 0, freeTables: 0});
     };
 
+    const {dark} = useSelector(state => state['themeReducers']);
+    const {EN} = useSelector(state => state['languageReducers']);
+
     return (
         <form className={css.add_place_form} onSubmit={handleSubmit(sendPlace)}>
-            <h4>Create place</h4>
+            <h4>{EN ? "Create place" : "Створити місце"}</h4>
             <input
-                className={css.add_place_input}
+                className={dark ? css.add_place_input_dark : css.add_place_input}
                 type="text"
                 {...register('name')}
-                placeholder="name"
+                placeholder={EN ? "name" : "ім'я"}
                 autoComplete="off"
             />
             <input
                 type="text"
                 {...register('shortName')}
-                placeholder="shortName"
-                className={css.add_place_input}
+                placeholder={EN ? "shortName" : "коротке ім'я"}
+                className={dark ? css.add_place_input_dark : css.add_place_input}
                 autoComplete="off"
             />
             <input
                 type="text"
                 {...register('location')}
-                placeholder="location"
-                className={css.add_place_input}
+                placeholder={EN ? "location" : "локація"}
+                className={dark ? css.add_place_input_dark : css.add_place_input}
                 autoComplete="off"
             />
             <input
                 type="text"
                 {...register('latitude')}
-                placeholder="latitude"
-                className={css.add_place_input}
+                placeholder={EN ? "latitude" : "широта"}
+                className={dark ? css.add_place_input_dark : css.add_place_input}
                 autoComplete="off"
             />
             <input
                 type="text"
                 {...register('longitude')}
-                placeholder="longitude"
-                className={css.add_place_input}
+                placeholder={EN ? "longitude" : "довгота"}
+                className={dark ? css.add_place_input_dark : css.add_place_input}
                 autoComplete="off"
             />
             <input
                 type="number"
                 {...register('userId')}
-                placeholder="userId"
-                className={css.add_place_input}
+                placeholder={EN ? "userId" : "Id користувача"}
+                className={dark ? css.add_place_input_dark : css.add_place_input}
             />
-            <button className={css.add_place_btn}>send</button>
+            <button className={dark ? css.add_place_btn_dark : css.add_place_btn}>{EN ? "send" : "відправити"}</button>
         </form>
     );
 };

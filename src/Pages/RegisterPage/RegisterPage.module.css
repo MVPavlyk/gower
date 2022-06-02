@@ -66,3 +66,72 @@
     color: crimson;
 }
 
+@media (max-width: 450px) {
+    .register_input,
+    .register_input_dark {
+        width: 300px;
+        height: 50px;
+        border-radius: 10px;
+        border: 2px solid #047E89;
+        outline: none;
+        padding: 0 15px;
+        font-size: 20px;
+    }
+
+
+
+
+
+    .login_input,
+    .login_input_dark {
+        width: 300px;
+        height: 50px;
+    }
+
+    .login_btn,
+    .login_btn_dark {
+        padding: 9px 33px;
+        font-size: 19px;
+    }
+
+    .register_link,
+    .register_link_dark {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 390px) {
+    .register_input,
+    .register_input_dark {
+        width: 280px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .register_btn,
+    .register_btn_dark {
+        padding: 8px 32px;
+        border-radius: 8px;
+        font-size: 18px;
+    }
+
+
+
+
+
+    .login_input,
+    .login_input_dark {
+        width: 280px;
+    }
+
+    .login_btn,
+    .login_btn_dark {
+        padding: 8px 30px;
+        font-size: 18px;
+    }
+
+    .register_link,
+    .register_link_dark {
+        font-size: 12px;
+    }
+}

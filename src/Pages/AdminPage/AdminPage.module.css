@@ -1,8 +1,14 @@
-.admin_page {
+.admin_page,
+.admin_page_dark {
     min-height: 100vh;
     padding: 100px 6.5vw;
     display: flex;
     justify-content: space-between;
+}
+
+.admin_page_dark {
+    background-color: #035259;
+    color: #FFFFFF;
 }
 
 .admin_page_left,
@@ -15,4 +21,29 @@
 
 .admin_page_right {
     align-items: center;
+}
+
+@media (max-width: 1200px) {
+    .admin_page_left{
+        width: 43%;
+    }
+
+    .admin_page_right {
+        width: 57%;
+    }
+}
+
+@media (max-width: 992px) {
+    .admin_page,
+    .admin_page_dark {
+        flex-direction: column-reverse;
+        row-gap: 40px;
+        align-items: center;
+    }
+
+    .admin_page_left,
+    .admin_page_right {
+        align-items: center;
+        width: 85%;
+    }
 }
