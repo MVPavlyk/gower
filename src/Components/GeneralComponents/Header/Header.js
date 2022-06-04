@@ -51,8 +51,8 @@ const Header = () => {
             <div className={show ? css.burger_menu_show : css.burger_menu}>
                 <NavLink className={css.header_link}
                          to={'/login'}>{user ? user.firstName : EN ? 'Login' : 'Вхід'}</NavLink>
-                <NavLink className={css.header_link} to={'/'}>Places</NavLink>
-                <NavLink className={css.header_link} to={'/cooperation'}>Cooperation</NavLink>
+                <NavLink className={css.header_link} to={'/'}>{EN ? 'Places' : 'Місця'}</NavLink>
+                <NavLink className={css.header_link} to={'/cooperation'}>{EN ? 'Cooperation' : 'Співпраця'}</NavLink>
             </div>
         </div>
     );
