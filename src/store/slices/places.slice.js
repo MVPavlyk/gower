@@ -12,6 +12,17 @@ export const getPlacesPaginated = createAsyncThunk(
     }
 );
 
+export const getPlacesByQuery = createAsyncThunk(
+    'placesSlice/getPlacesPaginated',
+    async ({pageNum, pageSize, query}, {rejectWithValue}) => {
+        try {
+            return await placesServices.getPlacesByQuery(pageNum, pageSize, query);
+        } catch (e) {
+            rejectWithValue(e);
+        }
+    }
+);
+
 export const getOnePlace = createAsyncThunk(
     'placesSlice/getOnePlace',
     async (placeId, {rejectWithValue}) => {
@@ -31,22 +42,36 @@ const placesSlice = createSlice({
         error: null,
         placesPage: [],
         onePlace: null,
-        pageNum: 1
+        pageNum: 1,
+        query: null
     },
 
     reducers: {
         setCurrent: (state, action) => {
             state.pageNum = action.payload;
         },
+        setQuery: (state, action) => {
+            console.log(action.payload);
+            state.query = action.payload;
+        }
     },
 
     extraReducers: {
         [getPlacesPaginated.fulfilled]: (state, action) => {
             state.status = 'fulfilled';
-            state.placesPage = action.payload.results;
+            state.placesPage = action.payload;
         },
 
         [getPlacesPaginated.pending]: (state) => {
+            state.status = 'pending';
+        },
+
+        [getPlacesByQuery.fulfilled]: (state, action) => {
+            state.status = 'fulfilled';
+            state.placesPage = action.payload;
+        },
+
+        [getPlacesByQuery.pending]: (state) => {
             state.status = 'pending';
         },
 
@@ -64,7 +89,7 @@ const placesSlice = createSlice({
 
 });
 
-export const {setCurrent} = placesSlice.actions;
+export const {setCurrent, setQuery} = placesSlice.actions;
 
 const placesReducers = placesSlice.reducer;
 

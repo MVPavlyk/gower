@@ -1,3 +1,32 @@
 .booking_page {
     min-height: 100vh;
+    padding: 60px 6.5vw;
+    display: flex;
+    align-items: center;
+    row-gap: 10px;
+    flex-direction: column;
+}
+
+.booking_header {
+    width: 100%;
+    padding: 1vw 2vw;
+    border-bottom: 2px solid #047E89;
+    text-align: left;
+    font-size: 28px;
+}
+
+.page_buttons {
+    margin-top: 3vw;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.page_buttons > img {
+    cursor: pointer;
+    width: 30px;
+}
+
+.page_number {
+    font-size: 32px;
 }

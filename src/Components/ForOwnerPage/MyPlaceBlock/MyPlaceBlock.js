@@ -2,14 +2,17 @@ import React, {useEffect, useState} from 'react';
 import css from './MyPlaceBlock.module.css';
 import {useForm} from 'react-hook-form';
 import {useDispatch, useSelector} from 'react-redux';
-import {getTablesOfPlace, uploadPhoto} from '../../../store';
+import {getBookingsForToday, getTablesOfPlace, uploadPhoto} from '../../../store';
 import arrowSide from '../../../img/arrow-side.svg';
 import {MyPlaceTable} from '../MyPlaceTable/MyPlaceTable';
+import {OwnerBookingRow} from '../OwnerBookingRow/OwnerBookingRow';
 
 const MyPlaceBlock = ({place}) => {
     const {EN} = useSelector(state => state['languageReducers']);
 
     const {placeTables} = useSelector(state => state['tableReducers']);
+
+    const {bookingsForToday} = useSelector(state => state['bookingReducers']);
 
     const {
         register, handleSubmit
@@ -29,6 +32,7 @@ const MyPlaceBlock = ({place}) => {
 
     useEffect(() => {
         dispatch(getTablesOfPlace(place.id));
+        dispatch(getBookingsForToday(place.id));
     }, []);
 
     useEffect(() => {
@@ -45,24 +49,6 @@ const MyPlaceBlock = ({place}) => {
         setString(string);
         setShowDrop(false);
     };
-
-
-    /*
-        const [photo, setPhoto] = useState();
-
-        const getPhoto = async () => {
-            try {
-                return await PhotosServices.downloadPhoto(7, 3);
-            } catch (e) {
-                console.error(e);
-            }
-        };
-
-
-        useEffect(() => {
-            getPhoto().then(value => setPhoto(value));
-        }, []);
-    */
 
 
     return (
@@ -159,11 +145,13 @@ const MyPlaceBlock = ({place}) => {
                 />
                 <button className={css.send_photo_btn}>{EN ? 'Send photo' : 'Надіслати фото'}</button>
             </form>
-            {/*{photo && <img src={`data:image/jpeg;base64,${photo.file}`} alt="photo"/>}*/}
             <div className={css.block_title}>{EN ? 'My tables' : 'Мої столики'}</div>
             {placeTables && !!placeTables.length && placeTables.map(table => <MyPlaceTable placeId={place.id}
                                                                                            key={table.id}
-                                                                                           table={table}/>)}
+                                                                                           table={table}/>)
+            }
+            <div className={css.block_title}>{EN ? 'Bookings for today' : 'Бронювання на сьогодні'}</div>
+            {bookingsForToday?.map(booking => <OwnerBookingRow key={booking.id} booking={booking}/>)}
         </div>
     );
 };

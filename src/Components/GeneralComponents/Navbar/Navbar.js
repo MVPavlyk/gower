@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import rootCss from '../../../root.module.css';
 import css from './Navbar.module.css';
 import search from '../../../img/Navbar/search.svg';
@@ -10,12 +10,13 @@ import filter_dark from '../../../img/Navbar/filter_dark.svg';
 
 
 import {useDispatch, useSelector} from 'react-redux';
-import {switchTheme, switchLanguage} from '../../../store';
+import {switchTheme, switchLanguage, setQuery} from '../../../store';
 
 const Navbar = () => {
-
     const {dark} = useSelector(state => state['themeReducers']);
     const {EN} = useSelector(state => state['languageReducers']);
+
+
 
     const dispatch = useDispatch();
 
@@ -27,6 +28,15 @@ const Navbar = () => {
         dispatch(switchLanguage());
     };
 
+
+    const handleChange = (e) => {
+        const data = e.target.value;
+        data === '' ? dispatch(setQuery(null)) : dispatch(setQuery(data));
+    };
+
+
+
+
     return (
         <div className={dark ? css.main_navbar_dark : css.main_navbar}>
             <div className={rootCss.container}>
@@ -35,7 +45,12 @@ const Navbar = () => {
                         <button className={css.search_btn}>
                             <img src={dark ? search_dark : search} alt="search"/>
                         </button>
-                        <input type="text" className={css.search_input} placeholder={EN ? "Search..." : "Пошук..."}/>
+                        <input
+                            type="text"
+                            className={css.search_input}
+                            placeholder={EN ? 'Search...' : 'Пошук...'}
+                            onChange={e => handleChange(e)}
+                        />
                     </form>
                     <div className={css.nav_links}>
                         {/*<div>
@@ -53,18 +68,20 @@ const Navbar = () => {
                                 <div className={dark ? css.dark_switch_btn_ball : css.switch_btn_ball}>
 
                                 </div>
-                                <div className={ dark ? css.dark_switch_btn_name : css.switch_btn_name}>
-                                    {dark ? "dark mode" : "white mode"}
+                                <div className={dark ? css.dark_switch_btn_name : css.switch_btn_name}>
+                                    {dark ? 'dark mode' : 'white mode'}
                                 </div>
                             </button>
                         </div>
                         <div>
-                            <button onClick={() => switchL()} className={EN ? ( dark ? css.switch_btn_en_dark : css.switch_btn_en) : (dark ? css.switch_btn_uk_dark : css.switch_btn_uk)}>
+                            <button onClick={() => switchL()}
+                                    className={EN ? (dark ? css.switch_btn_en_dark : css.switch_btn_en) : (dark ? css.switch_btn_uk_dark : css.switch_btn_uk)}>
                                 <div className={EN ? css.switch_btn_ball_en : css.switch_btn_ball_uk}>
 
                                 </div>
-                                <div className={EN ? ( dark ? css.switch_btn_name_en_dark : css.switch_btn_name_en) : ( dark ? css.switch_btn_name_uk_dark : css.switch_btn_name_uk)}>
-                                    {EN ? "EN" : "UK"}
+                                <div
+                                    className={EN ? (dark ? css.switch_btn_name_en_dark : css.switch_btn_name_en) : (dark ? css.switch_btn_name_uk_dark : css.switch_btn_name_uk)}>
+                                    {EN ? 'EN' : 'UK'}
                                 </div>
                             </button>
                         </div>

@@ -63,7 +63,14 @@ const bookingSlice = createSlice({
     initialState: {
         status: null,
         error: null,
-        myBookings: []
+        myBookings: [],
+        bookingsForToday: [],
+        currentBookPage: 1,
+    },
+    reducers: {
+        setBookPageNum: (state, action) => {
+            state.currentBookPage = action.payload;
+        }
     },
     extraReducers: {
         [createBooking.rejected]: (state, action) => {
@@ -82,11 +89,20 @@ const bookingSlice = createSlice({
         [getMyBookings.fulfilled]: (state, action) => {
             state.status = 'fulfilled';
             state.myBookings = action.payload;
+        },
+
+        [getBookingsForToday.rejected]: (state, action) => {
+            state.status = 'rejected';
+            state.error = action.payload;
+        },
+        [getBookingsForToday.fulfilled]: (state, action) => {
+            state.status = 'fulfilled';
+            state.bookingsForToday = action.payload;
         }
     }
-
-
 });
+
+export const {setBookPageNum} = bookingSlice.actions;
 
 const bookingReducers = bookingSlice.reducer;
 

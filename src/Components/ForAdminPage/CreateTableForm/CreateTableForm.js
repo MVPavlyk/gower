@@ -22,6 +22,7 @@ const CreateTableForm = () => {
             top: table.top,
             left: table.left,
             transform: table.transform,
+            type: table.type,
             capacity: +table.capacity,
             number: +table.number,
             placeId: +table.placeId,
@@ -47,19 +48,19 @@ const CreateTableForm = () => {
             >
                 <h4>{EN ? "Create new table" : "Додати новий стіл"}</h4>
                 <input
-                    type="number"
+                    type="text"
                     className={dark ? createCss.add_place_input_dark : createCss.add_place_input}
                     {...register('top')}
                     placeholder={EN ? "top" : "зверху"}
                 />
                 <input
-                    type="number"
+                    type="text"
                     className={dark ? createCss.add_place_input_dark : createCss.add_place_input}
                     {...register('left')}
                     placeholder={EN ? "left" : "зліва"}
                 />
                 <input
-                    type="number"
+                    type="text"
                     className={dark ? createCss.add_place_input_dark : createCss.add_place_input}
 
                     {...register('transform')}

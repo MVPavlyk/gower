@@ -48,15 +48,11 @@ const MapPage = () => {
                     isArchive: false,
                     bookedOn: dateTime
                 };
-                dispatch(createBooking(reqObj)).then(() => {
-                    if (!!error) {
-                        setLocalError(false);
-                        dispatch(sendReserve());
-                    } else {
-                        setLocalError(true)
-                    }
-                });
+                dispatch(createBooking(reqObj));
             }
+            setTimeout(()=> {
+                dispatch(sendReserve())
+            }, 100)
         } else {
             setLocalError(true);
         }
@@ -97,7 +93,7 @@ const MapPage = () => {
                         {(localError || error) && <div className={css.error}>
                             {EN ? 'Something wrong' : 'Щось не так'}
                         </div>}
-                        <button className={css.reserve_btn} onClick={() => send()}>
+                        <button className={css.reserve_btn}>
                             {EN ? 'Send' : 'Зарезервувати'}
                         </button>
                     </form>
