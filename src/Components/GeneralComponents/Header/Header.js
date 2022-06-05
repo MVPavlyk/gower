@@ -39,7 +39,7 @@ const Header = () => {
                         <NavLink className={css.header_link}
                                  to={'/cooperation'}>{EN ? 'Cooperation' : 'Співпраця'}
                         </NavLink>
-                        {!!roles.length && roles.includes('PlaceOwner') &&
+                        {roles && !!roles.length && roles.includes('PlaceOwner') &&
                             <NavLink className={css.header_link}
                                      to={'/myPlaces'}>{EN ? 'My places' : 'Мої заклади'}
                             </NavLink>
