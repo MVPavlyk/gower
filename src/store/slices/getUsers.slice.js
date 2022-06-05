@@ -1,11 +1,11 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
-import {GetUsersServices} from '../../services';
+import {getUsersServices} from '../../services';
 
 export const getAllPaginated = createAsyncThunk(
     'getUsersSlice/getAllPaginated',
     async (reqObj, {rejectWithValue}) => {
         try {
-            return GetUsersServices.getPaginated(reqObj);
+            return getUsersServices.getPaginated(reqObj);
         } catch (e) {
             rejectWithValue(e);
         }
@@ -16,7 +16,7 @@ export const getOneUser = createAsyncThunk(
     'getUsersSlice/getOneUser',
     async (id, {rejectWithValue}) => {
         try {
-            return GetUsersServices.getOne(id);
+            return getUsersServices.getOne(id);
         } catch (e) {
             rejectWithValue(e);
         }
@@ -27,7 +27,7 @@ export const getUserRoles = createAsyncThunk(
     'getUsersSlice/getUserRoles',
     async (id, {rejectWithValue}) => {
         try {
-            return GetUsersServices.getUserRole(id);
+            return getUsersServices.getUserRole(id);
         } catch (e) {
             rejectWithValue(e);
         }
@@ -38,7 +38,7 @@ export const updateUserRoles = createAsyncThunk(
     'getUsersSlice/updateUserRoles',
     async ({id, userRoles}, {rejectWithValue}) => {
         try {
-            return GetUsersServices.updateRoles(id, userRoles);
+            return getUsersServices.updateRoles(id, userRoles);
         } catch (e) {
             rejectWithValue(e);
         }
@@ -49,7 +49,7 @@ export const getUsersByRoleName = createAsyncThunk(
     'getUsersSlice/getUsersByRoleName',
     async (reqObj, {rejectWithValue}) => {
         try {
-            return GetUsersServices.getByRoleName(reqObj);
+            return getUsersServices.getByRoleName(reqObj);
         } catch (e) {
             rejectWithValue(e);
         }

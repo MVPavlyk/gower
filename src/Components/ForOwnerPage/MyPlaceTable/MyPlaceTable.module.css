@@ -1,0 +1,55 @@
+.table_block {
+    width: 100%;
+    height: 40px;
+    border-top: 1px solid #CDC9C9;
+    font-size: 20px;
+    display: flex;
+}
+
+.number,
+.status {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #CDC9C9;
+}
+
+
+.number {
+    width: 60px;
+}
+
+.status {
+    width: 200px;
+}
+
+.table_buttons {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+    column-gap: 30px;
+}
+
+.table_btn_active,
+.table_btn_disable {
+    width: 150px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.table_btn_active {
+    background-color: #047E89;
+    color: white;
+}
+
+.table_btn_disable {
+    background-color: #CDC9C9;
+    color: black;
+}

@@ -47,6 +47,20 @@ const CreatePlaceForm = () => {
             />
             <input
                 type="text"
+                {...register('workTime')}
+                placeholder="workTime"
+                className={css.add_place_input}
+                autoComplete="off"
+            />
+            <input
+                type="text"
+                {...register('rating')}
+                placeholder="rating"
+                className={css.add_place_input}
+                autoComplete="off"
+            />
+            <input
+                type="text"
                 {...register('latitude')}
                 placeholder={EN ? "latitude" : "широта"}
                 className={dark ? css.add_place_input_dark : css.add_place_input}

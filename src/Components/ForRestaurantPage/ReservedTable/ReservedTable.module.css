@@ -14,7 +14,7 @@
 }
 
 .reserved_header_block {
-    width: 22.5%;
+    width: 28%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,14 +54,10 @@
     }
 
     .reserved_header_block {
-        width: 15%;
-    }
-
-    .reserved_header_block:nth-child(4n-1) {
         width: 25%;
     }
 
-    .reserved_header_block:nth-child(4n) {
+    .reserved_header_block:nth-child(3n) {
         width: 30%;
     }
 }

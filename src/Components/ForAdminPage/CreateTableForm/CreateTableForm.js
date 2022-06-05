@@ -4,7 +4,7 @@ import createCss from '../CreatePlaceForm/CreatePlaceForm.module.css';
 import {useForm} from 'react-hook-form';
 import {useDispatch, useSelector} from 'react-redux';
 import {createTable} from '../../../store';
-import {TableRow} from '../../ForRestaurantPage/TableRow/TableRow';
+import {TableRow} from '../../ForRestaurantPage';
 
 const CreateTableForm = () => {
     const {
@@ -17,13 +17,23 @@ const CreateTableForm = () => {
 
     const assignTable = (table, e) => {
         const array = [...tableArray];
-        array.push({...table, isFree: true});
+        array.push({
+            id: 0,
+            top: table.top,
+            left: table.left,
+            transform: table.transform,
+            capacity: +table.capacity,
+            number: +table.number,
+            placeId: +table.placeId,
+            isFree: true
+        });
         setTableArray(array);
         e.target.reset();
     };
 
     const sendTables = () => {
-        dispatch(createTable({tables: tableArray}));
+        dispatch(createTable(tableArray)).then(setTableArray([]));
+
     };
 
     const {dark} = useSelector(state => state['themeReducers']);
@@ -51,6 +61,7 @@ const CreateTableForm = () => {
                 <input
                     type="number"
                     className={dark ? createCss.add_place_input_dark : createCss.add_place_input}
+
                     {...register('transform')}
                     placeholder={EN ? "transform" : "поворот"}
                 />
@@ -59,6 +70,18 @@ const CreateTableForm = () => {
                     className={dark ? createCss.add_place_input_dark : createCss.add_place_input}
                     {...register('capacity')}
                     placeholder={EN ? "capacity" : "вмістимість"}
+                />
+                <input
+                    type="text"
+                    className={createCss.add_place_input}
+                    {...register('type')}
+                    placeholder="type"
+                />
+                <input
+                    type="number"
+                    className={createCss.add_place_input}
+                    {...register('number')}
+                    placeholder="number"
                 />
                 <input
                     type="number"
@@ -84,8 +107,10 @@ const CreateTableForm = () => {
                             {EN ? "ROTATE" : "КУТ"}
                         </div>
                     </div>
+
                     {tableArray.map(table => <TableRow key={table.top} table={table} tableArray={tableArray} setTableArray={setTableArray}/>)}
                     <div className={dark ? css.send_tables_btn_dark : css.send_tables_btn} onClick={() => sendTables()}>{EN ? "SEND" : "ВІДПРАВИТИ"}</div>
+
                 </div>
             }
         </>

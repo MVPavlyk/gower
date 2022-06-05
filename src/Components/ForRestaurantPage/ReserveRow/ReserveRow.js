@@ -21,12 +21,12 @@ const ReserveRow = ({table}) => {
                     {table.number}
                 </div>
                 <div className={css.reserve_content_block}>
-                    {table.size}
+                    {table.capacity}
                 </div>
-                <div className={css.reserve_content_block}>
+               {/* <div className={css.reserve_content_block}>
                     08.05.22 <br/>
                     17:30
-                </div>
+                </div>*/}
                 <div className={css.delete_btn} onClick={() => deleter(table)}>
                     <img src={x} alt="x"/>
                 </div>

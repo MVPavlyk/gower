@@ -2,19 +2,18 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import css from './DescriptionBlock.module.css';
 
-const DescriptionBlock = ({descBlock}) => {
-    const {oneRestaurant} = useSelector(state => state['placeReducers']);
+const DescriptionBlock = ({description}) => {
 
     return (
         <div className={css.desc_block}>
-            <div className={css.desc_page_text}>
-                {descBlock.desc_p}
-            </div>
-            <img
-                src={descBlock.desc_img}
-                alt={oneRestaurant.name}
+            {description && <div className={css.desc_page_text}>
+                {description.description}
+            </div>}
+            {description && <img
+                src={`https://glitch4.s3.eu-central-1.amazonaws.com/${description.filePath}`}
+                alt="description"
                 className={css.desc_page_photo}
-            />
+            />}
         </div>
     );
 };

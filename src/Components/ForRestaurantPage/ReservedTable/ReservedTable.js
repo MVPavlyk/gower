@@ -24,9 +24,9 @@ const ReservedTable = ({tables}) => {
                 <div className={css.reserved_header_block}>
                     {EN ? '№ of seats' : 'К-сть місць'}
                 </div>
-                <div className={css.reserved_header_block}>
+             {/*   <div className={css.reserved_header_block}>
                     {EN ? 'Date & Time' : 'Дата та час'}
-                </div>
+                </div>*/}
                 <div className={css.empty_block}>
 
                 </div>

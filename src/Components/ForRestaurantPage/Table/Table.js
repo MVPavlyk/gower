@@ -19,7 +19,12 @@ const Table = ({table}) => {
     return (
         <div
             className={css[table.type]}
-            style={table.coordinates}
+            style={
+                {
+                    top: table.top,
+                    left: table.left,
+                }
+            }
             onClick={() => chooseTable(table)}
         >
         </div>

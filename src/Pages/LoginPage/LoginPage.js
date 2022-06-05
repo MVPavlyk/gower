@@ -22,7 +22,8 @@ const LoginPage = () => {
     const dispatch = useDispatch();
 
     const submit = (obj) => {
-        dispatch(login(obj)).then(dispatch(getMyRoles()));
+
+        dispatch(login(obj)).then(user && dispatch(getMyRoles()));
     };
 
     if (user) {

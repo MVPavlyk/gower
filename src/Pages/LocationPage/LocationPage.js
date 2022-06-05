@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {useJsApiLoader} from '@react-google-maps/api';
 import {useSelector} from 'react-redux';
 
@@ -11,6 +11,7 @@ import instagram from '../../img/LocationPage/instagram_icon.svg';
 import instagram_dark from '../../img/LocationPage/instagram_icon_dark.svg';
 import email from '../../img/LocationPage/email_logo.svg';
 import email_dark from '../../img/LocationPage/email_logo_dark.svg';
+import {getPhoto} from '../../root_functions/getPhoto';
 
 
 const API_KEY = process.env.REACT_APP_API_KEY;
@@ -18,7 +19,7 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 
 const LocationPage = () => {
 
-    const {oneRestaurant} = useSelector(state => state['placeReducers']);
+    const {onePlace} = useSelector(state => state['placesReducers']);
     const {dark} = useSelector(state => state['themeReducers']);
     const {EN} = useSelector(state => state['languageReducers']);
 
@@ -26,6 +27,15 @@ const LocationPage = () => {
         id: 'google-map-script',
         googleMapsApiKey: API_KEY
     });
+
+    const [exterior, setExterior] = useState();
+
+    useEffect(() => {
+        const id = onePlace.id;
+        getPhoto(11, id).then(value => setExterior(value.filePath));
+    }, [onePlace]);
+
+    console.log(exterior);
 
     return (
 
@@ -35,20 +45,19 @@ const LocationPage = () => {
                     <div className={css.title}>
                         {EN ? 'Exterior' : 'Екстер\'єр'}
                     </div>
-                    {oneRestaurant.exterior.map(photo =>
-                        <img src={`${photo}`}
-                             alt={oneRestaurant.name}
-                             key={`${photo}`}
-                        />)
-                    }
-
+                    {exterior && <img src={`https://glitch4.s3.eu-central-1.amazonaws.com/${exterior}`}
+                          alt={onePlace.name}
+                    />}
                 </div>
                 <div className={css.google_map}>
                     <div className={css.title}>
                         {EN ? 'Map' : 'Карта'}
                     </div>
                     <div className={css.map_wrap}>
-                        {isLoaded && <GoogleLocateMap center={oneRestaurant.coordinates}/>}
+                        {isLoaded && <GoogleLocateMap center={{
+                            lat: onePlace.latitude,
+                            lng: onePlace.longitude
+                        }}/>}
                     </div>
 
                 </div>

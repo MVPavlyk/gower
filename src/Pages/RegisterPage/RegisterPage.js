@@ -3,7 +3,7 @@ import {useForm} from 'react-hook-form';
 import {useDispatch, useSelector} from 'react-redux';
 import {Navigate} from 'react-router-dom';
 import css from './RegisterPage.module.css';
-import {registration} from '../../store';
+import {getMyRoles, registration} from '../../store';
 import {joiResolver} from '@hookform/resolvers/joi/dist/joi';
 import {UserValidator} from '../../Validation';
 
@@ -27,7 +27,7 @@ const RegisterPage = () => {
                 lastName: obj.lastName,
                 email: obj.email,
                 password: obj.password
-            }));
+            })).then(dispatch(getMyRoles()));
             setRepeatError(false);
         } else {
             setRepeatError(true);
@@ -71,6 +71,17 @@ const RegisterPage = () => {
                 />
 
                 {errors.email && <div className={css.error}>{errors.email.message}</div>}
+
+                <input
+                    type="text"
+                    placeholder="Phone number"
+                    {...register('phoneNumber')}
+                    autoComplete="off"
+                    autoCorrect="off"
+                    className={dark ? css.register_input_dark : css.register_input}
+                />
+
+                {errors.phoneNumber && <div className={css.error}>{errors.phoneNumber.message}</div>}
 
                 <input
                     type="password"
