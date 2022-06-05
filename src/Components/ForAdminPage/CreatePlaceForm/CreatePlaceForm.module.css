@@ -6,7 +6,8 @@
     width: fit-content;
 }
 
-.add_place_input {
+.add_place_input,
+.add_place_input_dark {
     padding: 0 20px;
     width: 350px;
     height: 60px;
@@ -16,17 +17,142 @@
     outline: none;
 }
 
-.add_place_btn {
+.add_place_input_dark {
+    background-color: #035259;
+    color: #FFF;
+}
+
+.add_place_input_dark::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.add_place_btn,
+.add_place_btn_dark {
     width: 350px;
     height: 60px;
     border-radius: 10px;
-    background-color: #047E89;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
     font-size: 20px;
     border: none;
     outline: none;
     cursor: pointer;
 }
+
+.add_place_btn {
+    background-color: #047E89;
+    color: #FFFFFF;
+}
+
+.add_place_btn_dark {
+    background-color: #FFF;
+    color: #047E89;
+}
+
+@media (max-width: 1200px) and (min-width: 992px), (max-width: 768px) and (min-width: 480px) {
+    .add_place_input,
+    .add_place_input_dark {
+        width: 320px;
+        height: 50px;
+    }
+
+    .add_place_btn,
+    .add_place_btn_dark {
+        width: 320px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .add_place_input,
+    .add_place_input_dark {
+        width: 300px;
+        height: 50px;
+    }
+
+    .add_place_btn,
+    .add_place_btn_dark {
+        width: 300px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 390px) {
+    .add_place_input,
+    .add_place_input_dark {
+        width: 280px;
+    }
+
+    .add_place_btn,
+    .add_place_btn_dark {
+        width: 280px;
+    }
+}
+
+/*@media (max-width: 992px) {*/
+/*    .add_place_input,*/
+/*    .add_place_input_dark {*/
+/*        width: 350px;*/
+/*        height: 60px;*/
+/*    }*/
+
+/*    .add_place_btn,*/
+/*    .add_place_btn_dark {*/
+/*        width: 350px;*/
+/*        height: 60px;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 768px) {*/
+/*    .add_place_input,*/
+/*    .add_place_input_dark {*/
+/*        width: 320px;*/
+/*        height: 50px;*/
+/*    }*/
+
+/*    .add_place_btn,*/
+/*    .add_place_btn_dark {*/
+/*        width: 320px;*/
+/*        height: 50px;*/
+/*    }*/
+/*}*/
+
+
+
+/*@media (max-width: 450px) {*/
+/*    .login_input,*/
+/*    .login_input_dark {*/
+/*        width: 300px;*/
+/*        height: 50px;*/
+/*    }*/
+
+/*    .login_btn,*/
+/*    .login_btn_dark {*/
+/*        padding: 9px 33px;*/
+/*        font-size: 19px;*/
+/*    }*/
+
+/*    .register_link,*/
+/*    .register_link_dark {*/
+/*        font-size: 13px;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 390px) {*/
+/*    .login_input,*/
+/*    .login_input_dark {*/
+/*        width: 280px;*/
+/*    }*/
+
+/*    .login_btn,*/
+/*    .login_btn_dark {*/
+/*        padding: 8px 30px;*/
+/*        font-size: 18px;*/
+/*    }*/
+
+/*    .register_link,*/
+/*    .register_link_dark {*/
+/*        font-size: 12px;*/
+/*    }*/
+/*}*/

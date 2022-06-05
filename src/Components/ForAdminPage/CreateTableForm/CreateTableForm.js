@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import css from './CreateTableForm.module.css';
 import createCss from '../CreatePlaceForm/CreatePlaceForm.module.css';
 import {useForm} from 'react-hook-form';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {createTable} from '../../../store';
 import {TableRow} from '../../ForRestaurantPage';
 
@@ -36,36 +36,40 @@ const CreateTableForm = () => {
 
     };
 
+    const {dark} = useSelector(state => state['themeReducers']);
+    const {EN} = useSelector(state => state['languageReducers']);
+
     return (
         <>
             <form
                 className={createCss.add_place_form}
                 onSubmit={handleSubmit(assignTable)}
             >
-                <h4>Create new table</h4>
+                <h4>{EN ? "Create new table" : "Додати новий стіл"}</h4>
                 <input
-                    type="text"
-                    className={createCss.add_place_input}
+                    type="number"
+                    className={dark ? createCss.add_place_input_dark : createCss.add_place_input}
                     {...register('top')}
-                    placeholder="top"
-                />
-                <input
-                    type="text"
-                    className={createCss.add_place_input}
-                    {...register('left')}
-                    placeholder="left"
-                />
-                <input
-                    type="text"
-                    className={createCss.add_place_input}
-                    {...register('transform')}
-                    placeholder="transform"
+                    placeholder={EN ? "top" : "зверху"}
                 />
                 <input
                     type="number"
-                    className={createCss.add_place_input}
+                    className={dark ? createCss.add_place_input_dark : createCss.add_place_input}
+                    {...register('left')}
+                    placeholder={EN ? "left" : "зліва"}
+                />
+                <input
+                    type="number"
+                    className={dark ? createCss.add_place_input_dark : createCss.add_place_input}
+
+                    {...register('transform')}
+                    placeholder={EN ? "transform" : "поворот"}
+                />
+                <input
+                    type="number"
+                    className={dark ? createCss.add_place_input_dark : createCss.add_place_input}
                     {...register('capacity')}
-                    placeholder="capacity"
+                    placeholder={EN ? "capacity" : "вмістимість"}
                 />
                 <input
                     type="text"
@@ -81,31 +85,32 @@ const CreateTableForm = () => {
                 />
                 <input
                     type="number"
-                    className={createCss.add_place_input}
+                    className={dark ? createCss.add_place_input_dark : createCss.add_place_input}
                     {...register('placeId')}
-                    placeholder="placeId"
+                    placeholder={EN ? "placeId" : "Id місця"}
                 />
-                <button className={createCss.add_place_btn}>ADD</button>
+                <button className={dark ? createCss.add_place_btn_dark : createCss.add_place_btn}>{EN ? "ADD" : "ДОДАТИ"}</button>
             </form>
             {!!tableArray.length &&
                 <div className={css.tables_to_send}>
                     <div className={css.tables_to_send_header}>
                         <div className={css.header_block}>
-                            PLACE
+                            {EN ? "PLACE" : "МІСЦЕ"}
                         </div>
                         <div className={css.header_block}>
-                            LEFT
+                            {EN ? "LEFT" : "ЛІВО"}
                         </div>
                         <div className={css.header_block}>
-                            TOP
+                            {EN ? "TOP" : "ВЕРХ"}
                         </div>
                         <div className={css.header_block}>
-                            ROTATE
+                            {EN ? "ROTATE" : "КУТ"}
                         </div>
                     </div>
-                    {tableArray.map(table => <TableRow key={table.top} table={table} tableArray={tableArray}
-                                                       setTableArray={setTableArray}/>)}
-                    <div className={css.send_tables_btn} onClick={() => sendTables()}>SEND</div>
+
+                    {tableArray.map(table => <TableRow key={table.top} table={table} tableArray={tableArray} setTableArray={setTableArray}/>)}
+                    <div className={dark ? css.send_tables_btn_dark : css.send_tables_btn} onClick={() => sendTables()}>{EN ? "SEND" : "ВІДПРАВИТИ"}</div>
+
                 </div>
             }
         </>

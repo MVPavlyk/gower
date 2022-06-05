@@ -63,8 +63,8 @@ const Header = () => {
                              to={'/myPlaces'}>{EN ? 'My places' : 'Мої заклади'}
                     </NavLink>
                 }
-                <NavLink className={css.header_link} to={'/'}>Places</NavLink>
-                <NavLink className={css.header_link} to={'/cooperation'}>Cooperation</NavLink>
+                 <NavLink className={css.header_link} to={'/'}>{EN ? 'Places' : 'Місця'}</NavLink>
+                <NavLink className={css.header_link} to={'/cooperation'}>{EN ? 'Cooperation' : 'Співпраця'}</NavLink>
             </div>
         </div>
     );

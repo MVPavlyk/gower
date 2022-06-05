@@ -10,6 +10,7 @@ import css from './LoginPage.module.css';
 const LoginPage = () => {
 
     const {dark} = useSelector(state => state['themeReducers']);
+    const {EN} = useSelector(state => state['languageReducers']);
 
     const {
         register, handleSubmit, formState: {errors}
@@ -37,7 +38,7 @@ const LoginPage = () => {
 
                         <input
                             type="text"
-                            placeholder="Email"
+                            placeholder={EN ? "Email" : "Пошта"}
                             {...register('email')}
                             className={dark ? css.login_input_dark : css.login_input}
                         />
@@ -46,7 +47,7 @@ const LoginPage = () => {
 
                         <input
                             type="password"
-                            placeholder="Password"
+                            placeholder={EN ? "Password" : "Пароль"}
                             autoComplete="on"
                             {...register('password')}
                             className={dark ? css.login_input_dark : css.login_input}
@@ -56,10 +57,10 @@ const LoginPage = () => {
 
                         {error && <div className={css.error}>Хибний email або пароль</div>}
 
-                        <button className={dark ? css.login_btn_dark : css.login_btn}> login</button>
+                        <button className={dark ? css.login_btn_dark : css.login_btn}>{EN ? "login" : "вхід"}</button>
                     </form>
                     <NavLink to={'/register'} className={dark ? css.register_link_dark : css.register_link}>
-                        У вас немає облікового запису? Зареєструватися
+                        {EN ? "Create a new account" : "У вас немає облікового запису? Зареєструватися"}
                     </NavLink>
                 </div>
             </div>

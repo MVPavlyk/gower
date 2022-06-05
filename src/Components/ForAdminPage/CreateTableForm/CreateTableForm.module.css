@@ -30,7 +30,8 @@
     border-right: none;
 }
 
-.send_tables_btn {
+.send_tables_btn,
+.send_tables_btn_dark {
     margin-top: 30px;
     width: 100%;
     height: 40px;
@@ -41,4 +42,53 @@
     background-color: #047E89;
     color: #ffffff;
     border-radius: 10px;
+}
+.send_tables_btn_dark {
+    background-color: #FFFFFF;
+    color: #047E89;
+}
+
+@media (max-width: 1200px) and (min-width: 992px), (max-width: 768px) and (min-width: 480px) {
+    .tables_to_send {
+        width: 320px;
+    }
+
+    .tables_to_send_header {
+        font-size: 14px;
+    }
+
+    .send_tables_btn,
+    .send_tables_btn_dark {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tables_to_send {
+        width: 300px;
+    }
+
+    .tables_to_send_header {
+        font-size: 13px;
+    }
+
+    .send_tables_btn,
+    .send_tables_btn_dark {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 390px) {
+    .tables_to_send {
+        width: 280px;
+    }
+
+    .tables_to_send_header {
+        font-size: 12px;
+    }
+
+    .send_tables_btn,
+    .send_tables_btn_dark {
+        font-size: 20px;
+    }
 }

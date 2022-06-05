@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import createCss from '../CreatePlaceForm/CreatePlaceForm.module.css';
 import css from './DeletePlaceForm.module.css';
 import {useForm} from 'react-hook-form';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {deletePlace} from '../../../store';
 
 const DeletePlaceForm = () => {
@@ -24,25 +24,28 @@ const DeletePlaceForm = () => {
         }
     };
 
+    const {dark} = useSelector(state => state['themeReducers']);
+    const {EN} = useSelector(state => state['languageReducers']);
+
     return (
         <form onSubmit={handleSubmit(deleteUserReq)} className={createCss.add_place_form}>
-            <h4>Delete place</h4>
+            <h4>{EN ? "Delete place" : "Видалити місце"}</h4>
             <input
-                className={createCss.add_place_input}
+                className={dark ? createCss.add_place_input_dark : createCss.add_place_input}
                 type="text"
                 {...register('id')}
                 placeholder="id"
                 autoCorrect="off"
                 autoComplete="off"
             />
-            <input className={createCss.add_place_input}
+            <input className={dark ? createCss.add_place_input_dark : createCss.add_place_input}
                    type="text"
                    {...register('password')}
-                   placeholder="password"
+                   placeholder={EN ? "password" : "пароль"}
                    autoCorrect="off"
                    autoComplete="off"
             />
-            <button className={css.delete_btn}>delete</button>
+            <button className={css.delete_btn}>{EN ? "delete" : "видалити"}</button>
             {error && <div className={css.error}>Error</div>}
         </form>
     );
