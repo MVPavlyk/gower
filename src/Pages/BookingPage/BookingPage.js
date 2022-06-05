@@ -50,13 +50,13 @@ const BookingPage = () => {
             </div>
             {myBookings && !!myBookings?.results?.length && myBookings?.results?.map(booking => <BookingRow
                 key={booking.id} booking={booking}/>)}
-            <div className={css.page_buttons}>
+            {myBookings && !!myBookings?.results?.length && <div className={css.page_buttons}>
                 <img src={arrow_left} alt="arrowLeft" onClick={() => prevPage()}/>
                 <div className={css.page_number}>
                     {EN ? 'Page ' : 'Сторінка '} {currentBookPage} {EN ? ' from ' : ' з '} {allPages}
                 </div>
                 <img src={arrow_right} alt="arrowRight" onClick={() => nextPage()}/>
-            </div>
+            </div>}
         </div>
     );
 };
