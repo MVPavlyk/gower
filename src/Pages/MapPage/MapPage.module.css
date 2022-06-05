@@ -7,10 +7,12 @@
     width: 100%;
     background-color: #FFFFFF;
 }
-.map_page_dark{
+
+.map_page_dark {
     background: #035259;
-    color:#FFFFFF;
+    color: #FFFFFF;
 }
+
 .map_wrap {
     width: 100%;
     height: fit-content !important;
@@ -64,6 +66,7 @@
     color: #fff;
     font-size: 24px;
     cursor: pointer;
+    border: none;
 }
 
 .map_bottom {
@@ -89,8 +92,29 @@
     outline: none;
 }
 
+
+.reserve_form {
+    margin-top: 2.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5vw;
+}
+
+.time_input {
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid #047E89;
+}
+
+.error {
+    color: crimson;
+}
+
 @media (max-width: 767px) {
-    .map_page,.map_page_dark {
+    .map_page, .map_page_dark {
         padding: 50px 8.5vw;
     }
 
@@ -100,7 +124,7 @@
 }
 
 @media (max-width: 500px) {
-    .map_page , .map_page_dark{
+    .map_page, .map_page_dark {
         padding: 25px 8.5vw;
         min-height: calc(100vh - 300px);
         justify-content: flex-start;

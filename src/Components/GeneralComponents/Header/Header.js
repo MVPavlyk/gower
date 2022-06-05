@@ -17,7 +17,7 @@ const Header = () => {
         setShow(!show);
     };
 
-    const {user} = useSelector(state => state['userReducers']);
+    const {user, roles} = useSelector(state => state['userReducers']);
 
     const {pathname} = useLocation();
 
@@ -37,9 +37,16 @@ const Header = () => {
                         </div>
                         <NavLink className={css.header_link} to={'/'}>{EN ? 'Places' : 'Місця'}</NavLink>
                         <NavLink className={css.header_link}
-                                 to={'/cooperation'}>{EN ? 'Cooperation' : 'Співпраця'}</NavLink>
+                                 to={'/cooperation'}>{EN ? 'Cooperation' : 'Співпраця'}
+                        </NavLink>
+                        {!!roles.length && roles.includes('PlaceOwner') &&
+                            <NavLink className={css.header_link}
+                                     to={'/myPlaces'}>{EN ? 'My places' : 'Мої заклади'}
+                            </NavLink>
+                        }
                         <NavLink className={css.header_link}
-                                 to={user ? 'user' : '/login'}>{user ? user.firstName : EN ? 'Login' : 'Вхід'}</NavLink>
+                                 to={user ? 'user' : '/login'}>{user ? user.firstName : EN ? 'Login' : 'Вхід'}
+                        </NavLink>
                     </div>
                     <div className={css.burger_btn} onClick={() => showBurger()}>
                         <div/>
@@ -51,6 +58,11 @@ const Header = () => {
             <div className={show ? css.burger_menu_show : css.burger_menu}>
                 <NavLink className={css.header_link}
                          to={'/login'}>{user ? user.firstName : EN ? 'Login' : 'Вхід'}</NavLink>
+                {!!roles.length && roles.includes('PlaceOwner') &&
+                    <NavLink className={css.header_link}
+                             to={'/myPlaces'}>{EN ? 'My places' : 'Мої заклади'}
+                    </NavLink>
+                }
                 <NavLink className={css.header_link} to={'/'}>Places</NavLink>
                 <NavLink className={css.header_link} to={'/cooperation'}>Cooperation</NavLink>
             </div>

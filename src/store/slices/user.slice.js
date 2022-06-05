@@ -1,5 +1,6 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
-import {UserServices} from '../../services/user.services';
+
+import {UserServices} from '../../services';
 
 export const login = createAsyncThunk(
     'userSlice/login',
@@ -87,6 +88,17 @@ export const getMyRoles = createAsyncThunk(
     }
 );
 
+export const getUser = createAsyncThunk(
+    'userSlice/getUser',
+    async (_, {rejectWithValue}) => {
+        try {
+            return await UserServices.getUser();
+        } catch (e) {
+            rejectWithValue(e);
+        }
+    }
+);
+
 
 const userSlice = createSlice({
     name: 'userSlice',
@@ -94,7 +106,8 @@ const userSlice = createSlice({
         error: null,
         status: null,
         user: null,
-        roles: []
+        roles: [],
+        noUser: true,
     },
 
     reducers: {
@@ -119,6 +132,19 @@ const userSlice = createSlice({
             state.status = 'rejected';
             state.error = action.payload;
         },
+
+
+        [getUser.fulfilled]: (state, action) => {
+            state.status = 'fulfilled';
+            state.user = action.payload;
+            state.noUser = false;
+        },
+        [getUser.rejected]: (state, action) => {
+            state.status = 'rejected';
+            state.error = action.payload;
+            state.noUser = true;
+        },
+
         [registration.pending]: (state) => {
             state.status = 'pending';
             state.error = null;

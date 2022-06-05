@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Route, Routes} from 'react-router-dom';
+import Cookies from 'js-cookie';
 import {Layout} from './Components';
 import {
     DescriptionPage,
@@ -10,19 +11,28 @@ import {
     OneRestaurantPage,
     PhotosPage, RegisterPage,
     RestaurantListPage, UserPage,
-    CooperationPage
+    CooperationPage, OwnerPage, UnfoundPage
 } from './Pages';
 import {AdminPage} from './Pages/AdminPage/AdminPage';
-import {useDispatch} from 'react-redux';
-import {getLanguage, getTheme, setRolesFromLocalStorage, setUserFromLocalStorage} from './store';
+import {useDispatch, useSelector} from 'react-redux';
+import {getLanguage, getTheme, getUser, setRolesFromLocalStorage, setUserFromLocalStorage} from './store';
 
 function App() {
+    const {isUser} = useSelector(state => state['userReducers']);
+
     const dispatch = useDispatch();
 
-    dispatch(setUserFromLocalStorage());
-    dispatch(setRolesFromLocalStorage());
-    dispatch(getTheme());
-    dispatch(getLanguage());
+    useEffect(() => {
+        dispatch(getUser());
+        dispatch(getTheme());
+        dispatch(getLanguage());
+    }, []);
+
+    useEffect(() => {
+        dispatch(setUserFromLocalStorage());
+        dispatch(setRolesFromLocalStorage());
+    }, [isUser]);
+
 
     return (
         <Routes>
@@ -38,8 +48,10 @@ function App() {
                 <Route path={'/login'} element={<LoginPage/>}/>
                 <Route path={'/admin'} element={<AdminPage/>}/>
                 <Route path={'/user'} element={<UserPage/>}/>
+                <Route path={'/myPlaces'} element={<OwnerPage/>}/>
                 <Route path={'/register'} element={<RegisterPage/>}/>
                 <Route path={'/cooperation'} element={<CooperationPage/>}/>
+                <Route path={'*'} element={<UnfoundPage/>}/>
             </Route>
         </Routes>
     );

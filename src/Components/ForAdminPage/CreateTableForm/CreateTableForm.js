@@ -4,7 +4,7 @@ import createCss from '../CreatePlaceForm/CreatePlaceForm.module.css';
 import {useForm} from 'react-hook-form';
 import {useDispatch} from 'react-redux';
 import {createTable} from '../../../store';
-import {TableRow} from '../../ForRestaurantPage/TableRow/TableRow';
+import {TableRow} from '../../ForRestaurantPage';
 
 const CreateTableForm = () => {
     const {
@@ -17,13 +17,23 @@ const CreateTableForm = () => {
 
     const assignTable = (table, e) => {
         const array = [...tableArray];
-        array.push({...table, isFree: true});
+        array.push({
+            id: 0,
+            top: table.top,
+            left: table.left,
+            transform: table.transform,
+            capacity: +table.capacity,
+            number: +table.number,
+            placeId: +table.placeId,
+            isFree: true
+        });
         setTableArray(array);
         e.target.reset();
     };
 
     const sendTables = () => {
-        dispatch(createTable({tables: tableArray}));
+        dispatch(createTable(tableArray)).then(setTableArray([]));
+
     };
 
     return (
@@ -34,19 +44,19 @@ const CreateTableForm = () => {
             >
                 <h4>Create new table</h4>
                 <input
-                    type="number"
+                    type="text"
                     className={createCss.add_place_input}
                     {...register('top')}
                     placeholder="top"
                 />
                 <input
-                    type="number"
+                    type="text"
                     className={createCss.add_place_input}
                     {...register('left')}
                     placeholder="left"
                 />
                 <input
-                    type="number"
+                    type="text"
                     className={createCss.add_place_input}
                     {...register('transform')}
                     placeholder="transform"
@@ -56,6 +66,18 @@ const CreateTableForm = () => {
                     className={createCss.add_place_input}
                     {...register('capacity')}
                     placeholder="capacity"
+                />
+                <input
+                    type="text"
+                    className={createCss.add_place_input}
+                    {...register('type')}
+                    placeholder="type"
+                />
+                <input
+                    type="number"
+                    className={createCss.add_place_input}
+                    {...register('number')}
+                    placeholder="number"
                 />
                 <input
                     type="number"
@@ -81,7 +103,8 @@ const CreateTableForm = () => {
                             ROTATE
                         </div>
                     </div>
-                    {tableArray.map(table => <TableRow key={table.top} table={table} tableArray={tableArray} setTableArray={setTableArray}/>)}
+                    {tableArray.map(table => <TableRow key={table.top} table={table} tableArray={tableArray}
+                                                       setTableArray={setTableArray}/>)}
                     <div className={css.send_tables_btn} onClick={() => sendTables()}>SEND</div>
                 </div>
             }

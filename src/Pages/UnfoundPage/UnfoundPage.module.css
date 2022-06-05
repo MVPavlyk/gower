@@ -1,0 +1,46 @@
+.page, .page_dark {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 3vw;
+}
+
+.page_dark {
+    background-color: #01444A;
+}
+
+.dark_title, .title {
+    font-size: 48px;
+    color: white;
+}
+
+.title {
+    color: #047E89;
+}
+
+.dark_link, .link {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.link {
+    color: #047E89;
+}
+
+
+@media (max-width: 700px) {
+    .dark_title, .title {
+        font-size: 24px;
+    }
+
+    .dark_link, .link {
+        font-size: 16px;
+    }
+
+}

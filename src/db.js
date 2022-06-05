@@ -149,7 +149,7 @@ const storage = [
         address: 'Проспект Свободи 45',
         time: '09:00 - 21:00',
         rating: 3.2,
-        mini_img: 'https://gower.s3.eu-north-1.amazonaws.com/panorama_new.png',
+        mini_img: 'https://gower.s3.eu-north-1.amazonaws.com/u_marty.png',
         bg_img: 'https://gower.s3.eu-north-1.amazonaws.com/panorama_bg_new.png',
         description: [
             {
