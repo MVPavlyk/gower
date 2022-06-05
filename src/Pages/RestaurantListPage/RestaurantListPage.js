@@ -7,6 +7,9 @@ import {useDispatch, useSelector} from 'react-redux';
 import {getPlacesByQuery, getPlacesPaginated, setCurrent} from '../../store';
 import arrow_left from '../../img/arrow-left.svg';
 import arrow_right from '../../img/arraw-right.svg';
+import arrow_left_dark from '../../img/arrow-left-dark.svg';
+import arrow_right_dark from '../../img/arraw-right-dark.svg';
+
 
 const RestaurantListPage = () => {
     const {EN} = useSelector(state => state['languageReducers']);
@@ -19,14 +22,14 @@ const RestaurantListPage = () => {
     const [allPages, setAllPages] = useState(1);
 
     useEffect(() => {
-        setAllPages(placesPage?.pageCount)
+        setAllPages(placesPage?.pageCount);
     }, [placesPage]);
 
     useEffect(() => {
-        if(query){
-            dispatch(getPlacesByQuery({pageNum: pageNum, pageSize: 5, query: query})).then(()=> window.scrollTo(0, 0));
+        if (query) {
+            dispatch(getPlacesByQuery({pageNum: pageNum, pageSize: 5, query: query})).then(() => window.scrollTo(0, 0));
         } else {
-            dispatch(getPlacesPaginated({pageNum: pageNum, pageSize: 5})).then(()=> window.scrollTo(0, 0));
+            dispatch(getPlacesPaginated({pageNum: pageNum, pageSize: 5})).then(() => window.scrollTo(0, 0));
         }
 
     }, [pageNum, query]);
@@ -50,16 +53,17 @@ const RestaurantListPage = () => {
             <Navbar/>
             <div className={dark ? css.restaurant__wrap_dark : css.restaurant__wrap}>
                 {
-                    placesPage && !!placesPage?.results?.length && placesPage?.results.map(restaurant => <RestaurantBlock
-                        key={restaurant.id} restaurant={restaurant}/>)
+                    placesPage && !!placesPage?.results?.length && placesPage?.results.map(restaurant =>
+                        <RestaurantBlock
+                            key={restaurant.id} restaurant={restaurant}/>)
                 }
             </div>
-            <div className={css.page_buttons}>
-                <img src={arrow_left} alt="arrowLeft" onClick={() => prevPage()}/>
+            <div className={dark ? css.page_buttons_dark : css.page_buttons}>
+                <img src={dark ? arrow_left_dark : arrow_left} alt="arrowLeft" onClick={() => prevPage()}/>
                 <div className={css.page_number}>
                     {EN ? 'Page ' : 'Сторінка '} {pageNum} {EN ? ' from ' : ' з '} {allPages}
                 </div>
-                <img src={arrow_right} alt="arrowRight" onClick={() => nextPage()}/>
+                <img src={dark ? arrow_right_dark : arrow_right} alt="arrowRight" onClick={() => nextPage()}/>
             </div>
         </>
     );

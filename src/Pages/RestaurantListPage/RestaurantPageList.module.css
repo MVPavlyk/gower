@@ -17,13 +17,19 @@
     background-color: #035259;
 }
 
-.page_buttons {
-    margin-bottom: 4vw;
+.page_buttons,
+.page_buttons_dark{
+    padding-bottom: 4vw;
     display: flex;
     align-items: center;
     column-gap: 15px;
     width: 100%;
     justify-content: center;
+}
+
+.page_buttons_dark{
+    background-color: #035259;
+    color: white;
 }
 
 .page_buttons > img {

@@ -36,7 +36,7 @@ const BookingPage = () => {
     };
 
     const nextPage = () => {
-        if (!(currentBookPage === allPages)) {
+        if (!(currentBookPage >= allPages)) {
             const number = currentBookPage + 1;
             dispatch(setBookPageNum(number));
         }
