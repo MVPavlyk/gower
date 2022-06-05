@@ -39,7 +39,7 @@ const Header = () => {
                         <NavLink className={css.header_link}
                                  to={'/cooperation'}>{EN ? 'Cooperation' : 'Співпраця'}
                         </NavLink>
-                        {roles && !!roles.length && roles.includes('PlaceOwner') &&
+                        {roles && !!roles?.length && roles?.includes('PlaceOwner') &&
                             <NavLink className={css.header_link}
                                      to={'/myPlaces'}>{EN ? 'My places' : 'Мої заклади'}
                             </NavLink>
@@ -58,7 +58,7 @@ const Header = () => {
             <div className={show ? css.burger_menu_show : css.burger_menu}>
                 <NavLink className={css.header_link}
                          to={'/login'}>{user ? user.firstName : EN ? 'Login' : 'Вхід'}</NavLink>
-                {!!roles.length && roles.includes('PlaceOwner') &&
+                {roles && !!roles?.length && roles.includes('PlaceOwner') &&
                     <NavLink className={css.header_link}
                              to={'/myPlaces'}>{EN ? 'My places' : 'Мої заклади'}
                     </NavLink>

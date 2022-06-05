@@ -11,9 +11,9 @@ import {
     OneRestaurantPage,
     PhotosPage, RegisterPage,
     RestaurantListPage, UserPage,
-    CooperationPage, OwnerPage, UnfoundPage
+    CooperationPage, OwnerPage, UnfoundPage, BookingPage, AdminPage
 } from './Pages';
-import {AdminPage} from './Pages/AdminPage/AdminPage';
+
 import {useDispatch, useSelector} from 'react-redux';
 import {getLanguage, getTheme, getUser, setRolesFromLocalStorage, setUserFromLocalStorage} from './store';
 
@@ -51,6 +51,7 @@ function App() {
                 <Route path={'/myPlaces'} element={<OwnerPage/>}/>
                 <Route path={'/register'} element={<RegisterPage/>}/>
                 <Route path={'/cooperation'} element={<CooperationPage/>}/>
+                <Route path={'/myBookings'} element={<BookingPage/>}/>
                 <Route path={'*'} element={<UnfoundPage/>}/>
             </Route>
         </Routes>

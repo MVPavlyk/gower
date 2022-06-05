@@ -14,11 +14,11 @@ export const createBooking = createAsyncThunk(
 
 export const getMyBookings = createAsyncThunk(
     'bookingSlice/getMyBookings',
-    async ({pageNum, pageSize}, {rejectWithWalue}) => {
+    async ({pageNum, pageSize}, {rejectWithValue}) => {
         try {
             return await bookingServices.getMyBookings(pageNum, pageSize);
         } catch (e) {
-            rejectWithWalue(e);
+            rejectWithValue(e);
         }
 
     }
@@ -62,7 +62,8 @@ const bookingSlice = createSlice({
     name: 'bookingSlice',
     initialState: {
         status: null,
-        error: null
+        error: null,
+        myBookings: []
     },
     extraReducers: {
         [createBooking.rejected]: (state, action) => {
@@ -71,7 +72,16 @@ const bookingSlice = createSlice({
         },
         [createBooking.fulfilled]: (state) => {
             state.status = 'fulfilled';
-            state.error = null
+            state.error = null;
+        },
+
+        [getMyBookings.rejected]: (state, action) => {
+            state.status = 'rejected';
+            state.error = action.payload;
+        },
+        [getMyBookings.fulfilled]: (state, action) => {
+            state.status = 'fulfilled';
+            state.myBookings = action.payload;
         }
     }
 

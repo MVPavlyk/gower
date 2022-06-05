@@ -35,7 +35,6 @@ const LocationPage = () => {
         getPhoto(11, id).then(value => setExterior(value.filePath));
     }, [onePlace]);
 
-    console.log(exterior);
 
     return (
 
@@ -64,10 +63,9 @@ const LocationPage = () => {
             </div>
             <div className={dark ? css.contacts_dark : css.contacts}>
                 <div>{EN ? 'Contacts:' : 'Контакти:'}</div>
-                <div className={css.contacts_info}><img src={dark ? phone_dark : phone} alt="phone"/>+38096758218</div>
-                <div className={css.contacts_info}><img src={dark ? instagram_dark : instagram} alt="phone"/>Panorama_Lviv
-                </div>
-                <div className={css.contacts_info}><img src={dark ? email_dark : email} alt="phone"/>panorama@gmail.com
+                <div className={css.contacts_info}><img src={dark ? phone_dark : phone} alt="phone"/>{onePlace?.phoneNumber}</div>
+                <div className={css.contacts_info}><img src={dark ? instagram_dark : instagram} alt="phone"/>{onePlace?.instagramName}</div>
+                <div className={css.contacts_info}><img src={dark ? email_dark : email} alt="phone"/>{onePlace?.email}
                 </div>
             </div>
         </>
