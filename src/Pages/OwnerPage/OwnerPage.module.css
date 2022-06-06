@@ -7,3 +7,8 @@
     row-gap: 35px;
     align-items: center;
 }
+
+.owner_page_dark {
+    background-color: #035259;
+    color: #FFFFFF;
+}

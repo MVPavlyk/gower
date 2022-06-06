@@ -27,15 +27,24 @@
     column-gap: 20px;
 }
 
-.send_photo_btn {
+.send_photo_btn,
+.send_photo_btn_dark {
     width: 200px;
     height: 30px;
-    background-color: #047E89;
     text-transform: uppercase;
-    color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.send_photo_btn {
+    background-color: #047E89;
+    color: white;
+}
+
+.send_photo_btn_dark {
+    background-color: #FFF;
+    color: #047E89;
 }
 
 .send_photo_input {
@@ -63,14 +72,22 @@
 }
 
 .dropdown_menu,
+.dropdown_menu_dark,
 .dropdown_menu_hide {
     width: 200px;
     position: absolute;
     top: 30px;
-    background-color: #fff;
     border: 3px solid #047E89;
     border-top: none;
     transition: all .2s linear;
+}
+
+.dropdown_menu {
+    background-color: #fff;
+}
+
+.dropdown_menu_dark {
+    background-color: #035259;
 }
 
 .desc_input {
@@ -114,4 +131,38 @@
 
 .hide_btn {
     transform: rotate(-90deg);
+}
+
+@media (max-width: 768px) and (min-width: 671px) {
+    .dropdown_wrap {
+        position: relative;
+        width: 160px;
+    }
+
+    .drop_btn {
+        width: 160px;
+        height: 30px;
+    }
+
+    .dropdown_menu,
+    .dropdown_menu_dark,
+    .dropdown_menu_hide {
+        width: 160px;
+    }
+
+    .send_photo_btn,
+    .send_photo_btn_dark {
+        width: 160px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 670px) {
+    .send_photo_form {
+
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        row-gap: 20px;
+    }
 }

@@ -12,6 +12,8 @@ const OwnerPage = () => {
 
     const dispatch = useDispatch();
 
+    const {dark} = useSelector(state => state['themeReducers']);
+
     useEffect(() => {
         dispatch(getMyPlaces());
     }, []);
@@ -20,7 +22,7 @@ const OwnerPage = () => {
         return <Navigate to="/" replace/>;
     }
     return (
-        <div className={css.owner_page}>
+        <div className={dark ? css.owner_page_dark : css.owner_page}>
             {!!places?.length && places.map(place => <MyPlaceBlock place={place} key={place.id}/>)}
         </div>
     );

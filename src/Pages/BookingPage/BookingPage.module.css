@@ -1,4 +1,5 @@
-.booking_page {
+.booking_page,
+.booking_page_dark {
     min-height: 100vh;
     padding: 60px 6.5vw;
     display: flex;
@@ -6,6 +7,12 @@
     row-gap: 10px;
     flex-direction: column;
 }
+
+.booking_page_dark {
+    background-color: #035259;
+    color: #FFFFFF;
+}
+
 
 .booking_header {
     width: 100%;
@@ -29,4 +36,38 @@
 
 .page_number {
     font-size: 32px;
+}
+
+@media (max-width: 1170px) {
+    .page_number {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .booking_header {
+        font-size: 24px;
+    }
+
+    .page_buttons > img {
+        width: 20px;
+    }
+
+    .page_number {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 550px) {
+    .booking_header {
+        font-size: 22px;
+    }
+
+    .page_buttons > img {
+        width: 18px;
+    }
+
+    .page_number {
+        font-size: 22px;
+    }
 }

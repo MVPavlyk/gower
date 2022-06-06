@@ -35,17 +35,17 @@ const BookingRow = ({booking}) => {
 
     return (
         <div className={css.booking_row}>
-            <div className={css.booking_block}>
+            <div className={dark ? css.booking_block_dark : css.booking_block}>
                 <div>{EN ? 'Date and time' : 'Дата та час'}:</div>
                 <div>{bookDate}</div>
                 <div>{`${bookTime[0]}:${bookTime[1]}`}</div>
             </div>
-            <div className={css.booking_block}>
+            <div className={dark ? css.booking_block_dark : css.booking_block}>
                 <div>{EN ? 'Place' : 'Заклад'}:</div>
                 <Link to={`/place/${restaurant?.id}`}>{restaurant?.name}</Link>
             </div>
             {booking.isArchive ?
-                <div className={css.non_active}>{EN ? 'Not active' : 'Неактивне'}</div>
+                <div className={dark ? css.non_active_dark : css.non_active}>{EN ? 'Not active' : 'Неактивне'}</div>
                 :
                 <div className={css.del_btn} onClick={() => delBooking()}>
                     {EN ? 'Cancel' : 'Скасувати'}
