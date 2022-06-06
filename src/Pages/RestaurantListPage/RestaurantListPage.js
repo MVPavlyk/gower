@@ -61,7 +61,7 @@ const RestaurantListPage = () => {
             <div className={dark ? css.page_buttons_dark : css.page_buttons}>
                 <img src={dark ? arrow_left_dark : arrow_left} alt="arrowLeft" onClick={() => prevPage()}/>
                 <div className={css.page_number}>
-                    {EN ? 'Page ' : 'Сторінка '} {pageNum} {EN ? ' from ' : ' з '} {allPages}
+                    {pageNum} / {allPages}
                 </div>
                 <img src={dark ? arrow_right_dark : arrow_right} alt="arrowRight" onClick={() => nextPage()}/>
             </div>

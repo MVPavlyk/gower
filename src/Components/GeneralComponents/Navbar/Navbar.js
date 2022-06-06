@@ -10,12 +10,11 @@ import filter_dark from '../../../img/Navbar/filter_dark.svg';
 
 
 import {useDispatch, useSelector} from 'react-redux';
-import {switchTheme, switchLanguage, setQuery} from '../../../store';
+import {switchTheme, switchLanguage, setQuery, setCurrent} from '../../../store';
 
 const Navbar = () => {
     const {dark} = useSelector(state => state['themeReducers']);
     const {EN} = useSelector(state => state['languageReducers']);
-
 
 
     const dispatch = useDispatch();
@@ -31,10 +30,9 @@ const Navbar = () => {
 
     const handleChange = (e) => {
         const data = e.target.value;
+        dispatch(setCurrent(1));
         data === '' ? dispatch(setQuery(null)) : dispatch(setQuery(data));
     };
-
-
 
 
     return (

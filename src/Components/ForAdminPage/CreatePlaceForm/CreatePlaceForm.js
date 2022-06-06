@@ -49,14 +49,14 @@ const CreatePlaceForm = () => {
                 type="text"
                 {...register('workTime')}
                 placeholder="workTime"
-                className={css.add_place_input}
+                className={dark ? css.add_place_input_dark : css.add_place_input}
                 autoComplete="off"
             />
             <input
                 type="text"
                 {...register('rating')}
                 placeholder="rating"
-                className={css.add_place_input}
+                className={dark ? css.add_place_input_dark : css.add_place_input}
                 autoComplete="off"
             />
             <input
@@ -70,6 +70,27 @@ const CreatePlaceForm = () => {
                 type="text"
                 {...register('longitude')}
                 placeholder={EN ? "longitude" : "довгота"}
+                className={dark ? css.add_place_input_dark : css.add_place_input}
+                autoComplete="off"
+            />
+            <input
+                type="text"
+                {...register('phoneNumber')}
+                placeholder={EN ? "Phone number" : "Номер телефону"}
+                className={dark ? css.add_place_input_dark : css.add_place_input}
+                autoComplete="off"
+            />
+            <input
+                type="text"
+                {...register('email')}
+                placeholder="Email"
+                className={dark ? css.add_place_input_dark : css.add_place_input}
+                autoComplete="off"
+            />
+            <input
+                type="text"
+                {...register('instagramName')}
+                placeholder={EN ? "Instagram" : "Instagram"}
                 className={dark ? css.add_place_input_dark : css.add_place_input}
                 autoComplete="off"
             />

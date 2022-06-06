@@ -74,13 +74,13 @@ const CreateTableForm = () => {
                 />
                 <input
                     type="text"
-                    className={createCss.add_place_input}
+                    className={dark ? createCss.add_place_input_dark : createCss.add_place_input}
                     {...register('type')}
                     placeholder="type"
                 />
                 <input
                     type="number"
-                    className={createCss.add_place_input}
+                    className={dark ? createCss.add_place_input_dark : createCss.add_place_input}
                     {...register('number')}
                     placeholder="number"
                 />

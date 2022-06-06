@@ -149,4 +149,19 @@
     .restaurant_block_left > img {
         height: 160px;
     }
+
+
+    .restaurant_location {
+        font-size: 12px;
+        column-gap: 7px;
+    }
+
+    .rating img,
+    .restaurant_location img {
+        height: 20px;
+    }
+
+    .restaurant_title{
+        font-size: 20px;
+    }
 }

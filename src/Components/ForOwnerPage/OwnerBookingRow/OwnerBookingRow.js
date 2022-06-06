@@ -6,8 +6,6 @@ import {useSelector} from 'react-redux';
 const OwnerBookingRow = ({booking}) => {
     const {EN} = useSelector(state => state['languageReducers']);
 
-    console.log(booking);
-
     const [user, setUser] = useState();
 
     const bookDate = booking.bookedOn.split('T')[0];
