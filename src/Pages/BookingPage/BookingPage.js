@@ -5,6 +5,8 @@ import {getMyBookings, setAllPagesCount, setBookPageNum} from '../../store';
 import {BookingRow} from '../../Components';
 import arrow_left from '../../img/arrow-left.svg';
 import arrow_right from '../../img/arraw-right.svg';
+import arrow_left_dark from '../../img/arrow-left-dark.svg';
+import arrow_right_dark from '../../img/arraw-right-dark.svg';
 import {Navigate} from 'react-router-dom';
 
 
@@ -49,18 +51,18 @@ const BookingPage = () => {
     }
 
     return (
-        <div className={css.booking_page}>
+        <div className={dark ? css.booking_page_dark : css.booking_page}>
             <div className={css.booking_header}>
                 {EN ? 'My bookings' : 'Мої бронювання'}
             </div>
             {myBookings && !!myBookings?.results?.length && myBookings?.results?.map(booking => <BookingRow
                 key={booking.id} booking={booking}/>)}
             {myBookings && !!myBookings?.results?.length && <div className={css.page_buttons}>
-                <img src={arrow_left} alt="arrowLeft" onClick={() => prevPage()}/>
+                <img src={dark ? arrow_left_dark : arrow_left} alt="arrowLeft" onClick={() => prevPage()}/>
                 <div className={css.page_number}>
                     {EN ? 'Page ' : 'Сторінка '} {currentBookPage} {EN ? ' from ' : ' з '} {allPages}
                 </div>
-                <img src={arrow_right} alt="arrowRight" onClick={() => nextPage()}/>
+                <img src={dark ? arrow_right_dark : arrow_right} alt="arrowRight" onClick={() => nextPage()}/>
             </div>}
         </div>
     );

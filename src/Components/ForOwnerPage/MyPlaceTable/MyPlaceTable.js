@@ -6,6 +6,7 @@ import {change, freeTable, getTablesOfPlace, occupyTable} from '../../../store';
 
 const MyPlaceTable = ({table, placeId}) => {
     const {EN} = useSelector(state => state['languageReducers']);
+    const {dark} = useSelector(state => state['themeReducers']);
 
     const {status} = useSelector(state => state['ownerReducers']);
 
@@ -24,7 +25,7 @@ const MyPlaceTable = ({table, placeId}) => {
             <div className={css.status}>{table.isFree ? (EN ? 'Free' : 'Вільно') : (EN ? 'Taken' : 'Зайнято')}</div>
             <div className={css.table_buttons}>
                 <div
-                    className={table.isFree ? css.table_btn_active : css.table_btn_disable}
+                    className={table.isFree ? dark ? css.table_btn_active_dark :css.table_btn_active : dark ? css.table_btn_disable_dark : css.table_btn_disable}
                     onClick={() => tableAction()}
                 >
                     {table.isFree ? (EN ? 'Occupy' : 'Зайняти') : (EN ? 'Free up' : 'Звільнити')}

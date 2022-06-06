@@ -24,7 +24,12 @@
     width: 200px;
 }
 
-.table_buttons {
+.status_dark {
+    width: 200px;
+}
+
+.table_buttons,
+.table_buttons_dark {
     display: flex;
     align-items: center;
     width: 100%;
@@ -33,7 +38,9 @@
 }
 
 .table_btn_active,
-.table_btn_disable {
+.table_btn_active_dark,
+.table_btn_disable,
+.table_btn_disable_dark {
     width: 150px;
     height: 30px;
     display: flex;
@@ -44,6 +51,10 @@
     cursor: pointer;
 }
 
+.table_btn_active_dark {
+    background-color: #FFF;
+    color: #047E89;
+}
 .table_btn_active {
     background-color: #047E89;
     color: white;
@@ -52,4 +63,9 @@
 .table_btn_disable {
     background-color: #CDC9C9;
     color: black;
+}
+
+.table_btn_disable_dark {
+    background-color: #CDC9C9;
+    color: #047E89;
 }

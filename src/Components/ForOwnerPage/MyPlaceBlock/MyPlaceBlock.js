@@ -4,6 +4,7 @@ import {useForm} from 'react-hook-form';
 import {useDispatch, useSelector} from 'react-redux';
 import {getBookingsForToday, getTablesOfPlace, uploadPhoto} from '../../../store';
 import arrowSide from '../../../img/arrow-side.svg';
+import arrowSide_dark from '../../../img/arrow-side-dark.svg';
 import {MyPlaceTable} from '../MyPlaceTable/MyPlaceTable';
 import {OwnerBookingRow} from '../OwnerBookingRow/OwnerBookingRow';
 import {getTables} from '../../../root_functions/getTables';
@@ -11,6 +12,7 @@ import {getBookingByPlace} from '../../../root_functions/getBookingByPlace';
 
 const MyPlaceBlock = ({place}) => {
     const {EN} = useSelector(state => state['languageReducers']);
+    const {dark} = useSelector(state => state['themeReducers']);
 
     const {changePoint} = useSelector(state => state['tableReducers']);
 
@@ -66,10 +68,10 @@ const MyPlaceBlock = ({place}) => {
                 <div className={css.dropdown_wrap}>
                     <div className={css.drop_btn} onClick={() => setShowDrop(!showDrop)}>
                         <div>{string}</div>
-                        <img src={arrowSide} className={showDrop ? css.hide_btn : css.show_btn}
+                        <img src={dark ? arrowSide_dark : arrowSide} className={showDrop ? css.hide_btn : css.show_btn}
                              alt="arrow"/>
                     </div>
-                    <div className={showDrop ? css.dropdown_menu : css.dropdown_menu_hide}>
+                    <div className={showDrop ? dark ? css.dropdown_menu_dark : css.dropdown_menu : css.dropdown_menu_hide}>
                         <div
                             className={css.dropdown_point}
                             onClick={() => switchType(1, 'Mini-bg')}
@@ -148,7 +150,7 @@ const MyPlaceBlock = ({place}) => {
                     type="file"
                     {...register('file')}
                 />
-                <button className={css.send_photo_btn}>{EN ? 'Send photo' : 'Надіслати фото'}</button>
+                <button className={dark ? css.send_photo_btn_dark : css.send_photo_btn}>{EN ? 'Send photo' : 'Надіслати фото'}</button>
             </form>
             <div className={css.block_title}>{EN ? 'My tables' : 'Мої столики'}</div>
             {placeTables && !!placeTables?.length && placeTables.map(table => <MyPlaceTable placeId={place.id}
