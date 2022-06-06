@@ -17,7 +17,8 @@ const tableSlice = createSlice({
     initialState: {
         status: null,
         tables: [],
-        placeTables: []
+        placeTables: [],
+        changePoint: true,
     },
     reducers: {
         addTable(state, action) {
@@ -29,6 +30,9 @@ const tableSlice = createSlice({
         },
         sendReserve(state) {
             state.tables = [];
+        },
+        change(state) {
+            state.changePoint = !state.changePoint;
         }
     },
     extraReducers: {
@@ -46,6 +50,6 @@ const tableSlice = createSlice({
 
 const tableReducers = tableSlice.reducer;
 
-export const {addTable, deleteTable, sendReserve} = tableSlice.actions;
+export const {addTable, deleteTable, sendReserve, change} = tableSlice.actions;
 
 export default tableReducers;

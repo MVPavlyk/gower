@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import css from './MyPlaceTable.module.css';
 import {useDispatch, useSelector} from 'react-redux';
-import {freeTable, getTablesOfPlace, occupyTable} from '../../../store';
+import {change, freeTable, getTablesOfPlace, occupyTable} from '../../../store';
 
 
 const MyPlaceTable = ({table, placeId}) => {
@@ -13,13 +13,10 @@ const MyPlaceTable = ({table, placeId}) => {
 
     const tableAction = () => {
         (table.isFree ? dispatch(occupyTable(table.id)) : dispatch(freeTable(table.id)));
+        setTimeout(()=> {
+            dispatch(change())
+        }, 100)
     };
-
-    useEffect(() => {
-        setTimeout(() => {
-            dispatch(getTablesOfPlace(placeId));
-        }, 100);
-    }, [status]);
 
     return (
         <div className={css.table_block}>

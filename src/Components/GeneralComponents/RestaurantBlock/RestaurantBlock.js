@@ -19,8 +19,6 @@ const RestaurantBlock = ({restaurant}) => {
         getPhoto(1, id).then(value => setMiniBg(value.filePath));
     }, []);
 
-    console.log(miniBg);
-
     return (
         <>
             <div className={dark ? css.block_border_dark : css.block_border}>
