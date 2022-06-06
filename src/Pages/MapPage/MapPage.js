@@ -31,6 +31,10 @@ const MapPage = () => {
         setDateTime(dt);
     }
 
+    useEffect(() => {
+        dispatch(sendReserve());
+    }, []);
+
 
     const send = () => {
         if ((dateTime === '')) return setLocalError(true);
@@ -50,9 +54,9 @@ const MapPage = () => {
                 };
                 dispatch(createBooking(reqObj));
             }
-            setTimeout(()=> {
-                dispatch(sendReserve())
-            }, 100)
+            setTimeout(() => {
+                dispatch(sendReserve());
+            }, 100);
         } else {
             setLocalError(true);
         }

@@ -23,6 +23,7 @@ const Table = ({table}) => {
                 {
                     top: table.top,
                     left: table.left,
+                    transform: `rotate(${table.transform}deg)`
                 }
             }
             onClick={() => chooseTable(table)}

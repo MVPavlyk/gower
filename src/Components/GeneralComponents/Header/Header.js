@@ -40,7 +40,7 @@ const Header = () => {
                         {user && <NavLink className={css.header_link}
                                           to={'myBookings'}>{EN ? 'My bookings' : 'Мої бронювання'}
                         </NavLink>}
-                        {roles && !!roles?.length && roles?.includes('PlaceOwner') &&
+                        {user && roles && !!roles?.length && roles?.includes('PlaceOwner') &&
                             <NavLink className={css.header_link}
                                      to={'/myPlaces'}>{EN ? 'My places' : 'Мої заклади'}
                             </NavLink>
@@ -59,7 +59,7 @@ const Header = () => {
             <div className={show ? css.burger_menu_show : css.burger_menu}>
                 <NavLink className={css.header_link}
                          to={'/login'}>{user ? user.firstName : EN ? 'Login' : 'Вхід'}</NavLink>
-                {roles && !!roles?.length && roles.includes('PlaceOwner') &&
+                {user && roles && !!roles?.length && roles.includes('PlaceOwner') &&
                     <NavLink className={css.header_link}
                              to={'/myPlaces'}>{EN ? 'My places' : 'Мої заклади'}
                     </NavLink>

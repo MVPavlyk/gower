@@ -5,9 +5,11 @@ import {getMyBookings, setAllPagesCount, setBookPageNum} from '../../store';
 import {BookingRow} from '../../Components';
 import arrow_left from '../../img/arrow-left.svg';
 import arrow_right from '../../img/arraw-right.svg';
+import {Navigate} from 'react-router-dom';
 
 
 const BookingPage = () => {
+    const {user} = useSelector(state => state['userReducers']);
     const {myBookings, currentBookPage} = useSelector(state => state['bookingReducers']);
     const {dark} = useSelector(state => state['themeReducers']);
     const {EN} = useSelector(state => state['languageReducers']);
@@ -25,7 +27,7 @@ const BookingPage = () => {
     }, [currentBookPage]);
 
     useEffect(()=> {
-        setAllPages(myBookings.pageCount)
+        setAllPages(myBookings?.pageCount)
     }, [myBookings])
 
     const prevPage = () => {
@@ -42,6 +44,9 @@ const BookingPage = () => {
         }
     };
 
+    if (!user) {
+        return <Navigate to="/" replace/>;
+    }
 
     return (
         <div className={css.booking_page}>
