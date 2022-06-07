@@ -1,0 +1,1 @@
+export const cloudUrl = 'https://gowerg.blob.core.windows.net/gower'

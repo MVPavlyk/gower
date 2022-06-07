@@ -1,8 +1,9 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 import css from './DescriptionBlock.module.css';
+import {cloudUrl} from '../../../config/cloudUrl';
 
-const DescriptionBlock = ({description}) => {
+const DescriptionBlock = ({description, path}) => {
 
     return (
         <div className={css.desc_block}>
@@ -10,7 +11,7 @@ const DescriptionBlock = ({description}) => {
                 {description.description}
             </div>}
             {description && <img
-                src={`https://glitch4.s3.eu-central-1.amazonaws.com/${description.filePath}`}
+                src={`${cloudUrl}${path}`}
                 alt="description"
                 className={css.desc_page_photo}
             />}

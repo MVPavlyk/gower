@@ -25,16 +25,19 @@ const DescriptionPage = () => {
     }, [onePlace]);
 
 
+    console.log(desc1);
+
     return (
+
         <>
             {desc1 &&
                 <div className={dark ? css.desc_page_dark : css.desc_page}>
                     <div className={rootCss.container}>
                         <div className={css.desc_wrap}>
-                            <DescriptionBlock description={desc1}/>
-                            <DescriptionBlock description={desc2}/>
-                            <DescriptionBlock description={desc3}/>
-                            <DescriptionBlock description={desc4}/>
+                            <DescriptionBlock description={desc1} path={`/images/${onePlace.id}/Description1/3.png`}/>
+                            <DescriptionBlock description={desc2} path={`/images/${onePlace.id}/Description2/4.png`}/>
+                            <DescriptionBlock description={desc3} path={`/images/${onePlace.id}/Description3/5.png`}/>
+                            <DescriptionBlock description={desc4} path={`/images/${onePlace.id}/Description4/6.png`}/>
                         </div>
                     </div>
                 </div>

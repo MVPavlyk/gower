@@ -7,17 +7,20 @@ import {Link} from 'react-router-dom';
 
 import {useSelector} from 'react-redux';
 import {getPhoto} from '../../../root_functions/getPhoto';
+import {cloudUrl} from '../../../config/cloudUrl';
 
 const RestaurantBlock = ({restaurant}) => {
 
     const {dark} = useSelector(state => state['themeReducers']);
 
+/*
     const [miniBg, setMiniBg] = useState();
 
     useEffect(() => {
         const id = restaurant.id;
         getPhoto(1, id).then(value => setMiniBg(value.filePath));
     }, []);
+*/
 
     return (
         <>
@@ -25,7 +28,7 @@ const RestaurantBlock = ({restaurant}) => {
             </div>
             <Link to={`/place/${restaurant.id}`} className={dark ? css.restaurant_block_dark : css.restaurant_block}>
                 <div className={css.restaurant_block_left}>
-                    <img src={`https://glitch4.s3.eu-central-1.amazonaws.com/${miniBg}`} alt={restaurant.name}/>
+                    <img src={`${cloudUrl}/images/${restaurant.id}/MiniBackground/1.png`} alt={restaurant.name}/>
                     <div className={css.restaurant_info}>
                         <h1 className={css.restaurant_title}>{restaurant.name}</h1>
                         <div className={css.rating}>

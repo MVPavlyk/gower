@@ -5,6 +5,7 @@ import {getPhoto} from '../../../root_functions/getPhoto';
 import {useDispatch, useSelector} from 'react-redux';
 import {getTablesOfPlace} from '../../../store';
 import bg from '../../../img/bg.svg';
+import {cloudUrl} from '../../../config/cloudUrl';
 
 
 const Map = ({id}) => {
@@ -21,11 +22,13 @@ const Map = ({id}) => {
     }, []);
 
 
+    console.log(mapBg);
+
     return (
         <div className={css.map}>
             <img
                 className={css.map_bg}
-                src={`https://glitch4.s3.eu-central-1.amazonaws.com/${mapBg}`}
+                src={`${cloudUrl}/images/${id}/MapBackground/10.svg`}
                 alt="map"
             />
             {placeTables && !!placeTables.length && placeTables.map(table => <Table table={table} key={table.id}/>)}

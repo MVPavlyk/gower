@@ -12,6 +12,7 @@ import instagram_dark from '../../img/LocationPage/instagram_icon_dark.svg';
 import email from '../../img/LocationPage/email_logo.svg';
 import email_dark from '../../img/LocationPage/email_logo_dark.svg';
 import {getPhoto} from '../../root_functions/getPhoto';
+import {cloudUrl} from '../../config/cloudUrl';
 
 
 const API_KEY = process.env.REACT_APP_API_KEY;
@@ -36,6 +37,8 @@ const LocationPage = () => {
     }, [onePlace]);
 
 
+    console.log(exterior);
+
     return (
 
         <>
@@ -44,7 +47,7 @@ const LocationPage = () => {
                     <div className={css.title}>
                         {EN ? 'Exterior' : 'Екстер\'єр'}
                     </div>
-                    {exterior && <img src={`https://glitch4.s3.eu-central-1.amazonaws.com/${exterior}`}
+                    {onePlace && <img src={`${cloudUrl}/images/${onePlace.id}/Exterior/11.png`}
                           alt={onePlace.name}
                     />}
                 </div>

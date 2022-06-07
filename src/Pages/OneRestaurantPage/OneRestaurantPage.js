@@ -5,6 +5,7 @@ import {Outlet} from 'react-router-dom';
 import {getOnePlace} from '../../store';
 import css from './OneRestaurantPage.module.css';
 import {getPhoto} from '../../root_functions/getPhoto';
+import {cloudUrl} from '../../config/cloudUrl';
 
 const OneRestaurantPage = () => {
     const restaurantId = useParams();
@@ -34,7 +35,7 @@ const OneRestaurantPage = () => {
                 <div className={css.one_page}>
                     <div className={css.one_page_bg}
                          style={
-                             {background: `url(https://glitch4.s3.eu-central-1.amazonaws.com/${bigBg}) center top / cover`}
+                             {background: `url(${cloudUrl}/images/${onePlace.id}/BigBackground/2.png) center top / cover`}
                          }>
                         <div className={css.one_bg_gradient}>
                         </div>
