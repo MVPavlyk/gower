@@ -4,7 +4,7 @@ import {Navbar} from '../../Components';
 import css from './RestaurantPageList.module.css';
 
 import {useDispatch, useSelector} from 'react-redux';
-import {getPlacesByQuery, getPlacesPaginated, setCurrent} from '../../store';
+import {getPlacesByQuery, getPlacesPaginated, setCurrent, setQuery} from '../../store';
 import arrow_left from '../../img/arrow-left.svg';
 import arrow_right from '../../img/arraw-right.svg';
 import arrow_left_dark from '../../img/arrow-left-dark.svg';

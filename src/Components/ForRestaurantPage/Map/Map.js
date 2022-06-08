@@ -21,9 +21,6 @@ const Map = ({id}) => {
         dispatch(getTablesOfPlace(id));
     }, []);
 
-
-    console.log(mapBg);
-
     return (
         <div className={css.map}>
             <img

@@ -11,6 +11,7 @@ import filter_dark from '../../../img/Navbar/filter_dark.svg';
 
 import {useDispatch, useSelector} from 'react-redux';
 import {switchTheme, switchLanguage, setQuery, setCurrent} from '../../../store';
+import {useLocation} from 'react-router-dom';
 
 const Navbar = () => {
     const {dark} = useSelector(state => state['themeReducers']);

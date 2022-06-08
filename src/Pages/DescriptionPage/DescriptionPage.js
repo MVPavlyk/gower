@@ -16,6 +16,7 @@ const DescriptionPage = () => {
     const [desc3, setDesc3] = useState();
     const [desc4, setDesc4] = useState();
 
+
     useEffect(() => {
         const id = onePlace.id;
         getPhoto(3, id).then(value => setDesc1(value));
@@ -24,8 +25,6 @@ const DescriptionPage = () => {
         getPhoto(6, id).then(value => setDesc4(value));
     }, [onePlace]);
 
-
-    console.log(desc1);
 
     return (
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
 import css from './DescriptionBlock.module.css';
 import {cloudUrl} from '../../../config/cloudUrl';
 

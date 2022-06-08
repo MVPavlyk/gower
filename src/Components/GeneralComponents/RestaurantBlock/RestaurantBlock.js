@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import css from './RestaurantBlock.module.css';
 import star from '../../../img/RestaurantBlock/star.svg';
 import location from '../../../img/RestaurantBlock/location.svg';
@@ -6,21 +6,11 @@ import location_dark from '../../../img/RestaurantBlock/location_dark.svg';
 import {Link} from 'react-router-dom';
 
 import {useSelector} from 'react-redux';
-import {getPhoto} from '../../../root_functions/getPhoto';
 import {cloudUrl} from '../../../config/cloudUrl';
 
 const RestaurantBlock = ({restaurant}) => {
 
     const {dark} = useSelector(state => state['themeReducers']);
-
-/*
-    const [miniBg, setMiniBg] = useState();
-
-    useEffect(() => {
-        const id = restaurant.id;
-        getPhoto(1, id).then(value => setMiniBg(value.filePath));
-    }, []);
-*/
 
     return (
         <>

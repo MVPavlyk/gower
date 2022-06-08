@@ -1,11 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {NavLink, useLocation, useParams} from 'react-router-dom';
 import {Outlet} from 'react-router-dom';
-import {getOnePlace} from '../../store';
 import css from './OneRestaurantPage.module.css';
-import {getPhoto} from '../../root_functions/getPhoto';
 import {cloudUrl} from '../../config/cloudUrl';
+import {getOnePlace} from '../../store';
 
 const OneRestaurantPage = () => {
     const restaurantId = useParams();
@@ -20,13 +19,11 @@ const OneRestaurantPage = () => {
 
     const {EN} = useSelector(state => state['languageReducers']);
 
-    const [bigBg, setBigBg] = useState();
+
 
     useEffect(() => {
         const id = restaurantId.id;
         dispatch(getOnePlace(id));
-        getPhoto(2, id).then(value => setBigBg(value.filePath));
-
     }, [restaurantId.id]);
 
     return (

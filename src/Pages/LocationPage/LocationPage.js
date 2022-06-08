@@ -11,12 +11,10 @@ import instagram from '../../img/LocationPage/instagram_icon.svg';
 import instagram_dark from '../../img/LocationPage/instagram_icon_dark.svg';
 import email from '../../img/LocationPage/email_logo.svg';
 import email_dark from '../../img/LocationPage/email_logo_dark.svg';
-import {getPhoto} from '../../root_functions/getPhoto';
 import {cloudUrl} from '../../config/cloudUrl';
 
 
 const API_KEY = process.env.REACT_APP_API_KEY;
-
 
 const LocationPage = () => {
 
@@ -29,18 +27,7 @@ const LocationPage = () => {
         googleMapsApiKey: API_KEY
     });
 
-    const [exterior, setExterior] = useState();
-
-    useEffect(() => {
-        const id = onePlace.id;
-        getPhoto(11, id).then(value => setExterior(value.filePath));
-    }, [onePlace]);
-
-
-    console.log(exterior);
-
     return (
-
         <>
             <div className={dark ? css.location_page_dark : css.location_page}>
                 <div className={css.exterior}>
@@ -61,7 +48,6 @@ const LocationPage = () => {
                             lng: onePlace.longitude
                         }}/>}
                     </div>
-
                 </div>
             </div>
             <div className={dark ? css.contacts_dark : css.contacts}>
